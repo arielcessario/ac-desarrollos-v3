@@ -3,4 +3,177 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+//Fonts Faces
+$font_primary: "Myriad Pro Bold";
+$font_secundary: "Myriad Pro Bold Condensed";
+
+$font_primary_color: #333;
+$font_secundary_color: #9DCDA6;
+$font_terciary_color: #C57161;
+
+
+$background_primary: #eee;
+$background_secundary: #000;
+
+$color_primary:#333;
+$color_secundary:#9DCDA6;;
+$color_terciary:#C57161;
+
+@import "compass";
 @import "compass/reset";
+//@import "compass/css3/font-face";
+/*
+@include font-face($myriad_pro_bold, font-files("MYRIADPRO-BOLD.woff"));
+@include font-face($myriad_pro_bold_condensed, font-files("MYRIADPRO-BOLDCOND.woff"));
+@include font-face($myriad_pro_condensed, font-files("MYRIADPRO-COND.woff"));
+@include font-face($myriad_pro_regular, font-files("MYRIADPRO-REGULAR.woff"));
+*/
+html, body {
+  height: 100%;
+}
+.wrap {
+  //height: 100vh;
+  //display: flex;
+}
+body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: $font_primary_color;
+  line-height: 1.42857143;
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+h3{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 0;
+  color: $color_secundary;
+}
+strong{
+  font-weight: bold;
+}
+.container-main{
+  background-color: #fff;
+  text-align: center;
+}
+.container{
+  background-color: $background_primary;
+  padding: 20px 15px;
+  text-align: justify;
+}
+.logo{
+  text-align: center;
+}
+.menu {
+  width: 250px;
+  margin: 0 auto;
+}
+.menu > li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid $color_secundary;
+}
+.menu > li > a{
+  text-decoration: none;
+  cursor: pointer;
+  color:$font_primary_color;
+  //padding-bottom: 11px;
+  //margin: 27px 0 18px;
+  text-transform: uppercase;
+}
+.row{
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.footer-link{
+  color:$font_terciary_color;
+}
+footer{
+  text-align: center;
+  //padding: 30px 20px 15px 20px;
+  //position: absolute;
+  bottom: 0;
+  width: 100%;
+  //height: 60px;
+  @media (min-width: 700px) {
+    position: absolute;
+  }
+}
+footer > p{
+  font-size: 0.7em;
+  margin: 15px auto;
+
+  @media (max-width: 700px) {
+    font-size: 16px;
+    margin: 35px 50px;
+  }
+}
+.primary-color{
+  color:$color_terciary;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid $color_secundary;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #f00;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid green;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right:15px solid $color_terciary;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea {
+  border: solid 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: $color_primary;
+  background-color: transparent;
+  margin: 0 0 10px;
+  //padding: 10px 5px 5px;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  //font-weight: 500;
+}
+.form-control{
+  display: block;
+  width: 100%;
+  height: 30px;
+  //padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  //background-color: #fff;
+  background-image: none;
+  //-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  //box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
