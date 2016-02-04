@@ -1,14 +1,18 @@
-'use strict';
+(function () {
 
-angular.module('ac.hacemos', ['ngRoute'])
+    'use strict';
 
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/hacemos', {
-            templateUrl: 'hacemos/hacemos.html',
-            controller: 'HacemosController'
-        });
-    }])
+    angular.module('ac.hacemos', ['ngRoute'])
 
-    .controller('HacemosController', [function() {
+        .config(['$routeProvider', function($routeProvider) {
+            $routeProvider.when('/hacemos', {
+                templateUrl: 'hacemos/hacemos.html',
+                controller: 'HacemosController'
+            });
+        }])
 
-    }]);
+        .controller('HacemosController', [function() {
+
+        }]);
+
+})();

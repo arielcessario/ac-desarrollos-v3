@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="acDesarrollos" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="acDesarrollos" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="acDesarrollos" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="acDesarrollos" class="no-js"> <!--<![endif]-->
 <head>
   <!--meta charset="utf-8"-->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -12,43 +12,109 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--link rel="stylesheet" href="app.css"-->
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
 </head>
-<body>
+<body ng-controller="AppController as appCtrl">
 
-  <div class="flex-container">
-    <div class="flex-menu">
-      <div class="nav-menu">
-          <div class="logo">
-            <img class="logo-small" src="images/logo.png">
-          </div>
+  <div class="header">
+    <div class="menu-mobile menu-type-mobile">
+      <div class="nav-button"
+           ng-click="appCtrl.menu_mobile_open = !appCtrl.menu_mobile_open;"
+           ng-class="{'nav-button-transformed':appCtrl.menu_mobile_open}">
+        <div ng-class="{'nav-button-top-transformed':appCtrl.menu_mobile_open}"></div>
+        <div ng-class="{'nav-button-mid-transformed':appCtrl.menu_mobile_open}"></div>
+        <div ng-class="{'nav-button-bot-transformed':appCtrl.menu_mobile_open}"></div>
+      </div>
 
-          <div class="menu-mobile">
-            <ul class="menu">
-              <li><a href="#/view2">NUESTRA MISION</a></li>
-              <li><a href="#/hacemos">QUE HACEMOS</a></li>
-              <li><a href="#/contacto">CONTACTANOS</a></li>
-              <li><a href="#/sabias">SABIAS?</a></li>
-              <li><a href="#/noticia">NOTICIAS</a></li>
-              <li style="border-bottom:0;border-right:0;"><a href="#/view2">CHATEA CON NOSOTROS!</a></li>
-            </ul>
-          </div>
+      <!--div class="header-separator"></div>
+      <div class="bienvenidos">Bienvenidos</div-->
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" height="45px" width="150px">
       </div>
     </div>
 
-    <div class="flex-content">
-      <div ng-view class="container"></div>
-    </div>
-
-    <div class="flex-footer">
-      <footer>
-        <p>
-          © 2016 - <a href="http://ac-desarrollos.com/" class="footer-link">www.ac-desarrollos.com </a>
-          AC-Desarrollos - 011-3111-5006 - <a href="http://ac-desarrollos.com/" class="footer-link">ventas@ac-desarrollos.com</a>  -
-          All Rights Reserved</p>
-      </footer>
+    <div class="menu-desktop menu-type-desktop"
+         ng-class="{'display-menu-desktop':appCtrl.display_menu != true }" >
+      <div id="menu-desktop-logo" ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">
+        <img src="images/logo.png" alt="logo" height="115px" width="140px">
+      </div>
+      <div id="menu-desktop-right">
+        <div id="menu-desktop-upper"></div>
+        <div id="menu-desktop-lower">
+          <div id="menu-desktop-lower-inner">
+            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NUESTRA MISION') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'NUESTRA MISION', path: '/view2'});"> NUESTRA MISION
+            </div>
+            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('QUE HACEMOS') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'QUE HACEMOS', path: '/hacemos'});"> QUE HACEMOS
+            </div>
+            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CONTACTANOS') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'CONTACTANOS', path: '/contacto'});"> CONTACTANOS
+            </div>
+            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('SABIAS') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'SABIAS', path: '/sabias'});"> SABIAS?
+            </div>
+            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NOTICIAS') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'NOTICIAS', path: '/noticia'});"> NOTICIAS
+            </div>
+            <div class="menu-desktop-btn ac-ripple"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CHATEA CON NOSOTROS') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'CHATEA CON NOSOTROS', path: '/view1'});"> CHATEA CON NOSOTROS!
+            </div>
+            <div class="menu-desktop-btn ac-ripple"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(appCtrl.links[6].nombre) > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'INGRESO', path: '/ingreso'});">{{appCtrl.links[6].nombre}}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
+    <div class="menu-desktop-btn ac-ripple"
+         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
+         ripple-color="#ffffff"
+         ng-repeat="link in appCtrl.links"
+         ng-click="appCtrl.goTo(link); appCtrl.menu_mobile_open=false;"> {{link.nombre}}
+    </div>
+  </div>
+
+  <div ng-view class="view-container" autoscroll="true"></div>
+
+  <!--div class="flex-content">
+    <div ng-view class="container"></div>
+  </div-->
+
+  <div class="footer">
+    <p>
+      © 2016 - <a href="http://ac-desarrollos.com/" class="footer-link">www.ac-desarrollos.com </a>
+      AC-Desarrollos - 011-3111-5006 - <a href="http://ac-desarrollos.com/" class="footer-link">ventas@ac-desarrollos.com</a>  -
+      All Rights Reserved</p>
+  </div>
+
 
 
   <script src="bower_components/angular/angular.js"></script>
