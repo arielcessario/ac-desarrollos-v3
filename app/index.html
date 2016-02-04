@@ -12,30 +12,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--link rel="stylesheet" href="app.css"-->
   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
-  <!--ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul-->
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+  <div class="flex-container">
+    <div class="flex-menu">
+      <div class="nav-menu">
+          <div class="logo">
+            <img class="logo-small" src="images/logo.png">
+          </div>
 
-  <div ng-view class="wrap"></div>
+          <div class="menu-mobile">
+            <ul class="menu">
+              <li><a href="#/view2">NUESTRA MISION</a></li>
+              <li><a href="#/hacemos">QUE HACEMOS</a></li>
+              <li><a href="#/contacto">CONTACTANOS</a></li>
+              <li><a href="#/sabias">SABIAS?</a></li>
+              <li><a href="#/noticia">NOTICIAS</a></li>
+              <li style="border-bottom:0;border-right:0;"><a href="#/view2">CHATEA CON NOSOTROS!</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
 
-  <!--div>Angular seed app: v<span app-version></span></div-->
+    <div class="flex-content">
+      <div ng-view class="container"></div>
+    </div>
 
-  <footer>
-    <p>
-      © 2016 - <a href="http://ac-desarrollos.com/" class="footer-link">www.ac-desarrollos.com </a>
-      AC-Desarrollos - 011-3111-5006 - <a href="http://ac-desarrollos.com/" class="footer-link">ventas@ac-desarrollos.com</a>  -
-      All Rights Reserved</p>
-  </footer>
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+    <div class="flex-footer">
+      <footer>
+        <p>
+          © 2016 - <a href="http://ac-desarrollos.com/" class="footer-link">www.ac-desarrollos.com </a>
+          AC-Desarrollos - 011-3111-5006 - <a href="http://ac-desarrollos.com/" class="footer-link">ventas@ac-desarrollos.com</a>  -
+          All Rights Reserved</p>
+      </footer>
+    </div>
+  </div>
+
+
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>

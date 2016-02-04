@@ -1,14 +1,23 @@
-'use strict';
+(function () {
 
-angular.module('myApp.view1', ['ngRoute'])
+  'use strict';
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
+  angular.module('ac.main', ['ngRoute'])
 
-.controller('View1Ctrl', [function() {
+      .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/view1', {
+          templateUrl: 'view1/view1.html',
+          controller: 'MainController'
+        });
+      }])
+      .controller('MainController', MainController);
 
-}]);
+  MainController.$inject = ['$scope'];
+
+  function MainController($scope) {
+    var vm = this;
+
+  };
+
+})();
+

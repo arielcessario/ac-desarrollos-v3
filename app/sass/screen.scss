@@ -4,30 +4,36 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 //Fonts Faces
-$font_primary: "Myriad Pro Bold";
-$font_secundary: "Myriad Pro Bold Condensed";
+//$font_primary: "Myriad Pro Condensed";
+//$font_secundary: "Myriad Pro Bold Condensed";
 
 $font_primary_color: #333;
 $font_secundary_color: #9DCDA6;
 $font_terciary_color: #C57161;
 
-
 $background_primary: #eee;
 $background_secundary: #000;
 
 $color_primary:#333;
-$color_secundary:#9DCDA6;;
-$color_terciary:#C57161;
+//$color_secundary:#9DCDA6;;
+//$color_terciary:#C57161;
+
+$color_1:#fbe083;
+$color_2:#ce5f2d;
+$color_3:#50232e;
+$color_4:#a1cca5;
 
 @import "compass";
 @import "compass/reset";
-//@import "compass/css3/font-face";
-/*
-@include font-face($myriad_pro_bold, font-files("MYRIADPRO-BOLD.woff"));
-@include font-face($myriad_pro_bold_condensed, font-files("MYRIADPRO-BOLDCOND.woff"));
-@include font-face($myriad_pro_condensed, font-files("MYRIADPRO-COND.woff"));
-@include font-face($myriad_pro_regular, font-files("MYRIADPRO-REGULAR.woff"));
-*/
+@import "compass/css3/font-face";
+
+//@include font-face($font_primary, font-files("MYRIADPRO-COND.woff"));
+//@include font-face($font_secundary, font-files("MYRIADPRO-BOLDCOND.woff"));
+
+//@include font-face($myriad_pro_bold, font-files("MYRIADPRO-BOLD.woff"));
+//@include font-face($myriad_pro_regular, font-files("MYRIADPRO-REGULAR.woff"));
+
+
 html, body {
   height: 100%;
 }
@@ -36,20 +42,68 @@ html, body {
   //display: flex;
 }
 body{
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  //font-family: $font_secundary, Arial;
+  font-family: Arial;
   color: $font_primary_color;
   line-height: 1.42857143;
+}
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  height: 100%;
+}
+
+.flex-menu:nth-child(1) {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  background-color: #000;
+  @media (min-width: 700px) {
+    background-color: #fff;
+  }
+}
+
+.flex-content:nth-child(2) {
+  order: 1;
+  flex: 3 1 auto;
+  align-self: auto;
+  background-color: #eee;
+}
+
+.flex-footer:nth-child(3) {
+  order: 2;
+  flex: 0 1 auto;
+  align-self: auto;
+  background-color: #a1cca5;
+}
+
+.nav-menu{
+  //background-color: #000000;
+  height: 60px;
+  @media (min-width: 700px) {
+    height: 160px;
+  }
+}
+.menu-mobile {
+  margin-top: 20px;
 }
 h1{
   font-size: 40px;
   font-weight: bold;
   padding: 10px 0;
+  @media (min-width: 700px) {
+    font-size: 80px;
+  }
 }
 h3{
   font-size: 20px;
   font-weight: bold;
   padding: 10px 0;
-  color: $color_secundary;
+  color: $color_4;
 }
 strong{
   font-weight: bold;
@@ -60,19 +114,53 @@ strong{
 }
 .container{
   background-color: $background_primary;
-  padding: 20px 15px;
+  padding: 10px 0;
   text-align: justify;
+}
+.container-fluid{
+  background-color: #eee;
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: 700px) {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
 }
 .logo{
   text-align: center;
 }
+.logo-size{
+  width: 250px;
+  height: 150px;
+  @media (min-width: 700px) {
+    width: 500px;
+    height: 350px;
+  }
+}
+.logo-small{
+  width: 90px;
+  height: 40px;
+}
 .menu {
   width: 250px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 700px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
 }
 .menu > li {
   padding: 0.5em 0;
-  border-bottom: 1px solid $color_secundary;
+  border-bottom: 1px solid $color_4;
+  @media (min-width: 700px) {
+    padding: 0.5em 0.5em;
+    border-right: 1px solid #9DCDA6;
+    border-bottom: 0;
+  }
 }
 .menu > li > a{
   text-decoration: none;
@@ -82,6 +170,9 @@ strong{
   //margin: 27px 0 18px;
   text-transform: uppercase;
 }
+.menu > li > a:hover{
+  color:$color_2;
+}
 .row{
   padding-right: 15px;
   padding-left: 15px;
@@ -89,7 +180,7 @@ strong{
   margin-left: auto;
 }
 .footer-link{
-  color:$font_terciary_color;
+  color:$color_2;
 }
 footer{
   text-align: center;
@@ -99,7 +190,7 @@ footer{
   width: 100%;
   //height: 60px;
   @media (min-width: 700px) {
-    position: absolute;
+    //position: absolute;
   }
 }
 footer > p{
@@ -108,18 +199,18 @@ footer > p{
 
   @media (max-width: 700px) {
     font-size: 16px;
-    margin: 35px 50px;
+    margin: 20px 50px;
   }
 }
 .primary-color{
-  color:$color_terciary;
+  color:$color_2;
 }
 .arrow-up {
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 15px solid $color_secundary;
+  border-bottom: 15px solid $color_4;
 }
 .arrow-down {
   width: 0;
@@ -140,7 +231,7 @@ footer > p{
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right:15px solid $color_terciary;
+  border-right:15px solid $color_2;
 }
 input[type="text"],
 input[type="password"],
@@ -150,7 +241,7 @@ input[type="date"],
 textarea {
   border: solid 0px;
   border-bottom-width: 1px;
-  border-bottom-color: $color_primary;
+  border-bottom-color: $color_2;
   background-color: transparent;
   margin: 0 0 10px;
   //padding: 10px 5px 5px;
