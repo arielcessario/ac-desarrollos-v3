@@ -33,7 +33,8 @@
 </head>
 <body ng-controller="AppController as appCtrl">
 
-  <div class="header">
+  <div class="header"
+       ng-class="{'display-header':appCtrl.display_header != true}">
     <div class="menu-mobile menu-type-mobile">
       <div class="nav-button"
            ng-click="appCtrl.menu_mobile_open = !appCtrl.menu_mobile_open;"

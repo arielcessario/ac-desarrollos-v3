@@ -41,6 +41,7 @@
     vm.selectedPage = 'INICIO';
     vm.menu_mobile_open = false;
     vm.display_menu = false;
+    vm.display_header = false;
     vm.links = LinksService.links;
 
     function goTo(location) {
@@ -50,8 +51,10 @@
 
       if(location.nombre != 'Volver') {
         vm.display_menu = true;
+        vm.display_header = true;
       } else {
         vm.display_menu = false;
+        vm.display_header = false;
       }
 
     }
