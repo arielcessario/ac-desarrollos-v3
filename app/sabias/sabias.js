@@ -1,14 +1,19 @@
-'use strict';
+(function () {
 
-angular.module('ac.sabias', ['ngRoute'])
+    'use strict';
+    var scripts = document.getElementsByTagName("script");
+    var currentScriptPath = scripts[scripts.length - 1].src;
 
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/sabias', {
-            templateUrl: 'sabias/sabias.html',
-            controller: 'SabiasController'
-        });
-    }])
+    angular.module('acdesarrollos.sabias', ['ngRoute'])
+        .controller('SabiasController', SabiasController);
 
-    .controller('SabiasController', [function() {
+    SabiasController.$inject = ['$scope', '$location'];
 
-    }]);
+    function SabiasController($scope, $location) {
+        var vm = this;
+
+        vm.slider_nro = 1;
+    };
+
+})();
+

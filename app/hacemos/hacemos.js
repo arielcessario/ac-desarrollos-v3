@@ -1,18 +1,18 @@
 (function () {
 
     'use strict';
+    var scripts = document.getElementsByTagName("script");
+    var currentScriptPath = scripts[scripts.length - 1].src;
 
-    angular.module('ac.hacemos', ['ngRoute'])
+    angular.module('acdesarrollos.hacemos', ['ngRoute'])
+        .controller('HacemosController', HacemosController);
 
-        .config(['$routeProvider', function($routeProvider) {
-            $routeProvider.when('/hacemos', {
-                templateUrl: 'hacemos/hacemos.html',
-                controller: 'HacemosController'
-            });
-        }])
+    HacemosController.$inject = ['$scope', '$location'];
 
-        .controller('HacemosController', [function() {
+    function HacemosController($scope, $location) {
+        var vm = this;
 
-        }]);
+
+    };
 
 })();

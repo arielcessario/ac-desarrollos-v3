@@ -2,18 +2,111 @@
 
   'use strict';
 
-// Declare app level module which depends on views, and components
-  angular.module('acDesarrollos', [
+  // Declare app level module which depends on views, and components
+  angular.module('acDesarrollos', ['oc.lazyLoad',
     'ngRoute',
-    'ac.main',
-    'myApp.view2',
-    'ac.contacto',
-    'ac.noticias',
-    'ac.sabias',
-    'ac.hacemos'
-  ]).
-      config(['$routeProvider', function($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/view1'});
+    'ngAnimate',
+    //'angular-storage'
+  ]).config(['$routeProvider', function($routeProvider) {
+
+        $routeProvider.otherwise('/main');
+
+        $routeProvider.when('/main', {
+          templateUrl: 'main/main.html',
+          controller: 'MainController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('main/main.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/contacto', {
+          templateUrl: 'contactanos/contacto.html',
+          controller: 'ContactoController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('contactanos/contacto.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/hacemos', {
+          templateUrl: 'hacemos/hacemos.html',
+          controller: 'HacemosController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('hacemos/hacemos.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/noticias', {
+          templateUrl: 'noticias/noticias.html',
+          controller: 'NoticiaController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('noticias/noticia.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/noticia', {
+          templateUrl: 'noticias/noticia.html',
+          controller: 'NoticiaController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('noticias/noticia.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/sabias', {
+          templateUrl: 'sabias/sabias.html',
+          controller: 'SabiasController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('sabias/sabias.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/chat', {
+          templateUrl: 'chat/chat.html',
+          controller: 'ChatController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('chat/chat.js');
+            }]
+          }
+        });
+
+        $routeProvider.when('/mision', {
+          templateUrl: 'mision/mision.html',
+          controller: 'MisionController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('mision/mision.js');
+            }]
+          }
+        });
+
       }])
       .controller('AppController', AppController)
       .service('LinksService', LinksService);
@@ -21,22 +114,23 @@
 
   function LinksService() {
     this.links = [
-      {nombre: 'NUESTRA MISION', path: '/view2'},
+      {nombre: 'NUESTRA MISION', path: '/mision'},
       {nombre: 'QUE HACEMOS', path: '/hacemos'},
       {nombre: 'CONTACTANOS', path: '/contacto'},
       {nombre: 'SABIAS?', path: '/sabias'},
-      {nombre: 'NOTICIAS', path: '/noticia'},
-      {nombre: 'CHATEA CON NOSOTROS!', path: '/revistas'},
-      //{nombre: 'Volver', path: '/view1'}
+      {nombre: 'NOTICIAS', path: '/noticias'},
+      {nombre: 'CHATEA CON NOSOTROS!', path: '/chat'}
     ];
 
   }
 
 
-  AppController.$inject = ['$scope', '$location', '$rootScope', 'LinksService'];
-  function AppController($scope, $location, $rootScope, LinksService) {
+  AppController.$inject = ['$scope', '$location', 'LinksService'];
+
+  function AppController($scope, $location, LinksService) {
 
     var vm = this;
+
     vm.goTo = goTo;
     vm.selectedPage = 'INICIO';
     vm.menu_mobile_open = false;

@@ -1,14 +1,19 @@
-'use strict';
+(function () {
 
-angular.module('ac.contacto', ['ngRoute'])
+    'use strict';
 
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/contacto', {
-            templateUrl: 'contactanos/contacto.html',
-            controller: 'ContactoController'
-        });
-    }])
+    var scripts = document.getElementsByTagName("script");
+    var currentScriptPath = scripts[scripts.length - 1].src;
 
-    .controller('ContactoController', [function() {
+    angular.module('acdesarrollos.contacto', ['ngRoute'])
+        .controller('ContactoController', ContactoController);
 
-    }]);
+    ContactoController.$inject = ['$scope', '$location'];
+
+    function ContactoController($scope, $location) {
+        var vm = this;
+
+
+    };
+
+})();

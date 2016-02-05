@@ -1,17 +1,23 @@
-<div class="container container-color">
+<div ng-controller="SabiasController as sabiasCtrl" class="container container-color container-menu-margin">
     <div class="container-info">
-        <h1>Sabias?</h1>
-        <p>
-            Siendo un empresa de sistemas forjandose en los &uacute;ltimos a&ntilde;os, nuestra visi&oacute;n del
-            mercado es muy diferente de las empresas tradicionales Argentinas. Nuestro objetivo
-            es el servicio y servicio solo lo entendemos por entregar el producto, lo entedemos por
-            entregar el producto y establecer una relaci&oacute;n con el cliente de soporte y crecimiento.
-        </p>
+        <div class="sabias-slider">
+            <h1>Sab&iacute;as qué?</h1>
+            <div class="sabias-container">
+                <div class="sabias-container-2">
 
+                </div>
+            </div>
 
-        <div class="back">
-            <div class="arrow-left"></div>
-            <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/view1'});">Volver</a>
+            <div class="slider-indicator">
+                <div class="slider_1" ng-class="{slider_selected:sabiasCtrl.slider_nro==1}"
+                     ng-click="sabiasCtrl.slider_nro=1;"></div>
+                <div class="slider_2" ng-class="{slider_selected:sabiasCtrl.slider_nro==2}"
+                     ng-click="sabiasCtrl.slider_nro=2;"></div>
+                <div class="slider_3" ng-class="{slider_selected:sabiasCtrl.slider_nro==3}"
+                     ng-click="sabiasCtrl.slider_nro=3;"></div>
+                <div class="slider_4" ng-class="{slider_selected:sabiasCtrl.slider_nro==4}"
+                     ng-click="sabiasCtrl.slider_nro=4;"></div>
+            </div>
         </div>
     </div>
 </div>

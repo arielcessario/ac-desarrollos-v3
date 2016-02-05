@@ -24,6 +24,7 @@ $color_3:#50232e;
 $color_4:#a1cca5;
 $color_5:#eee;
 $color_6:#000;
+$color_7:#8CC63F;
 
 @import "compass/reset";
 @import "compass";
@@ -57,6 +58,17 @@ html {
 *:focus {
   outline: 0;
 }
+
+.color-default{
+  color:$color_6;
+}
+.color-primary{
+  color:$color_2;
+}
+.color-terciary{
+  color:$color_4;
+}
+
 
 //SECCION PARA EL MENU
 .header {
@@ -459,7 +471,9 @@ select option {
 //SECCION PARA EL CONTENEDOR CON INFORMACION
 .view-container {
   display: flex;
-  margin-top: 100px;
+  //margin-top: 100px;
+  margin-top: 15%;
+
   @media (min-width: 800px) {
     margin-top: 210px;
     height: 600px;
@@ -490,6 +504,12 @@ strong{
   width: 100%;
   padding: 10px 0;
   text-align: justify;
+}
+.container-menu-margin{
+  margin-top: 50px;
+  @media (min-width: 800px) {
+    margin-top: 0;
+  }
 }
 .container-color{
   background-color: $color_5;
@@ -650,13 +670,21 @@ label {
   flex-direction: row;
   margin-bottom: 15px;
 }
-.noticia-foto{
+.show-noticia-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.noticia-foto {
   /*
   border: 1px solid $color_6;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   */
+}
+.show-noticia-foto{
+  margin: 30px 0 20px;
 }
 .noticia-foto > img{
   height: 100px;
@@ -667,10 +695,22 @@ label {
   border-radius: 20px;
   text-align: center;
 }
+.show-noticia-foto > img{
+  height: 200px;
+  width: 100%;
+  border: 1px solid $color_6;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
 .noticia-info{
   margin-left: 20px;
 }
-.noticia-info > p{
+.show-noticia-info {
+  margin: 0 15px;
+}
+.noticia-info > p, .show-noticia-info > p{
   font-size: 12px;
 }
 .buscar{
@@ -714,8 +754,53 @@ label {
     width: 60%;
   }
 }
-
-
+.sabias-slider{
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.sabias-container{
+  height: 300px;
+  width: 350px;
+  border: 1px solid $color_4;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  @media (min-width: 800px) {
+    width: 500px;
+  }
+}
+.sabias-container-2{
+  height: 278px;
+  width: 328px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: $color_4;
+  margin: 10px;
+  @media (min-width: 800px) {
+    width: 478px;
+  }
+}
+.slider-indicator{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.slider_1, .slider_2, .slider_3, .slider_4 {
+  border: 1px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 10px;
+}
+.slider_selected {
+  background-color: $color_7;
+  border: 1px solid #fff;
+}
 //=========================================================================0
 //SECCION PARA EL FOOTER
 .footer {

@@ -1,14 +1,19 @@
-'use strict';
+(function () {
 
-angular.module('ac.noticias', ['ngRoute'])
+    'use strict';
+    var scripts = document.getElementsByTagName("script");
+    var currentScriptPath = scripts[scripts.length - 1].src;
 
-    .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/noticia', {
-            templateUrl: 'noticias/noticia.html',
-            controller: 'NoticiaController'
-        });
-    }])
+    angular.module('acdesarrollos.noticias', ['ngRoute'])
+        .controller('NoticiaController', NoticiaController);
 
-    .controller('NoticiaController', [function() {
+    NoticiaController.$inject = ['$scope', '$location'];
 
-    }]);
+    function NoticiaController($scope, $location) {
+        var vm = this;
+
+
+    };
+
+})();
+
