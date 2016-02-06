@@ -367,13 +367,42 @@ select option {
         -o-transform: scale(5, 5);
         transform: scale(5, 5);
 
-
+      //-webkit-animation: latido 1s infinite;
+      //-o-animation: latido 1s infinite;
+      //animation: latido 1s infinite;
       pointer-events: none;
 
 
     }
   }
 
+}
+
+@keyframes latido{
+  0%{
+
+    -webkit-transform: scale(5, 5);
+    -moz-transform: scale(5, 5);
+    -ms-transform: scale(5, 5);
+    -o-transform: scale(5, 5);
+    transform: scale(5, 5);
+  }
+  75%{
+
+    -webkit-transform: scale(5.2, 5.2);
+    -moz-transform: scale(5.2, 5.2);
+    -ms-transform: scale(5.2, 5.2);
+    -o-transform: scale(5.2, 5.2);
+    transform: scale(5.2, 5.2);
+  }
+  100%{
+
+    -webkit-transform: scale(5, 5);
+    -moz-transform: scale(5, 5);
+    -ms-transform: scale(5, 5);
+    -o-transform: scale(5, 5);
+    transform: scale(5, 5);
+  }
 }
 
 .menu-desktop {
@@ -523,12 +552,66 @@ select option {
   display: flex;
   //margin-top: 100px;
   margin-top: 15%;
+  
 
   @media (min-width: 800px) {
     margin-top: 140px;
     height: 600px;
   }
 }
+
+.view-container.ng-enter{
+  -webkit-animation: view-in 0.5s ease;
+  -o-animation: view-in 0.5s ease;
+  animation: view-in 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+.view-container.ng-leave{
+  -webkit-animation: view-out 0.5s ease;
+  -o-animation: view-out 0.5s ease;
+  animation: view-out 0.5s ease;
+  position: absolute;
+  width: 100%;
+}
+
+
+@keyframes view-in {
+  0%{
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -o-transform: translateX(200%);
+    transform: translateX(200%);
+  }
+  100%{
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  
+}
+
+@keyframes view-out {
+  0%{
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+  100%{
+    -webkit-transform: translateX(-200%);
+    -moz-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    -o-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+
+}
+
 
 h1 {
   font-size: 40px;
