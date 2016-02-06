@@ -134,8 +134,8 @@
     vm.goTo = goTo;
     vm.selectedPage = 'INICIO';
     vm.menu_mobile_open = false;
-    vm.display_menu = false;
-    vm.display_header = false;
+    vm.display_menu = true;
+    vm.display_header = true;
     vm.links = LinksService.links;
 
     function goTo(location) {
@@ -143,17 +143,18 @@
       $location.path(location.path);
       vm.selectedPage = location.nombre;
 
-      if(location.nombre != 'Volver') {
+      if(location.nombre != 'INICIO') {
         vm.display_menu = true;
         vm.display_header = true;
       } else {
-        vm.display_menu = false;
-        vm.display_header = false;
+        vm.display_menu = true;
+        vm.display_header = true;
+        vm.selectedPage = 'INICIO';
       }
 
     }
 
-  };
+  }
 
 
 })();

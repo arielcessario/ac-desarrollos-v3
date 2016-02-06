@@ -151,7 +151,7 @@
 <body ng-controller="AppController as appCtrl">
 
   <div class="header"
-       ng-class="{'display-header':appCtrl.display_header != true}">
+       ng-class="{'display-header': !appCtrl.display_header, 'header-as-main': appCtrl.selectedPage == 'INICIO'}">
     <div class="menu-mobile menu-type-mobile">
       <div class="nav-button"
            ng-click="appCtrl.menu_mobile_open = !appCtrl.menu_mobile_open;"
@@ -162,14 +162,14 @@
       </div>
 
       <div class="logo">
-        <img src="images/logo.png" alt="logo" height="45px" width="150px">
+        <img src="images/logo.png" alt="logo" height="30px" width="150px">
       </div>
     </div>
 
     <div class="menu-desktop menu-type-desktop"
          ng-class="{'display-menu-desktop':appCtrl.display_menu != true }" >
       <div id="menu-desktop-logo" ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">
-        <img src="images/logo.png" alt="logo" height="115px" width="140px">
+        <img src="images/logo.png" alt="logo" height="45">
       </div>
       <div id="menu-desktop-right">
         <div id="menu-desktop-upper"></div>
