@@ -6,6 +6,8 @@
   angular.module('acDesarrollos', ['oc.lazyLoad',
     'ngRoute',
     'ngAnimate',
+    'acUtils',
+    'acContacts'
     //'angular-storage'
   ]).config(['$routeProvider', function($routeProvider) {
 

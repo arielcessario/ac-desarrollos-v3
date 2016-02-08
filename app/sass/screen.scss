@@ -555,7 +555,8 @@ select option {
   
 
   @media (min-width: 800px) {
-    margin-top: 140px;
+    //margin-top: 140px;
+    margin-top: 135px;
     height: 600px;
   }
 }
@@ -618,7 +619,7 @@ h1 {
   font-weight: bold;
   padding: 10px 0;
   @media (min-width: 800px) {
-    font-size: 76px;
+    font-size: 70px;
   }
 }
 

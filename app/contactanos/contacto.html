@@ -1,4 +1,4 @@
-<div class="container container-color container-menu-margin">
+<div ng-controller="ContactoController as contactoCtrl" class="container container-color container-menu-margin">
     <div class="container-info">
         <h1 class="color-primary">Cont&aacute;ctanos:</h1>
         <div class="contacto-container">
@@ -8,25 +8,25 @@
             <div class="contacto-controls">
                 <div class="controls">
                     <label>Escribe tu nombre:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" ng-model="contactoCtrl.nombre" id="contacto-nombre" >
                 </div>
                 <div class="controls">
                     <label>E-mail:</label>
-                    <input type="email" class="form-control">
+                    <input type="email" class="form-control" ng-model="contactoCtrl.email" type="text" id="contacto-mail">
                 </div>
                 <div class="controls">
                     <label>Asunto:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" ng-model="contactoCtrl.asunto" type="text" id="contacto-asunto">
                 </div>
                 <div class="controls">
                     <label>Consulta:</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" ng-model="contactoCtrl.mensaje" name="" id="contacto-consulta">
                 </div>
             </div>
         </div>
         <div class="btn-action">
             <div class="arrow-up"></div>
-            <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Enviar</a>
+            <a href="" ng-click="contactoCtrl.sendMail();">Enviar</a>
         </div>
         <div class="logo-container" style="margin-top: 50px">
             <img class="" src="images/logo.png" width="70px" height="70px">
