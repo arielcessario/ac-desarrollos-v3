@@ -586,6 +586,12 @@ select option {
     transform: translateY(-200%);
     opacity: 0;
   }
+
+  20%{
+  opacity: 0;
+
+  }
+
   100%{
     -webkit-transform: translateY(0%);
     -moz-transform: translateY(0%);
