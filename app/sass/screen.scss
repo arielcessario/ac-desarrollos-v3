@@ -29,7 +29,7 @@ $color_7: #8CC63F;
 @import "compass/reset";
 @import "compass";
 @import "compass/css3/font-face";
-
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
 //@include font-face($font_primary, font-files("MYRIADPRO-COND.woff"));
 //@include font-face($font_secundary, font-files("MYRIADPRO-BOLDCOND.woff"));
 
@@ -255,7 +255,7 @@ select option {
 
   .menu-desktop-btn {
     margin-top: 15px;
-    font-family: 'Open Sans', serif;
+    font-family: 'Oswald', sans-serif;
     line-height: 18px;
     padding: 5px;
     font-variant: all-petite-caps;
@@ -310,6 +310,7 @@ select option {
     -o-transform: translate(0px, 0);
     transform: translate(0px, 0);
   }
+
 }
 
 @keyframes menu-mobile-leave {
@@ -484,7 +485,8 @@ select option {
 
       .menu-desktop-btn {
         cursor: pointer;
-        font-family: Arial, serif;
+        font-family: 'Oswald', sans-serif;
+        color: black;
         //font-weight: lighter;
         //letter-spacing: .9px;
         //margin-top: 10px;
@@ -494,8 +496,6 @@ select option {
         //max-height: 26px;
         position: relative;
         //color: white;
-        color: $color_6;
-        opacity: 0.5;
 
         -webkit-transition: opacity .5s ease-in-out;
         -moz-transition: opacity .5s ease-in-out;
@@ -615,19 +615,21 @@ select option {
 
 
 h1 {
+  font-family: 'Oswald', sans-serif;
   font-size: 40px;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 5px 0;
   @media (min-width: 800px) {
-    font-size: 70px;
+    font-size: 80px;
   }
 }
 
 h3 {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
   padding: 10px 0;
-  color: $color_4;
+  color: darkgoldenrod;
+  font-variant: all-small-caps;
 }
 
 h5 {
@@ -653,7 +655,16 @@ strong {
 }
 
 .container-color {
-  background-color: $color_5;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaefb5+0,e1e9a0+100;Wax+Flat */
+  background: rgb(234,239,181); /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  rgba(234,239,181,1) 0%, rgba(225,233,160,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  rgba(234,239,181,1) 0%,rgba(225,233,160,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  rgba(234,239,181,1) 0%,rgba(225,233,160,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaefb5', endColorstr='#e1e9a0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+
+
 }
 
 .container-info {
@@ -662,6 +673,17 @@ strong {
     margin: 0 20%;
   }
 }
+
+.container-info p{
+  font-size: 17px;
+  font-family: 'Oswald', sans-serif;
+  color: black;
+  font-weight: 400;
+
+
+}
+
+
 
 .logo-container {
   text-align: center;
@@ -770,6 +792,7 @@ strong {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .back > a, .btn-action > a {
@@ -804,6 +827,7 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
   //font-weight: 500;
 }
 
@@ -837,7 +861,7 @@ label {
 }
 
 .noticia-foto {
-  /*
+    /*
   border: 1px solid $color_6;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -856,6 +880,7 @@ label {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+  background-color: lightgrey;
   text-align: center;
 }
 
@@ -941,7 +966,7 @@ label {
   -moz-border-radius: 20px;
   border-radius: 20px;
   @media (min-width: 800px) {
-    width: 500px;
+    width: 800px;
   }
 }
 
@@ -954,7 +979,7 @@ label {
   background-color: $color_4;
   margin: 10px;
   @media (min-width: 800px) {
-    width: 478px;
+    width: 780px;
   }
 }
 
