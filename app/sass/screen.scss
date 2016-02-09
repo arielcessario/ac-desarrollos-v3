@@ -569,9 +569,9 @@ select option {
   width: 100%;
 }
 .view-container.ng-leave{
-  //-webkit-animation: view-out 0.5s ease;
-  //-o-animation: view-out 0.5s ease;
-  //animation: view-out 0.5s ease;
+  -webkit-animation: view-out 1s ease;
+  -o-animation: view-out 1s ease;
+  animation: view-out 1s ease;
   position: absolute;
   width: 100%;
 }
@@ -610,13 +610,20 @@ select option {
     -ms-transform: translateY(0%);
     -o-transform: translateY(0%);
     transform: translateY(0%);
+    opacity: 1;
+  }
+
+  20%{
+    opacity: 0;
+
   }
   100%{
-    -webkit-transform: translateY(-200%);
-    -moz-transform: translateY(-200%);
-    -ms-transform: translateY(-200%);
-    -o-transform: translateY(-200%);
-    transform: translateY(-200%);
+    -webkit-transform: translateY(200%);
+    -moz-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    -o-transform: translateY(200%);
+    transform: translateY(200%);
+    opacity: 0;
   }
 
 }
