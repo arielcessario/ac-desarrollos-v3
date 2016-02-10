@@ -113,6 +113,9 @@ html {
     //height: 120px;
     height: 140px;
     background-color: #fff;
+    -webkit-box-shadow: 0px 15px 5px -9px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0px 15px 5px -9px rgba(0,0,0,0.09);
+    box-shadow: 0px 15px 5px -9px rgba(0,0,0,0.09);
   }
 }
 
