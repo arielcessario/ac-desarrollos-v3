@@ -5,20 +5,29 @@
         <div id="main-slider">
 
             <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 1}" class="main-slider-proyecto">
-                <h3>{{hacemosCtrl.slider_01.titulo}}</h3>
-                <p>{{hacemosCtrl.slider_01.descripcion}}</p>
+                <h3 class="color-terciary">Ecommerce, Mcommerce y Comercio Social:</h3>
+                <p>El comercio electronico, tambien conocido como e-commerce (electronic commerce en inglés), consiste en la compra y venta de productos o de servicios a traves de medios electronicos.</p>
+                <p>La mayor parte del comercio electronico consiste en la compra y venta de productos o servicios entre personas y empresas, sin embargo un porcentaje considerable del comercio electrónico consiste en la adquisición de artículos virtuales (software y derivados en su mayoría), tales como el acceso a contenido "premium" de un sitio web.</p>
             </div>
-
             <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 2}" class="main-slider-proyecto">
-                <h3>{{hacemosCtrl.slider_02.titulo}}</h3>
-                <p>{{hacemosCtrl.slider_02.descripcion}}</p>
+                <h3 class="color-primary">Institucionales:</h3>
+                <p>Los sitios web institucionales están desarrollados para brindar al usuario información concisa sobre los datos de la empresa, a lo que se dedica y las formas de contacto.</p>
+                <p>Los sitios web institucionales están desarrollados para brindar al usuario información concisa sobre los datos de la empresa, a lo que se dedica y las formas de contacto.</p>
             </div>
-
             <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 3}" class="main-slider-proyecto">
-                <h3>{{hacemosCtrl.slider_03.titulo}}</h3>
-                <p>{{hacemosCtrl.slider_03.descripcion}}</p>
+                <h3 class="color-terciary">Sistemas de gestión:</h3>
+                <p>Un sistema robusto y completo que permite realizar l agestión de ventas, stock, clientes y movimientos contables. Un sistema en evolución constante que crece de acuerdo a las necesidades de nuestros clientes</p>
             </div>
-
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 4}" class="main-slider-proyecto">
+                <h3 class="color-primary">Desarrollos a medida:</h3>
+                <p>Si tenés una idea, nosotros te damos un plan para implementarla de una forma seria y aplicando todas las nuevas tecnologias del mercado.</p>
+                <p>No importa como sea tu negocio, siempre podés contar con nosotros para poder llevar a cabu tu proyecto.</p>
+                <p>Todos nuestros diseños y desarrollos estan pensados de acuerdo a las necesidades y el negocio de nuestro cliente, cada página es una experiencia única e irrepetible.</p>
+            </div>
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 5}" class="main-slider-proyecto">
+                <h3 class="color-terciary">Analiticas:</h3>
+                <p>Te ofrecemos las mejores herramientas para que puedas ver que está pasando en tu sitio, las páginas más visitadas, los países, los idiomas, los gustos de tus usuarios y mucho más.</p>
+            </div>
         </div>
 
 
@@ -34,6 +43,10 @@
                  ng-click="hacemosCtrl.slider_nro=2;"></div>
             <div class="slider_3" ng-class="{slider_selected:hacemosCtrl.slider_nro==3}"
                  ng-click="hacemosCtrl.slider_nro=3;"></div>
+            <div class="slider_4" ng-class="{slider_selected:hacemosCtrl.slider_nro==4}"
+                 ng-click="hacemosCtrl.slider_nro=4;"></div>
+            <div class="slider_5" ng-class="{slider_selected:hacemosCtrl.slider_nro==5}"
+                 ng-click="hacemosCtrl.slider_nro=5;"></div>
         </div>
     </div>
 </div>
