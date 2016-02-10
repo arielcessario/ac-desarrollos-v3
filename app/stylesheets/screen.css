@@ -1028,7 +1028,7 @@ border-radius: 20px;
 }
 
 /* line 1010, ../sass/screen.scss */
-.slider_1, .slider_2, .slider_3, .slider_4 {
+.slider_1, .slider_2, .slider_3, .slider_4, .slider_5 {
   border: 1px solid #333;
   border-radius: 10px;
   cursor: pointer;
