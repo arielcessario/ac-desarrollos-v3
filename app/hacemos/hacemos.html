@@ -1,39 +1,39 @@
-<div class="container container-color container-menu-margin">
+<div ng-controller="HacemosController as hacemosCtrl" class="container container-color container-menu-margin">
     <div class="container-info">
         <h1>Que hacemos?</h1>
-        <h3>Ecommerce, Mcommerce y Comercio Social:</h3>
-        <p>
-            El comercio electrónico, también conocido como e-commerce (electronic commerce en inglés),
-            consiste en la compra y venta de productos o de servicios a través de medios electrónicos.
-        </p>
-        <br>
-        <p>
-            La mayor parte del comercio electrónico consiste en la compra y venta de productos o servicios
-            entre personas y empresas, sin embargo un porcentaje considerable del comercio electrónico consiste
-            en la adquisición de artículos virtuales (software y derivados en su mayoría), tales como el acceso
-            a contenido "premium" de un sitio web.
-        </p>
-        <br>
-        <p>
-            M-Commerce o comercio móvil (del anglicismo Mobile Commerce) toma sus bases del e-commerce,
-            solo que llevando todas las transacciones a nivel de poder ser ejecutadas desde un teléfono
-            móvil u otro dispositivo inalámbrico móvil.
-        </p>
-        <br>
-        <p>
-            El comercio social (en inglés: social commerce) es una ramificación del comercio electrónico que supone el uso de
-            redes sociales para ayudar en la compra y venta en línea de productos y servicios.
-        </p>
-        <br>
-        <p>
-            El término comercio social fue acuñado por Yahoo! en noviembre de 20051 para describir un conjunto de herramientas de
-            compra colaborativa tales como listas compartidas, valoraciones de usuarios y otro tipo de información y consejos
-            generados por usuarios.
-        </p>
+
+        <div id="main-slider">
+
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 1}" class="main-slider-proyecto">
+                <h3>{{hacemosCtrl.slider_01.titulo}}</h3>
+                <p>{{hacemosCtrl.slider_01.descripcion}}</p>
+            </div>
+
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 2}" class="main-slider-proyecto">
+                <h3>{{hacemosCtrl.slider_02.titulo}}</h3>
+                <p>{{hacemosCtrl.slider_02.descripcion}}</p>
+            </div>
+
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 3}" class="main-slider-proyecto">
+                <h3>{{hacemosCtrl.slider_03.titulo}}</h3>
+                <p>{{hacemosCtrl.slider_03.descripcion}}</p>
+            </div>
+
+        </div>
+
 
         <div class="back">
             <div class="arrow-left"></div>
             <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
+        </div>
+
+        <div class="slider-indicator">
+            <div class="slider_1" ng-class="{slider_selected:hacemosCtrl.slider_nro==1}"
+                 ng-click="hacemosCtrl.slider_nro=1;"></div>
+            <div class="slider_2" ng-class="{slider_selected:hacemosCtrl.slider_nro==2}"
+                 ng-click="hacemosCtrl.slider_nro=2;"></div>
+            <div class="slider_3" ng-class="{slider_selected:hacemosCtrl.slider_nro==3}"
+                 ng-click="hacemosCtrl.slider_nro=3;"></div>
         </div>
     </div>
 </div>

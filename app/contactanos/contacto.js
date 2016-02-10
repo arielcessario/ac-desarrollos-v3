@@ -25,16 +25,16 @@
         vm.sendMail = sendMail;
 
         function sendMail() {
-            console.log(vm.nombre);
+            //console.log(vm.nombre);
 
             /*
             if(vm.enviando){
                 return;
             }
             vm.enviando = true;
-
+            */
             ContactsService.sendMail(vm.email,
-                [{mail: 'arielcessario@gmail.com'}],
+                [{mail: 'mmaneff@gmail.com'}],
                 vm.nombre,
                 vm.mensaje,
                 vm.asunto,
@@ -49,7 +49,7 @@
                     vm.mensaje = '';
 
                 });
-                */
+
         }
 
     };

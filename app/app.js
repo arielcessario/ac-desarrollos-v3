@@ -8,7 +8,6 @@
     'ngAnimate',
     'acUtils',
     'acContacts'
-    //'angular-storage'
   ]).config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.otherwise('/main');
