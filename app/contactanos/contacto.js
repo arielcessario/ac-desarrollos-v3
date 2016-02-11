@@ -8,9 +8,9 @@
     angular.module('acdesarrollos.contacto', ['ngRoute'])
         .controller('ContactoController', ContactoController);
 
-    ContactoController.$inject = ['$scope', '$location', 'ContactsService'];
+    ContactoController.$inject = ['$scope', 'ContactsService'];
 
-    function ContactoController($scope, $location, ContactsService) {
+    function ContactoController($scope, ContactsService) {
         var vm = this;
 
         vm.email = '';

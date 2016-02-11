@@ -1,34 +1,39 @@
 <div ng-controller="ContactoController as contactoCtrl" class="container container-color container-menu-margin">
-    <div class="container-info">
+    <div class="container-info" form-id="contacto">
         <h1 class="color-primary">Cont&aacute;ctanos:</h1>
-        <div class="contacto-container">
+        <div class="contacto-container" id="contacto-form">
             <div class="arrow-contacto">
                 <div class="arrow-right"></div>
             </div>
-            <div class="contacto-controls">
+            <div class="contacto-controls" >
                 <div class="controls">
                     <label>Escribe tu nombre:</label>
-                    <input type="text" class="form-control" ng-model="contactoCtrl.nombre" id="contacto-nombre" >
+                    <input ac-validator is-required="Debe ingresar un nombre" type="text"
+                           class="form-control" ng-model="contactoCtrl.nombre" id="contacto-nombre" >
                 </div>
                 <div class="controls">
                     <label>E-mail:</label>
-                    <input type="email" class="form-control" ng-model="contactoCtrl.email" type="text" id="contacto-mail">
+                    <input ac-validator is-mail="El mail es incorrecto" type="email"
+                           class="form-control" ng-model="contactoCtrl.email" type="text" id="contacto-mail">
                 </div>
                 <div class="controls">
                     <label>Asunto:</label>
-                    <input type="text" class="form-control" ng-model="contactoCtrl.asunto" type="text" id="contacto-asunto">
+                    <input ac-validator is-required="Debe ingresar un tema de consulta" type="text"
+                           class="form-control" ng-model="contactoCtrl.asunto" type="text" id="contacto-asunto">
                 </div>
                 <div class="controls">
                     <label>Consulta:</label>
-                    <input type="text" class="form-control" ng-model="contactoCtrl.mensaje" name="" id="contacto-consulta">
+                    <input ac-validator is-required="Debe ingresar una consulta" type="text"
+                           class="form-control" ng-model="contactoCtrl.mensaje" name="" id="contacto-consulta">
                 </div>
             </div>
         </div>
         <div class="btn-action">
             <div class="arrow-up"></div>
-            <a href="" ng-click="contactoCtrl.sendMail();">Enviar</a>
+            <!--a href="" ng-click="contactoCtrl.sendMail();">Enviar</a-->
+            <button id="contacto-enviar-mobile" ac-validator ng-click="contactoCtrl.sendMail();">Enviar</button>
         </div>
-        <div class="logo-container" style="margin-top: 50px">
+        <div class="logo-container" style="margin-top: 150px">
             <img class="" src="images/logo.png" width="140px">
         </div>
     </div>

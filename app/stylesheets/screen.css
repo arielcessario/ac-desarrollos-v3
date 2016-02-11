@@ -834,10 +834,10 @@ textarea {
   border-bottom-width: 1px;
   border-bottom-color: #000;
   background-color: transparent;
-  margin: 0 0 10px;
+  margin-left: 5px;
 }
 
-/* line 844, ../sass/screen.scss */
+/* line 845, ../sass/screen.scss */
 label {
   display: inline-block;
   max-width: 100%;
@@ -845,7 +845,7 @@ label {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 852, ../sass/screen.scss */
+/* line 853, ../sass/screen.scss */
 .form-control {
   display: block;
   width: 100%;
@@ -859,21 +859,21 @@ label {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-/* line 869, ../sass/screen.scss */
+/* line 870, ../sass/screen.scss */
 .noticia-container {
   display: flex;
   flex-direction: row;
   margin-bottom: 15px;
 }
 
-/* line 875, ../sass/screen.scss */
+/* line 876, ../sass/screen.scss */
 .show-noticia-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-/* line 881, ../sass/screen.scss */
+/* line 882, ../sass/screen.scss */
 .noticia-foto {
   /*
 border: 1px solid $color_6;
@@ -883,12 +883,12 @@ border-radius: 20px;
 */
 }
 
-/* line 890, ../sass/screen.scss */
+/* line 891, ../sass/screen.scss */
 .show-noticia-foto {
   margin: 30px 0 20px;
 }
 
-/* line 894, ../sass/screen.scss */
+/* line 895, ../sass/screen.scss */
 .noticia-foto > img {
   height: 100px;
   width: 100px;
@@ -900,7 +900,7 @@ border-radius: 20px;
   text-align: center;
 }
 
-/* line 905, ../sass/screen.scss */
+/* line 906, ../sass/screen.scss */
 .show-noticia-foto > img {
   height: 200px;
   width: 100%;
@@ -911,27 +911,27 @@ border-radius: 20px;
   text-align: center;
 }
 
-/* line 915, ../sass/screen.scss */
+/* line 916, ../sass/screen.scss */
 .noticia-info {
   margin-left: 20px;
 }
 
-/* line 919, ../sass/screen.scss */
+/* line 920, ../sass/screen.scss */
 .show-noticia-info {
   margin: 0 15px;
 }
 
-/* line 923, ../sass/screen.scss */
+/* line 924, ../sass/screen.scss */
 .noticia-info > p, .show-noticia-info > p {
   font-size: 12px;
 }
 
-/* line 927, ../sass/screen.scss */
+/* line 928, ../sass/screen.scss */
 .buscar {
   margin-top: 20px;
 }
 
-/* line 931, ../sass/screen.scss */
+/* line 932, ../sass/screen.scss */
 .buscar-control {
   width: 89%;
   background-image: none;
@@ -941,14 +941,14 @@ border-radius: 20px;
 }
 
 @media (min-width: 800px) {
-  /* line 940, ../sass/screen.scss */
+  /* line 941, ../sass/screen.scss */
   .contacto-container {
     flex-direction: row;
     display: flex;
     width: 80%;
   }
 
-  /* line 945, ../sass/screen.scss */
+  /* line 946, ../sass/screen.scss */
   .arrow-contacto {
     border-left: 1px solid #000;
     margin-right: 5%;
@@ -957,7 +957,7 @@ border-radius: 20px;
     margin-left: 10%;
   }
 
-  /* line 952, ../sass/screen.scss */
+  /* line 953, ../sass/screen.scss */
   .contacto-controls {
     width: 100%;
     display: flex;
@@ -965,7 +965,7 @@ border-radius: 20px;
     align-items: flex-end;
   }
 
-  /* line 958, ../sass/screen.scss */
+  /* line 959, ../sass/screen.scss */
   .contacto-controls > .controls {
     width: 100%;
     display: flex;
@@ -973,13 +973,13 @@ border-radius: 20px;
     justify-content: flex-end;
   }
 
-  /* line 964, ../sass/screen.scss */
+  /* line 965, ../sass/screen.scss */
   .contacto-controls > .controls > .form-control {
     display: inline;
     width: 60%;
   }
 }
-/* line 970, ../sass/screen.scss */
+/* line 971, ../sass/screen.scss */
 .sabias-slider {
   display: flex;
   flex-direction: column;
@@ -987,7 +987,7 @@ border-radius: 20px;
   width: 100%;
 }
 
-/* line 979, ../sass/screen.scss */
+/* line 980, ../sass/screen.scss */
 .sabias-container {
   height: 300px;
   width: 350px;
@@ -997,13 +997,13 @@ border-radius: 20px;
   border-radius: 20px;
 }
 @media (min-width: 800px) {
-  /* line 979, ../sass/screen.scss */
+  /* line 980, ../sass/screen.scss */
   .sabias-container {
     width: 800px;
   }
 }
 
-/* line 991, ../sass/screen.scss */
+/* line 992, ../sass/screen.scss */
 .sabias-container-2 {
   height: 278px;
   width: 328px;
@@ -1014,20 +1014,20 @@ border-radius: 20px;
   margin: 10px;
 }
 @media (min-width: 800px) {
-  /* line 991, ../sass/screen.scss */
+  /* line 992, ../sass/screen.scss */
   .sabias-container-2 {
     width: 780px;
   }
 }
 
-/* line 1004, ../sass/screen.scss */
+/* line 1005, ../sass/screen.scss */
 .slider-indicator {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* line 1010, ../sass/screen.scss */
+/* line 1011, ../sass/screen.scss */
 .slider_1, .slider_2, .slider_3, .slider_4, .slider_5 {
   border: 1px solid #333;
   border-radius: 10px;
@@ -1037,13 +1037,13 @@ border-radius: 20px;
   margin: 10px;
 }
 
-/* line 1019, ../sass/screen.scss */
+/* line 1020, ../sass/screen.scss */
 .slider_selected {
   background-color: #8CC63F;
   border: 1px solid #fff;
 }
 
-/* line 1026, ../sass/screen.scss */
+/* line 1027, ../sass/screen.scss */
 .footer {
   font-family: Arial, serif;
   font-size: 16px;
@@ -1055,7 +1055,7 @@ border-radius: 20px;
   height: 160px;
 }
 @media (min-width: 800px) {
-  /* line 1026, ../sass/screen.scss */
+  /* line 1027, ../sass/screen.scss */
   .footer {
     position: relative;
     bottom: 0;
@@ -1064,19 +1064,19 @@ border-radius: 20px;
   }
 }
 
-/* line 1044, ../sass/screen.scss */
+/* line 1045, ../sass/screen.scss */
 .footer > p {
   margin: 35px 50px;
   text-align: center;
 }
 @media (min-width: 800px) {
-  /* line 1044, ../sass/screen.scss */
+  /* line 1045, ../sass/screen.scss */
   .footer > p {
     margin: 10px 0;
   }
 }
 
-/* line 1052, ../sass/screen.scss */
+/* line 1053, ../sass/screen.scss */
 .footer > p > a {
   text-decoration: none;
   color: #ce5f2d;
@@ -1276,12 +1276,12 @@ label {
 }
 
 */
-/* line 1254, ../sass/screen.scss */
+/* line 1255, ../sass/screen.scss */
 #main-slider {
   height: 370px;
   position: relative;
 }
-/* line 1260, ../sass/screen.scss */
+/* line 1261, ../sass/screen.scss */
 #main-slider h1 {
   color: black;
   font-family: 'Droid Sans', sans-serif;
@@ -1291,21 +1291,21 @@ label {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-/* line 1269, ../sass/screen.scss */
+/* line 1270, ../sass/screen.scss */
 #main-slider p {
   font-family: 'Droid Sans', sans-serif;
   font-size: 16px;
   margin-bottom: 20px;
   overflow: hidden;
 }
-/* line 1277, ../sass/screen.scss */
+/* line 1278, ../sass/screen.scss */
 #main-slider img {
   max-height: 100%;
   max-width: 100%;
   vertical-align: middle;
   text-align: center;
 }
-/* line 1285, ../sass/screen.scss */
+/* line 1286, ../sass/screen.scss */
 #main-slider .button-ver {
   width: 54px;
   height: 32px;
@@ -1326,12 +1326,12 @@ label {
   -o-transition: all .3s;
   transition: all .3s;
 }
-/* line 1307, ../sass/screen.scss */
+/* line 1308, ../sass/screen.scss */
 #main-slider .button-ver:hover {
   cursor: pointer;
   background-color: orange;
 }
-/* line 1319, ../sass/screen.scss */
+/* line 1320, ../sass/screen.scss */
 #main-slider .main-slider-proyecto {
   opacity: 0;
   position: absolute;
@@ -1348,9 +1348,74 @@ label {
   transition: all 0.4s;
 }
 
-/* line 1343, ../sass/screen.scss */
+/* line 1344, ../sass/screen.scss */
 .show-slider-proyecto {
   opacity: 1 !important;
   z-index: 0;
   pointer-events: all !important;
+}
+
+/* line 1350, ../sass/screen.scss */
+button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* line 1356, ../sass/screen.scss */
+button:hover {
+  color: #ce5f2d;
+}
+
+/* line 1359, ../sass/screen.scss */
+.ac-mensaje-custom-show {
+  background-color: #a1cca5;
+  text-align: center;
+  border: 1px solid #000;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* line 1372, ../sass/screen.scss */
+#message-chat {
+  height: 250px;
+  overflow-y: auto;
+  border-right: 1px solid;
+}
+
+/* line 1377, ../sass/screen.scss */
+.chat-container {
+  flex-direction: column;
+  display: flex;
+  width: 80%;
+}
+
+/* line 1382, ../sass/screen.scss */
+.chat-container-login {
+  flex-direction: row;
+  display: flex;
+}
+
+/* line 1386, ../sass/screen.scss */
+.btn-chat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* line 1394, ../sass/screen.scss */
+#texto-mensaje {
+  width: 60%;
+  margin-left: 25%;
+  margin-top: 15px;
 }

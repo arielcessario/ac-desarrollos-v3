@@ -837,7 +837,8 @@ textarea {
   border-bottom-width: 1px;
   border-bottom-color: $color_6;
   background-color: transparent;
-  margin: 0 0 10px;
+  margin-left: 5px;
+  //margin: 0 0 10px;
   //padding: 10px 5px 5px;
 }
 
@@ -1344,4 +1345,54 @@ label {
   opacity: 1 !important;
   z-index: 0;
   pointer-events: all !important;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover{
+  color:$color_2;
+}
+.ac-mensaje-custom-show{
+  background-color: $color_4;
+  text-align: center;
+  border: 1px solid $color_6;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+#message-chat{
+  height: 250px;
+  overflow-y: auto;
+  border-right: 1px solid;
+}
+.chat-container{
+  flex-direction: column;
+  display: flex;
+  width: 80%;
+}
+.chat-container-login{
+  flex-direction: row;
+  display: flex;
+}
+.btn-chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 30px;
+  font-family: 'Oswald', sans-serif;
+}
+#texto-mensaje {
+  width: 60%;
+  margin-left: 25%;
+  margin-top: 15px;
 }
