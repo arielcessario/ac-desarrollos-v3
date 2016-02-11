@@ -248,7 +248,8 @@ select option {
 .menu-mobile-panel {
   width: 70%;
   color: white;
-  background-color: #17384B;
+  //background-color: #17384B;
+  background-color: $color_4;
   position: fixed;
   bottom: 0px;
   top: 50px;
@@ -258,6 +259,7 @@ select option {
 
   .menu-desktop-btn {
     margin-top: 15px;
+    margin-left: 15px;
     font-family: 'Oswald', sans-serif;
     line-height: 18px;
     padding: 5px;
@@ -800,8 +802,12 @@ strong {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 15%;
-  margin-top: 30px;
+  //margin-right: 15%;
+  //margin-top: 30px;
+  margin: 20px 15% 20px 0;
+  //@media (min-width: 800px) {
+  //  margin: 30px 15% 0 0;
+  //}
 }
 
 .btn-action {
@@ -935,6 +941,10 @@ label {
   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.arrow-contacto {
+  display: none;
 }
 
 @media (min-width: 800px) {
@@ -1269,11 +1279,13 @@ label {
   }
   p {
     font-family: 'Droid Sans', sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 20px;
     //max-height: 16px;
     overflow: hidden;
-
+    @media (min-width: 800px) {
+      font-size: 16px;
+    }
   }
   img {
     max-height: 100%;
