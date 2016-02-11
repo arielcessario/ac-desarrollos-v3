@@ -817,6 +817,9 @@ strong {
   align-items: center;
   margin-top: 30px;
   font-family: 'Oswald', sans-serif;
+  @media (min-width: 800px) {
+    align-items: flex-end;
+  }
 }
 
 .back > a, .btn-action > a {
@@ -947,9 +950,14 @@ label {
   display: none;
 }
 
+.contacto-controls {
+  width: 100%;
+}
+
 @media (min-width: 800px) {
   .contacto-container {
-    flex-direction: row;
+    //flex-direction: row;
+    flex-direction: column;
     display: flex;
     width: 80%;
   }
@@ -961,7 +969,7 @@ label {
     margin-left: 10%;
   }
   .contacto-controls {
-    width: 100%;
+    //width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -1389,9 +1397,12 @@ button:hover{
 .chat-container{
   flex-direction: column;
   display: flex;
-  width: 80%;
+  width: 100%;
+  @media (min-width: 800px) {
+    width: 80%;
+  }
 }
-.chat-container-login{
+.chat-container-login, .contacto-container-controls{
   flex-direction: row;
   display: flex;
 }
@@ -1399,12 +1410,41 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   margin-top: 30px;
   font-family: 'Oswald', sans-serif;
+  @media (min-width: 800px) {
+    align-items: flex-end;
+  }
 }
 #texto-mensaje {
   width: 60%;
   margin-left: 25%;
   margin-top: 15px;
 }
+.arrow-contacto-margin{
+  margin-right:0;
+  @media (min-width: 800px) {
+    margin-right:10px;
+  }
+}
+.arrow-chat-margin{
+  margin-right:0;
+  @media (min-width: 800px) {
+    margin-right:15px;
+  }
+}
+.controls-margin{
+  margin-top: 20px;
+}
+.error-message {
+  font-size: 11px;
+  color: red;
+  position: absolute;
+  //margin-left: 18%;
+  //margin-top: -15px;
+}
+
+
+
+

@@ -2,38 +2,40 @@
     <div class="container-info" form-id="contacto">
         <h1 class="color-primary">Cont&aacute;ctanos:</h1>
         <div class="contacto-container" id="contacto-form" style="margin-top:30px;">
-            <div class="arrow-contacto">
-                <div class="arrow-right"></div>
+            <div class="contacto-container-controls">
+                <div class="arrow-contacto">
+                    <div class="arrow-right"></div>
+                </div>
+                <div class="contacto-controls" >
+                    <div class="controls">
+                        <label>Escribe tu nombre:</label>
+                        <input ac-validator is-required="Debe ingresar un nombre" type="text"
+                               class="form-control" ng-model="contactoCtrl.nombre" id="contacto-nombre" >
+                    </div>
+                    <div class="controls controls-margin">
+                        <label>E-mail:</label>
+                        <input ac-validator is-mail="El mail es incorrecto" type="email"
+                               class="form-control" ng-model="contactoCtrl.email" id="contacto-mail">
+                    </div>
+                    <div class="controls controls-margin">
+                        <label>Asunto:</label>
+                        <input ac-validator is-required="Debe ingresar un tema de consulta" type="text"
+                               class="form-control" ng-model="contactoCtrl.asunto" id="contacto-asunto">
+                    </div>
+                    <div class="controls controls-margin">
+                        <label>Consulta:</label>
+                        <textarea ac-validator is-required="Debe ingresar una consulta" ng-model="contactoCtrl.mensaje"
+                                  class="form-control" name="" id="contacto-consulta" rows="10" style="height: 60px;"></textarea>
+                    </div>
+                </div>
             </div>
-            <div class="contacto-controls" >
-                <div class="controls">
-                    <label>Escribe tu nombre:</label>
-                    <input ac-validator is-required="Debe ingresar un nombre" type="text"
-                           class="form-control" ng-model="contactoCtrl.nombre" id="contacto-nombre" >
-                </div>
-                <div class="controls">
-                    <label>E-mail:</label>
-                    <input ac-validator is-mail="El mail es incorrecto" type="email"
-                           class="form-control" ng-model="contactoCtrl.email" type="text" id="contacto-mail">
-                </div>
-                <div class="controls">
-                    <label>Asunto:</label>
-                    <input ac-validator is-required="Debe ingresar un tema de consulta" type="text"
-                           class="form-control" ng-model="contactoCtrl.asunto" type="text" id="contacto-asunto">
-                </div>
-                <div class="controls">
-                    <label>Consulta:</label>
-                    <input ac-validator is-required="Debe ingresar una consulta" type="text"
-                           class="form-control" ng-model="contactoCtrl.mensaje" name="" id="contacto-consulta">
-                </div>
+            <div class="btn-action">
+                <div class="arrow-up arrow-contacto-margin"></div>
+                <!--a href="" ng-click="contactoCtrl.sendMail();">Enviar</a-->
+                <button id="contacto-enviar-mobile" ac-validator ng-click="contactoCtrl.sendMail();">Enviar</button>
             </div>
         </div>
-        <div class="btn-action">
-            <div class="arrow-up"></div>
-            <!--a href="" ng-click="contactoCtrl.sendMail();">Enviar</a-->
-            <button id="contacto-enviar-mobile" ac-validator ng-click="contactoCtrl.sendMail();">Enviar</button>
-        </div>
-        <div class="logo-container" style="margin-top: 15%">
+        <div class="logo-container" style="margin-top: 5%">
             <img class="" src="images/logo.png" width="140px">
         </div>
     </div>

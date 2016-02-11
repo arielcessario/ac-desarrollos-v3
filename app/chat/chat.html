@@ -1,18 +1,18 @@
 <div ng-controller="ChatController as chatCtrl" class="container container-color container-menu-margin">
     <div class="container-info" form-id="contacto">
-        <h1 class="color-primary">CHAT</h1>
+        <h1 class="color-primary">Chat</h1>
         <div class="chat-container" id="contacto-form" ng-if="!chatCtrl.chatIsLogged">
             <div class="chat-container-login">
                 <div class="arrow-contacto">
                     <div class="arrow-right"></div>
                 </div>
                 <div id="login-chat" class="contacto-controls" >
-                    <div class="controls">
+                    <div class="controls controls-margin">
                         <label>Escribe tu nombre:</label>
                         <input ac-validator is-required="Debe ingresar un nombre" type="text"
                                class="form-control" ng-model="chatCtrl.nombre" id="contacto-nombre">
                     </div>
-                    <div class="controls">
+                    <div class="controls controls-margin">
                         <label>E-mail:</label>
                         <input ac-validator is-mail="El mail es incorrecto" type="email"
                                class="form-control" ng-model="chatCtrl.email" id="contacto-mail">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="btn-chat">
-                <div class="arrow-up" style="margin-right: 15px;"></div>
+                <div class="arrow-up arrow-chat-margin"></div>
                 <!--a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Ingresar</a-->
                 <button id="contacto-enviar-mobile" ac-validator ng-click="chatCtrl.loginChat();">Ingresar</button>
             </div>
