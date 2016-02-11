@@ -1482,7 +1482,11 @@ button:hover {
 
 /* line 1440, ../sass/screen.scss */
 .error-message {
-  font-size: 11px;
-  color: red;
+  font-size: 12px;
   position: absolute;
+  color: #fff;
+  background-color: #f44336;
+  padding: 2px 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
