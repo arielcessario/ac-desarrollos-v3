@@ -20,8 +20,9 @@
 
         NoticiasService.getNoticias(function (data) {
             //vm.noticias = data;
-            //console.log(data);
+            console.log(data);
 
+            /*
             vm.noticias = [
                 {noticia_id: 1,
                     titulo: 'GOOGLE REGALA 2GB A QUIENES CHEQUEEN SU SEGURIDAD DIGITAL:',
@@ -32,7 +33,7 @@
                 {noticia_id: 3,
                     titulo: 'Titulo 3:',
                     detalles: 'Siendo un empresa de sistemas forjandose en los últimos años, nuestra visión del mercado es muy diferente de las empresas tradicionales Argentinas. Nuestro objetivo es el servicio y servicio solo lo entendemos por entregar el producto, lo entedemos por entregar el producto y establecer una relación con el cliente de soporte y crecimiento.'}]
-
+            */
         });
 
         function goToNoticia(noticia_id) {
