@@ -1,32 +1,18 @@
-<div class="container container-color container-menu-margin">
+<div ng-controller="NoticiaController as noticiaCtrl" class="container container-color container-menu-margin">
     <div class="container-info">
         <h1>Noticias</h1>
-        <div class="noticia-container">
+        <div ng-repeat="noticia in noticiaCtrl.noticias" class="noticia-container">
             <div class="noticia-foto">
                 <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
             </div>
             <div class="noticia-info">
-                <h5>GOOGLE REGALA 2GB A QUIENES CHEQUEEN SU SEGURIDAD DIGITAL:</h5>
-                <p>La empresa del buscador regala almacenamiento en Drive a aquellos que verifiquen su configuración. Es una campaña por el "Día de Internet más seguro". Hay tiempo hasta el 11 de febrero.</p>
-                <a href="" ng-click="appCtrl.goTo({nombre: 'Ver', path: '/noticia'});">Ver</a>
+                <h5>{{noticia.titulo}}</h5>
+                <p>{{noticia.detalles}}</p>
+                <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
             </div>
         </div>
-        <div class="noticia-container">
-            <div class="noticia-foto">
-                <img src="" title="Foto 2" alt="Foto 2">
-            </div>
-            <div class="noticia-info">
-                <h5>Titulo 2:</h5>
-                <p>
-                    Siendo un empresa de sistemas forjandose en los &uacute;ltimos a&ntilde;os, nuestra visi&oacute;n del
-                    mercado es muy diferente de las empresas tradicionales Argentinas. Nuestro objetivo
-                    es el servicio y servicio solo lo entendemos por entregar el producto, lo entedemos por
-                    entregar el producto y establecer una relaci&oacute;n con el cliente de soporte y crecimiento.
-                </p>
-                <a href="" ng-click="appCtrl.goTo({nombre: 'Ver', path: '/noticia'});">Ver</a>
-            </div>
-        </div>
-        <div class="noticia-container">
+
+        <!--div class="noticia-container">
             <div class="noticia-foto">
                 <img src="" title="Foto 3" alt="Foto 3">
             </div>
@@ -40,7 +26,7 @@
                 </p>
                 <a href="" ng-click="appCtrl.goTo({nombre: 'Ver', path: '/noticia'});">Ver</a>
             </div>
-        </div>
+        </div-->
 
 
         <div class="back">

@@ -7,7 +7,8 @@
     'ngRoute',
     'ngAnimate',
     'acUtils',
-    'acContacts'
+    'acContacts',
+    'ac.noticias'
   ]).config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.otherwise('/main');
