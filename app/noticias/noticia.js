@@ -7,34 +7,99 @@
     angular.module('acdesarrollos.noticias', ['ngRoute'])
         .controller('NoticiaController', NoticiaController);
 
-    NoticiaController.$inject = ['$scope', '$location', 'NoticiasService'];
+    NoticiaController.$inject = ['$scope', '$location', 'NoticiasService', '$interval'];
 
-    function NoticiaController($scope, $location, NoticiasService) {
+    function NoticiaController($scope, $location, NoticiasService, $interval) {
         var vm = this;
+
+        vm.titulo = '';
+        vm.slider_1 = false;
+        vm.slider_2 = false;
+        vm.slider_3 = false;
+        vm.slider_4 = false;
+        vm.slider_5 = false;
+
         vm.noticias = [];
         vm.noticia = {};
-        vm.titulo = '';
+        vm.noticias_slider_1 = [];
+        vm.noticias_slider_2 = [];
+        vm.noticias_slider_3 = [];
+        vm.noticias_slider_4 = [];
+        vm.noticias_slider_5 = [];
 
         vm.goToNoticia = goToNoticia;
         vm.showNoticia = showNoticia;
 
         NoticiasService.getNoticias(function (data) {
-            //vm.noticias = data;
             console.log(data);
 
+            if(data != null || data.length > 0) {
+                for(var i=0; i < data.length; i++) {
+                    var noticia = {};
+                    noticia.noticia_id = data[i].noticia_id;
+                    noticia.titulo = data[i].titulo;
+                    noticia.detalles = data[i].detalles;
+
+                    if(i < 3) {
+                        noticia.slider = 1;
+                        vm.noticias_slider_1.push(noticia);
+
+                        vm.slider_1 = true;
+                    }
+                    if(i >= 3 && i < 6) {
+                        noticia.slider = 2;
+                        vm.noticias_slider_2.push(noticia);
+
+                        vm.slider_2 = true;
+                    }
+                    if(i >= 6 && i < 9) {
+                        noticia.slider = 3;
+                        vm.noticias_slider_3.push(noticia);
+
+                        vm.slider_3 = true;
+                    }
+                    if(i >= 9 && i < 12) {
+                        noticia.slider = 4;
+                        vm.noticias_slider_4.push(noticia);
+
+                        vm.slider_4 = true;
+                    }
+                    if(i >= 12 && i < 15) {
+                        noticia.slider = 5;
+                        vm.noticias_slider_5.push(noticia);
+
+                        vm.slider_5 = true;
+                    }
+                }
+            }
+
             /*
-            vm.noticias = [
-                {noticia_id: 1,
-                    titulo: 'GOOGLE REGALA 2GB A QUIENES CHEQUEEN SU SEGURIDAD DIGITAL:',
-                    detalles: 'La empresa del buscador regala almacenamiento en Drive a aquellos que verifiquen su configuración. Es una campaña por el "Día de Internet más seguro". Hay tiempo hasta el 11 de febrero.'},
-                {noticia_id: 2,
-                    titulo: 'Titulo 2:',
-                    detalles: 'Siendo un empresa de sistemas forjandose en los últimos años, nuestra visión del mercado es muy diferente de las empresas tradicionales Argentinas. Nuestro objetivo es el servicio y servicio solo lo entendemos por entregar el producto, lo entedemos por entregar el producto y establecer una relación con el cliente de soporte y crecimiento.'},
-                {noticia_id: 3,
-                    titulo: 'Titulo 3:',
-                    detalles: 'Siendo un empresa de sistemas forjandose en los últimos años, nuestra visión del mercado es muy diferente de las empresas tradicionales Argentinas. Nuestro objetivo es el servicio y servicio solo lo entendemos por entregar el producto, lo entedemos por entregar el producto y establecer una relación con el cliente de soporte y crecimiento.'}]
+            console.log(vm.noticias_slider_1);
+            console.log(vm.noticias_slider_2);
+            console.log(vm.noticias_slider_3);
+            console.log(vm.noticias_slider_4);
+            console.log(vm.noticias_slider_5);
             */
         });
+
+        vm.slider_nro = 1;
+
+        $interval(changeSlider, 5000);
+
+        function changeSlider() {
+            if(vm.noticias_slider_5.length > 0) {
+                vm.slider_nro = (vm.slider_nro == 5) ? 1 : vm.slider_nro + 1;
+            }
+            else if(vm.noticias_slider_4.length > 0) {
+                vm.slider_nro = (vm.slider_nro == 4) ? 1 : vm.slider_nro + 1;
+            }
+            else if(vm.noticias_slider_3.length > 0) {
+                vm.slider_nro = (vm.slider_nro == 3) ? 1 : vm.slider_nro + 1;
+            }
+            else if(vm.noticias_slider_2.length > 0) {
+                vm.slider_nro = (vm.slider_nro == 2) ? 1 : vm.slider_nro + 1;
+            }
+        }
 
         function goToNoticia(noticia_id) {
             console.log(noticia_id);

@@ -1,33 +1,74 @@
 <div ng-controller="NoticiaController as noticiaCtrl" class="container container-color container-menu-margin">
     <div class="container-info">
         <h1>Noticias</h1>
-        <div ng-repeat="noticia in noticiaCtrl.noticias" class="noticia-container">
-            <div class="noticia-foto">
-                <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
+
+        <div id="main-slider">
+            <div ng-class="{'show-slider-proyecto':noticiaCtrl.slider_nro == 1}"
+                 class="main-slider-proyecto">
+                <div ng-repeat="noticia in noticiaCtrl.noticias_slider_1" class="noticia-container">
+                    <div class="noticia-foto">
+                        <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
+                    </div>
+                    <div class="noticia-info">
+                        <h5>{{noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
+                    </div>
+                </div>
             </div>
-            <div class="noticia-info">
-                <h5>{{noticia.titulo}}</h5>
-                <p>{{noticia.detalles}}</p>
-                <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
+            <div ng-class="{'show-slider-proyecto':noticiaCtrl.slider_nro == 2}"
+                 class="main-slider-proyecto">
+                <div ng-repeat="noticia in noticiaCtrl.noticias_slider_2" class="noticia-container">
+                    <div class="noticia-foto">
+                        <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
+                    </div>
+                    <div class="noticia-info">
+                        <h5>{{noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div ng-class="{'show-slider-proyecto':noticiaCtrl.slider_nro == 3}"
+                 class="main-slider-proyecto">
+                <div ng-repeat="noticia in noticiaCtrl.noticias_slider_3" class="noticia-container">
+                    <div class="noticia-foto">
+                        <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
+                    </div>
+                    <div class="noticia-info">
+                        <h5>{{noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div ng-class="{'show-slider-proyecto':noticiaCtrl.slider_nro == 4}"
+                 class="main-slider-proyecto">
+                <div ng-repeat="noticia in noticiaCtrl.noticias_slider_4" class="noticia-container">
+                    <div class="noticia-foto">
+                        <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
+                    </div>
+                    <div class="noticia-info">
+                        <h5>{{noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <div ng-class="{'show-slider-proyecto':noticiaCtrl.slider_nro == 5}"
+                 class="main-slider-proyecto">
+                <div ng-repeat="noticia in noticiaCtrl.noticias_slider_5" class="noticia-container">
+                    <div class="noticia-foto">
+                        <img src="https://play.google.com/books/publish/static/images/google-search.png" title="Foto 1" alt="Foto 1">
+                    </div>
+                    <div class="noticia-info">
+                        <h5>{{noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <a href="" ng-click="noticiaCtrl.goToNoticia(noticia.noticia_id);">Ver</a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!--div class="noticia-container">
-            <div class="noticia-foto">
-                <img src="" title="Foto 3" alt="Foto 3">
-            </div>
-            <div class="noticia-info">
-                <h5>Titulo 3:</h5>
-                <p>
-                    Siendo un empresa de sistemas forjandose en los &uacute;ltimos a&ntilde;os, nuestra visi&oacute;n del
-                    mercado es muy diferente de las empresas tradicionales Argentinas. Nuestro objetivo
-                    es el servicio y servicio solo lo entendemos por entregar el producto, lo entedemos por
-                    entregar el producto y establecer una relaci&oacute;n con el cliente de soporte y crecimiento.
-                </p>
-                <a href="" ng-click="appCtrl.goTo({nombre: 'Ver', path: '/noticia'});">Ver</a>
-            </div>
-        </div-->
-
 
         <div class="back">
             <div class="arrow-left"></div>
@@ -37,6 +78,24 @@
         <div class="buscar">
             <label>Buscar:</label>
             <input type="text" class="buscar-control">
+        </div>
+
+        <div class="slider-indicator">
+            <div class="slider_1" ng-class="{slider_selected:noticiaCtrl.slider_nro==1}"
+                 ng-if="noticiaCtrl.slider_1"
+                 ng-click="noticiaCtrl.slider_nro=1;"></div>
+            <div class="slider_2" ng-class="{slider_selected:noticiaCtrl.slider_nro==2}"
+                 ng-if="noticiaCtrl.slider_2"
+                 ng-click="noticiaCtrl.slider_nro=2;"></div>
+            <div class="slider_3" ng-class="{slider_selected:noticiaCtrl.slider_nro==3}"
+                 ng-if="noticiaCtrl.slider_3"
+                 ng-click="noticiaCtrl.slider_nro=3;"></div>
+            <div class="slider_4" ng-class="{slider_selected:noticiaCtrl.slider_nro==4}"
+                 ng-if="noticiaCtrl.slider_4"
+                 ng-click="noticiaCtrl.slider_nro=4;"></div>
+            <div class="slider_5" ng-class="{slider_selected:noticiaCtrl.slider_nro==5}"
+                 ng-if="noticiaCtrl.slider_5"
+                 ng-click="noticiaCtrl.slider_nro=5;"></div>
         </div>
     </div>
 </div>

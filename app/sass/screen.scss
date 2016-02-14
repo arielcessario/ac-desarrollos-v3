@@ -939,6 +939,8 @@ label {
   -moz-border-radius: 20px;
   border-radius: 20px;
   */
+  height: 100px;
+  width: 100px;
 }
 
 .show-noticia-foto {
@@ -1339,7 +1341,8 @@ label {
   p {
     font-family: 'Oswald', sans-serif;
     font-size: 17px;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
+    margin-bottom: 10px;
     //max-height: 16px;
     overflow: hidden;
     @media (min-width: 800px) {
@@ -1347,11 +1350,10 @@ label {
     }
   }
   img {
-    max-height: 100%;
-    max-width: 100%;
+    //max-height: 100%;
+    //max-width: 100%;
     vertical-align: middle;
     text-align: center;
-
   }
 
   .button-ver {
