@@ -51,24 +51,24 @@
 
         $routeProvider.when('/noticias', {
           templateUrl: 'noticias/noticias.html',
-          controller: 'NoticiaController',
+          controller: 'NoticiasController',
           //data: {requiresLogin: false},
           resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
             loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
               // you can lazy load files for an existing module
-              return $ocLazyLoad.load('noticias/noticia.js');
+              return $ocLazyLoad.load('noticias/noticias.js');
             }]
           }
         });
 
-        $routeProvider.when('/noticia', {
-          templateUrl: 'noticias/noticia.html',
+        $routeProvider.when('/noticia/:id', {
+          templateUrl: 'noticia/noticia.html',
           controller: 'NoticiaController',
           //data: {requiresLogin: false},
           resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
             loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
               // you can lazy load files for an existing module
-              return $ocLazyLoad.load('noticias/noticia.js');
+              return $ocLazyLoad.load('noticia/noticia.js');
             }]
           }
         });

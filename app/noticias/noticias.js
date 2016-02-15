@@ -5,11 +5,11 @@
     var currentScriptPath = scripts[scripts.length - 1].src;
 
     angular.module('acdesarrollos.noticias', ['ngRoute'])
-        .controller('NoticiaController', NoticiaController);
+        .controller('NoticiasController', NoticiasController);
 
-    NoticiaController.$inject = ['$scope', '$location', 'NoticiasService', '$interval'];
+    NoticiasController.$inject = ['$scope', '$location', 'NoticiasService', '$interval'];
 
-    function NoticiaController($scope, $location, NoticiasService, $interval) {
+    function NoticiasController($scope, $location, NoticiasService, $interval) {
         var vm = this;
 
         vm.titulo = '';
@@ -32,6 +32,7 @@
 
         NoticiasService.getNoticias(function (data) {
             console.log(data);
+            vm.noticias = data;
 
             if(data != null || data.length > 0) {
                 for(var i=0; i < data.length; i++) {
@@ -84,7 +85,7 @@
 
         vm.slider_nro = 1;
 
-        $interval(changeSlider, 5000);
+        //$interval(changeSlider, 5000);
 
         function changeSlider() {
             if(vm.noticias_slider_5.length > 0) {
@@ -103,14 +104,15 @@
 
         function goToNoticia(noticia_id) {
             console.log(noticia_id);
-            vm.noticia = vm.noticias[noticia_id - 1];
 
-            vm.titulo = vm.noticia.titulo;
+            for(var i=0; i < vm.noticias.length; i++) {
+                if(vm.noticias[i].noticia_id == noticia_id){
+                    vm.noticia = vm.noticias[i];
+                }
+            }
 
-            console.log(vm.titulo);
             console.log(vm.noticia);
-
-            $location.path('/noticia');
+            $location.path('/noticia/' + noticia_id);
         }
 
         function showNoticia(noticia) {

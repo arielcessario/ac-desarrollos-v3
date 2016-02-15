@@ -2,12 +2,15 @@
     <div class="container-info">
         <div class="show-noticia-container">
             <div class="show-noticia-foto">
-                <img src="" title="Foto 1" alt="Foto 1">
+                <img src="{{noticiaCtrl.noticia.fotos.length > 0 ? 'images/'+noticiaCtrl.noticia.fotos[0].foto : ''}}"
+                title="Foto 1" alt="Foto 1">
+                <div>
+
+                </div>
             </div>
             <div class="show-noticia-info">
-                <h3 class="color-default">{{noticiaCtrl.titulo}}</h3>
+                <h3 class="color-default">{{noticiaCtrl.noticia.titulo}}</h3>
                 <p>{{noticiaCtrl.noticia.detalles}}</p>
-                <a href="" ng-click="noticiaCtrl.showNoticia(noticiaCtrl.noticia);">Ver</a>
             </div>
         </div>
 
