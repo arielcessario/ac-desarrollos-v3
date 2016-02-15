@@ -18,28 +18,23 @@
 
         vm.id = $routeParams.id;
 
-        vm.goToNoticia = goToNoticia;
         vm.showNoticia = showNoticia;
+        vm.comentar = comentar;
 
         if (vm.id > 0) {
             NoticiasService.getNoticiaByID(vm.id, function (data) {
                 console.log(data);
                 vm.noticia = data;
+                var comentario1 = {fecha:'12/02/2016',detalles:'sfsdfsdfsdfsdfsdf'};
+                var comentario2 = {fecha:'01/02/2016',detalles:'xxxxxxxxxxxxxxxx'};
+
+                vm.noticia.comentarios.push(comentario1);
+                vm.noticia.comentarios.push(comentario2);
             });
         }
 
-
-        function goToNoticia(noticia_id) {
-            console.log(noticia_id);
-
-            for(var i=0; i < vm.noticias.length; i++) {
-                if(vm.noticias[i].noticia_id == noticia_id){
-                    vm.noticia = vm.noticias[i];
-                }
-            }
-
-            console.log(vm.noticia);
-            $location.path('/noticia');
+        function comentar() {
+            console.log('enviar comentario');
         }
 
         function showNoticia(noticia) {

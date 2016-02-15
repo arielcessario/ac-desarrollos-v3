@@ -567,7 +567,7 @@ select option {
   @media (min-width: 800px) {
     //margin-top: 140px;
     margin-top: 135px;
-    height: 600px;
+    //height: 600px;
   }
 }
 
@@ -689,6 +689,7 @@ strong {
   width: 100%;
   padding: 10px 0;
   text-align: justify;
+  min-height: 600px;
 }
 
 .container-menu-margin {
@@ -923,8 +924,11 @@ label {
 
 .noticia-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 15px;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
 }
 
 .show-noticia-container {
@@ -941,7 +945,10 @@ label {
   border-radius: 20px;
   */
   height: 100px;
-  width: 100px;
+  width: 100%;
+  @media (min-width: 800px) {
+    width: 100px;
+  }
 }
 
 .show-noticia-foto {
@@ -950,12 +957,15 @@ label {
 
 .noticia-foto > img {
   height: 100px;
-  width: 100px;
+  width: 100%;
   border: 1px solid $color_6;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   text-align: center;
+  @media (min-width: 800px) {
+    width: 100px;
+  }
 }
 
 .show-noticia-foto > img {
@@ -969,11 +979,15 @@ label {
 }
 
 .noticia-info {
-  margin-left: 20px;
+  //margin-left: 20px;
+  @media (min-width: 800px) {
+    margin-left: 20px;
+    width: 100%;
+  }
 }
 
 .show-noticia-info {
-  margin: 0 15px;
+  //margin: 0 15px;
 }
 
 .show-noticia-info h3{
@@ -1549,5 +1563,35 @@ button:hover{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaefb5', endColorstr='#e1e9a0',GradientType=1 );
 }
 
-
-
+.btn {
+  width: 100%;
+  padding: 5px 0;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+  @media (min-width: 800px) {
+    width: 25%;
+  }
+}
+.btn-default {
+  background-image: -webkit-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+  background-image: -o-linear-gradient(top,#5bc0de 0,#2aabd2 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#5bc0de),to(#2aabd2));
+  background-image: linear-gradient(to bottom,#5bc0de 0,#2aabd2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2aabd2', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  background-repeat: repeat-x;
+  border-color: #28a4c9;
+}
+.noticia-detalle {
+  height: 250px;
+  overflow: auto;
+  padding: 15px 15px 0 0;
+}
+.container-comentario{
+  display: flex;
+  flex-direction: column;
+}
+.container-comentarios{
+  margin-top: 15px;
+}

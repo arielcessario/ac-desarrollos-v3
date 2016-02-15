@@ -85,7 +85,7 @@
 
         vm.slider_nro = 1;
 
-        //$interval(changeSlider, 5000);
+        $interval(changeSlider, 5000);
 
         function changeSlider() {
             if(vm.noticias_slider_5.length > 0) {

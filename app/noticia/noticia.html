@@ -10,10 +10,22 @@
             </div>
             <div class="show-noticia-info">
                 <h3 class="color-default">{{noticiaCtrl.noticia.titulo}}</h3>
-                <p>{{noticiaCtrl.noticia.detalles}}</p>
+                <div class="noticia-detalle">
+                    <p>{{noticiaCtrl.noticia.detalles}}</p>
+                </div>
             </div>
         </div>
-
+        <div class="container-comentario">
+            <h3>Comentarios</h3>
+            <textarea class="" rows="4" cols="10"></textarea>
+            <button ng-click="noticiaCtrl.comentar();" class="btn btn-default">Comentar</button>
+        </div>
+        <div class="container-comentarios">
+            <div ng-repeat="comentario in noticiaCtrl.noticia.comentarios">
+                <div>{{comentario.fecha}}</div>
+                <div>{{comentario.detalles}}</div>
+            </div>
+        </div>
         <div class="back">
             <div class="arrow-left"></div>
             <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/noticias'});">Volver</a>
