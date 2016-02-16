@@ -75,14 +75,18 @@
             </div>
         </div>
 
-        <div class="back">
+        <!--div class="back">
             <div class="arrow-left"></div>
             <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
-        </div>
+        </div-->
 
         <div class="buscar">
             <label>Buscar:</label>
-            <input type="text" class="buscar-control">
+            <input type="text" class="buscar-control" style="width: 70%;">
+            <div class="back" style="margin: 0">
+                <div class="arrow-left"></div>
+                <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
+            </div>
         </div>
 
         <div class="slider-indicator">
