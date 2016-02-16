@@ -66,6 +66,7 @@ html {
 
 .color-primary {
   color: white;
+  text-align: center;
 }
 
 .color-terciary {
@@ -1163,11 +1164,15 @@ label {
 }
 
 .slider_selected {
-  background-color: $color_7;
+  background-color: black;
   border: 1px solid #fff;
+   -webkit-transition: all;
+   -moz-transition: all .3;
+  -ms-transition: all .3s;
+   -o-transition: all .3s;
 }
 
-//=========================================================================0
+// transition: all .3s;   =========================================================================0
 //SECCION PARA EL FOOTER
 .footer {
   font-family: Arial, serif;
