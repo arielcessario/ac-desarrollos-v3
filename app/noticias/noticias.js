@@ -40,6 +40,7 @@
                     noticia.noticia_id = data[i].noticia_id;
                     noticia.titulo = data[i].titulo;
                     noticia.detalles = data[i].detalles;
+                    noticia.fotos = data[i].fotos;
 
                     if(i < 3) {
                         noticia.slider = 1;

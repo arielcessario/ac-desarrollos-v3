@@ -1,9 +1,9 @@
 <div ng-controller="NoticiaController as noticiaCtrl" class="container container-color container-menu-margin">
-    <div class="container-info">
+    <div class="container-info" form-id="noticia">
         <div class="show-noticia-container">
             <div class="show-noticia-foto">
                 <img src="{{noticiaCtrl.noticia.fotos.length > 0 ? 'images/'+noticiaCtrl.noticia.fotos[0].foto : ''}}"
-                title="Foto 1" alt="Foto 1">
+                     title="Foto 1" alt="Foto 1">
                 <div>
 
                 </div>
@@ -15,14 +15,15 @@
                 </div>
             </div>
         </div>
-        <div class="container-comentario">
+        <div class="container-comentario" style="display:none">
             <h3>Comentarios</h3>
-            <textarea class="" rows="4" cols="10"></textarea>
-            <button ng-click="noticiaCtrl.comentar();" class="btn btn-default">Comentar</button>
+            <textarea ac-validator is-required="El comentario no debe estar vacío" id="text-comentario" rows="5" cols="30"
+                      ng-model="noticiaCtrl.comentario"></textarea>
+            <button ac-validator ng-click="noticiaCtrl.saveComentario();" class="btn btn-default">Comentar</button>
         </div>
-        <div class="container-comentarios">
+        <div class="container-comentarios" style="display:none">
             <div ng-repeat="comentario in noticiaCtrl.noticia.comentarios">
-                <div>{{comentario.fecha}}</div>
+                <div>{{comentario.fecha}} - {{comentario.creador}}</div>
                 <div>{{comentario.detalles}}</div>
             </div>
         </div>

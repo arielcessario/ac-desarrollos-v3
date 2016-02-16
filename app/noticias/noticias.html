@@ -7,11 +7,11 @@
                  class="main-slider-proyecto">
                 <div ng-repeat="noticia in noticiasCtrl.noticias_slider_1" class="noticia-container">
                     <div class="noticia-foto">
-                        <img src="{{noticia.fotos.length > 0 ? 'img/'+noticia.fotos[0].foto : ''}}"
-                             title="Foto 1" alt="Foto 1">
+                        <img ng-src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
+                             title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo}}</h5>
+                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
                         <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
                         <!--a href="" ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);">Ver</a-->
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver Noticia</button>
@@ -22,11 +22,11 @@
                  class="main-slider-proyecto">
                 <div ng-repeat="noticia in noticiasCtrl.noticias_slider_2" class="noticia-container">
                     <div class="noticia-foto">
-                        <img src="{{noticia.fotos.length > 0 ? 'img/'+noticia.fotos[0].foto : ''}}"
+                        <img ng-src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
                              title="Foto 2" alt="Foto 2">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo}}</h5>
+                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
                         <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
                         <!--a href="" ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);">Ver</a-->
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver Noticia</button>
@@ -37,12 +37,12 @@
                  class="main-slider-proyecto">
                 <div ng-repeat="noticia in noticiasCtrl.noticias_slider_3" class="noticia-container">
                     <div class="noticia-foto">
-                        <img src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
+                        <img ng-src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
                              title="Foto 2" alt="Foto 2">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver Noticia</button>
                     </div>
                 </div>
@@ -51,12 +51,12 @@
                  class="main-slider-proyecto">
                 <div ng-repeat="noticia in noticiasCtrl.noticias_slider_4" class="noticia-container">
                     <div class="noticia-foto">
-                        <img src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
+                        <img ng-src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
                              title="Foto 3" alt="Foto 3">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver Noticia</button>
                     </div>
                 </div>
@@ -65,12 +65,12 @@
                  class="main-slider-proyecto">
                 <div ng-repeat="noticia in noticiasCtrl.noticias_slider_5" class="noticia-container">
                     <div class="noticia-foto">
-                        <img src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
+                        <img ng-src="{{noticia.fotos.length > 0 ? 'images/'+noticia.fotos[0].foto : ''}}"
                              title="Foto 4" alt="Foto 4">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 250 ? noticia.detalles.substring(0, 250) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
+                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver Noticia</button>
                     </div>
                 </div>
