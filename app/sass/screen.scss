@@ -642,7 +642,8 @@ select option {
 
 h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 50px;
+  //font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   padding: 5px 0;
   opacity:0;  /* make things invisible upon start */
@@ -678,7 +679,8 @@ h3 {
   animation-duration:2s;
   @media (max-width: 600px){
     text-justify: inter-word;
-    font-size: 25px;
+    //font-size: 25px;
+    font-size: 20px;
   }
 
 }
@@ -706,7 +708,15 @@ strong {
   text-align: justify;
   min-height: 600px;
 }
-
+.container-noticias {
+  width: 100%;
+  padding: 10px 0;
+  text-align: justify;
+  min-height: 1500px;
+  @media (min-width: 800px) {
+    min-height: 600px;
+  }
+}
 .container-menu-margin {
   margin-top: -2px;
   @media (min-width: 800px) {
@@ -754,6 +764,7 @@ strong {
 }
 
 .container-info p{
+  //font-size: 0.8em;
   font-size: 17px;
   font-family: 'Oswald', sans-serif;
   color: black;
@@ -768,7 +779,9 @@ strong {
   -moz-animation-duration:2.7s;
   animation-duration:2.7s;
   text-align: left;
-
+  @media (min-width: 800px) {
+    font-size: 17px;
+  }
 
 }
 
@@ -895,11 +908,11 @@ strong {
   align-items: center;
   //margin-right: 15%;
   //margin-top: 30px;
-  margin: 10px 0 10px 0;
+  margin: 5px 0 5px 0;
   padding-bottom: 5px;
-  //@media (min-width: 800px) {
-  //  margin: 30px 15% 0 0;
-  //}
+  @media (min-width: 800px) {
+    margin: 10px 0 10px 0;
+  }
 }
 
 .btn-action {
@@ -1009,7 +1022,8 @@ border-radius: 20px;
 
 .show-noticia-foto {
   margin: 30px 0 20px;
-  height: 400px;
+  //height: 400px;
+  min-height: 200px;
   width: 100%;
   overflow: hidden;
 }
@@ -1038,8 +1052,10 @@ border-radius: 20px;
 
 .noticia-info {
   //margin-left: 20px;
+  margin-top: 100px;
   @media (min-width: 800px) {
     margin-left: 20px;
+    margin-top: 0;
     width: 100%;
   }
 }
@@ -1168,7 +1184,10 @@ border-radius: 20px;
   cursor: pointer;
   height: 16px;
   width: 16px;
-  margin: 10px;
+  margin: 0 10px;
+  @media (min-width: 800px) {
+    margin: 10px;
+  }
 }
 
 .slider_selected {
@@ -1184,24 +1203,32 @@ border-radius: 20px;
 //SECCION PARA EL FOOTER
 .footer {
   font-family: Arial, serif;
-  font-size: 16px;
+  //font-size: 16px;
+  font-size: 0.75em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  height: 160px;
+  //height: 160px;
+  height: 80px;
+  background-color: #eee;
+  position:fixed;
+  bottom:0;
+  z-index: 10;
   @media (min-width: 800px) {
     //position: absolute;
     position: relative;
     bottom: 0;
     font-size: 12px;
     height: 40px;
+    background-color: transparent;
   }
 }
 
 .footer > p {
-  margin: 35px 50px;
+  //margin: 35px 50px;
+  margin: 15px 50px;
   text-align: center;
   @media (min-width: 800px) {
     margin: 10px 0;
@@ -1209,6 +1236,7 @@ border-radius: 20px;
 }
 
 .footer > p > a {
+  font-size: 1.1em;
   text-decoration: none;
   color: $color_2;
 }
@@ -1682,4 +1710,12 @@ button:hover{
 }
 .container-comentarios{
   margin-top: 15px;
+}
+.hacemos-container {
+  overflow: auto;
+  height: 280px;
+}
+.mision-container{
+  overflow: auto;
+  height: 380px;
 }
