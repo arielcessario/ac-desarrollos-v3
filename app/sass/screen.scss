@@ -1015,6 +1015,10 @@ border-radius: 20px;
 */
   height: 100px;
   width: 100%;
+  border: 1px solid $color_6;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   @media (min-width: 800px) {
     width: 100px;
   }
@@ -1031,10 +1035,6 @@ border-radius: 20px;
 
 .noticia-foto > img {
   width: 100%;
-  border: 3px solid $color_6;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
   text-align: center;
   @media (min-width: 800px) {
     width: 100px;
@@ -1043,10 +1043,7 @@ border-radius: 20px;
 
 .show-noticia-foto > img {
   width: 100%;
-  border: 1px solid $color_6;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
+
   text-align: center;
 }
 
