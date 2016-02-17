@@ -1104,13 +1104,13 @@ border-radius: 20px;
   }
 }
 
-/* line 1067, ../sass/screen.scss */
+/* line 1068, ../sass/screen.scss */
 .show-noticia-info h3 {
   font-family: 'Oswald', sans-serif;
   font-size: 36px;
 }
 
-/* line 1072, ../sass/screen.scss */
+/* line 1073, ../sass/screen.scss */
 .noticia-info > p, a, .show-noticia-info > p {
   font-size: 16px;
   font-family: 'Oswald', sans-serif;
@@ -1118,14 +1118,14 @@ border-radius: 20px;
   margin-top: 5px;
 }
 
-/* line 1081, ../sass/screen.scss */
+/* line 1082, ../sass/screen.scss */
 .buscar {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
 
-/* line 1087, ../sass/screen.scss */
+/* line 1088, ../sass/screen.scss */
 .buscar-control {
   width: 89%;
   background-image: none;
@@ -1134,25 +1134,25 @@ border-radius: 20px;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-/* line 1095, ../sass/screen.scss */
+/* line 1096, ../sass/screen.scss */
 .arrow-contacto {
   display: none;
 }
 
-/* line 1099, ../sass/screen.scss */
+/* line 1100, ../sass/screen.scss */
 .contacto-controls {
   width: 100%;
 }
 
 @media (min-width: 800px) {
-  /* line 1104, ../sass/screen.scss */
+  /* line 1105, ../sass/screen.scss */
   .contacto-container {
     flex-direction: column;
     display: flex;
     width: 80%;
   }
 
-  /* line 1110, ../sass/screen.scss */
+  /* line 1111, ../sass/screen.scss */
   .arrow-contacto {
     border-left: 1px solid #000;
     margin-right: 5%;
@@ -1161,14 +1161,14 @@ border-radius: 20px;
     margin-left: 10%;
   }
 
-  /* line 1117, ../sass/screen.scss */
+  /* line 1118, ../sass/screen.scss */
   .contacto-controls {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
   }
 
-  /* line 1123, ../sass/screen.scss */
+  /* line 1124, ../sass/screen.scss */
   .contacto-controls > .controls {
     width: 100%;
     display: flex;
@@ -1176,20 +1176,20 @@ border-radius: 20px;
     justify-content: flex-end;
   }
 
-  /* line 1129, ../sass/screen.scss */
+  /* line 1130, ../sass/screen.scss */
   .contacto-controls > .controls > .form-control {
     display: inline;
     width: 60%;
   }
 
-  /* line 1133, ../sass/screen.scss */
+  /* line 1134, ../sass/screen.scss */
   .message-controls {
     width: 100%;
     display: flex;
     justify-content: flex-start;
   }
 }
-/* line 1141, ../sass/screen.scss */
+/* line 1142, ../sass/screen.scss */
 .sabias-slider {
   display: flex;
   flex-direction: column;
@@ -1197,7 +1197,7 @@ border-radius: 20px;
   width: 100%;
 }
 
-/* line 1150, ../sass/screen.scss */
+/* line 1151, ../sass/screen.scss */
 .sabias-container {
   height: 300px;
   width: 350px;
@@ -1207,13 +1207,13 @@ border-radius: 20px;
   border-radius: 20px;
 }
 @media (min-width: 800px) {
-  /* line 1150, ../sass/screen.scss */
+  /* line 1151, ../sass/screen.scss */
   .sabias-container {
     width: 800px;
   }
 }
 
-/* line 1162, ../sass/screen.scss */
+/* line 1163, ../sass/screen.scss */
 .sabias-container-2 {
   height: 278px;
   width: 328px;
@@ -1224,20 +1224,20 @@ border-radius: 20px;
   margin: 10px;
 }
 @media (min-width: 800px) {
-  /* line 1162, ../sass/screen.scss */
+  /* line 1163, ../sass/screen.scss */
   .sabias-container-2 {
     width: 780px;
   }
 }
 
-/* line 1175, ../sass/screen.scss */
+/* line 1176, ../sass/screen.scss */
 .slider-indicator {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* line 1181, ../sass/screen.scss */
+/* line 1182, ../sass/screen.scss */
 .slider_1, .slider_2, .slider_3, .slider_4, .slider_5 {
   border: 1px solid #333;
   border-radius: 10px;
@@ -1247,13 +1247,13 @@ border-radius: 20px;
   margin: 0 10px;
 }
 @media (min-width: 800px) {
-  /* line 1181, ../sass/screen.scss */
+  /* line 1182, ../sass/screen.scss */
   .slider_1, .slider_2, .slider_3, .slider_4, .slider_5 {
     margin: 10px;
   }
 }
 
-/* line 1193, ../sass/screen.scss */
+/* line 1194, ../sass/screen.scss */
 .slider_selected {
   background-color: black;
   border: 1px solid #fff;
@@ -1263,7 +1263,7 @@ border-radius: 20px;
   -o-transition: all .3s;
 }
 
-/* line 1204, ../sass/screen.scss */
+/* line 1205, ../sass/screen.scss */
 .footer {
   font-family: Arial, serif;
   font-size: 0.75em;
@@ -1279,7 +1279,7 @@ border-radius: 20px;
   z-index: 10;
 }
 @media (min-width: 800px) {
-  /* line 1204, ../sass/screen.scss */
+  /* line 1205, ../sass/screen.scss */
   .footer {
     position: relative;
     bottom: 0;
@@ -1289,19 +1289,19 @@ border-radius: 20px;
   }
 }
 
-/* line 1229, ../sass/screen.scss */
+/* line 1230, ../sass/screen.scss */
 .footer > p {
   margin: 15px 50px;
   text-align: center;
 }
 @media (min-width: 800px) {
-  /* line 1229, ../sass/screen.scss */
+  /* line 1230, ../sass/screen.scss */
   .footer > p {
     margin: 10px 0;
   }
 }
 
-/* line 1238, ../sass/screen.scss */
+/* line 1239, ../sass/screen.scss */
 .footer > p > a {
   font-size: 1.1em;
   text-decoration: none;
@@ -1502,12 +1502,12 @@ label {
 }
 
 */
-/* line 1441, ../sass/screen.scss */
+/* line 1442, ../sass/screen.scss */
 #main-slider {
   height: 370px;
   position: relative;
 }
-/* line 1447, ../sass/screen.scss */
+/* line 1448, ../sass/screen.scss */
 #main-slider h1 {
   color: black;
   font-family: 'Oswald', sans-serif;
@@ -1517,7 +1517,7 @@ label {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-/* line 1456, ../sass/screen.scss */
+/* line 1457, ../sass/screen.scss */
 #main-slider p {
   font-family: 'Oswald', sans-serif;
   font-size: 17px;
@@ -1525,17 +1525,17 @@ label {
   overflow: hidden;
 }
 @media (min-width: 800px) {
-  /* line 1456, ../sass/screen.scss */
+  /* line 1457, ../sass/screen.scss */
   #main-slider p {
     font-size: 16px;
   }
 }
-/* line 1467, ../sass/screen.scss */
+/* line 1468, ../sass/screen.scss */
 #main-slider img {
   vertical-align: middle;
   text-align: center;
 }
-/* line 1474, ../sass/screen.scss */
+/* line 1475, ../sass/screen.scss */
 #main-slider .button-ver {
   width: 54px;
   height: 32px;
@@ -1556,12 +1556,12 @@ label {
   -o-transition: all .3s;
   transition: all .3s;
 }
-/* line 1496, ../sass/screen.scss */
+/* line 1497, ../sass/screen.scss */
 #main-slider .button-ver:hover {
   cursor: pointer;
   background-color: orange;
 }
-/* line 1508, ../sass/screen.scss */
+/* line 1509, ../sass/screen.scss */
 #main-slider .main-slider-proyecto {
   opacity: 0;
   position: absolute;
@@ -1577,14 +1577,14 @@ label {
   transition: all 0.4s;
 }
 
-/* line 1533, ../sass/screen.scss */
+/* line 1534, ../sass/screen.scss */
 .show-slider-proyecto {
   opacity: 1 !important;
   z-index: 10 !important;
   pointer-events: all !important;
 }
 
-/* line 1540, ../sass/screen.scss */
+/* line 1541, ../sass/screen.scss */
 button {
   font-family: 'Oswald', sans-serif;
   border: none;
@@ -1593,12 +1593,12 @@ button {
   cursor: pointer;
 }
 
-/* line 1547, ../sass/screen.scss */
+/* line 1548, ../sass/screen.scss */
 button:hover {
   color: #ce5f2d;
 }
 
-/* line 1550, ../sass/screen.scss */
+/* line 1551, ../sass/screen.scss */
 .ac-mensaje-custom-show {
   background-color: #a1cca5;
   text-align: center;
@@ -1613,33 +1613,33 @@ button:hover {
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
 }
 
-/* line 1563, ../sass/screen.scss */
+/* line 1564, ../sass/screen.scss */
 #message-chat {
   height: 350px;
   overflow-y: auto;
   border-right: 1px solid;
 }
 
-/* line 1569, ../sass/screen.scss */
+/* line 1570, ../sass/screen.scss */
 .chat-container {
   flex-direction: column;
   display: flex;
   width: 100%;
 }
 @media (min-width: 800px) {
-  /* line 1569, ../sass/screen.scss */
+  /* line 1570, ../sass/screen.scss */
   .chat-container {
     width: 80%;
   }
 }
 
-/* line 1577, ../sass/screen.scss */
+/* line 1578, ../sass/screen.scss */
 .chat-container-login, .contacto-container-controls {
   flex-direction: row;
   display: flex;
 }
 
-/* line 1581, ../sass/screen.scss */
+/* line 1582, ../sass/screen.scss */
 .btn-chat {
   display: flex;
   flex-direction: column;
@@ -1649,47 +1649,47 @@ button:hover {
   font-family: 'Oswald', sans-serif;
 }
 @media (min-width: 800px) {
-  /* line 1581, ../sass/screen.scss */
+  /* line 1582, ../sass/screen.scss */
   .btn-chat {
     align-items: flex-end;
   }
 }
 
-/* line 1592, ../sass/screen.scss */
+/* line 1593, ../sass/screen.scss */
 #texto-mensaje {
   width: 60%;
   margin-left: 25%;
   margin-top: 15px;
 }
 
-/* line 1597, ../sass/screen.scss */
+/* line 1598, ../sass/screen.scss */
 .arrow-contacto-margin {
   margin-right: 0;
 }
 @media (min-width: 800px) {
-  /* line 1597, ../sass/screen.scss */
+  /* line 1598, ../sass/screen.scss */
   .arrow-contacto-margin {
     margin-right: 10px;
   }
 }
 
-/* line 1603, ../sass/screen.scss */
+/* line 1604, ../sass/screen.scss */
 .arrow-chat-margin {
   margin-right: 0;
 }
 @media (min-width: 800px) {
-  /* line 1603, ../sass/screen.scss */
+  /* line 1604, ../sass/screen.scss */
   .arrow-chat-margin {
     margin-right: 10px;
   }
 }
 
-/* line 1609, ../sass/screen.scss */
+/* line 1610, ../sass/screen.scss */
 .controls-margin {
   margin-top: 20px;
 }
 
-/* line 1612, ../sass/screen.scss */
+/* line 1613, ../sass/screen.scss */
 .error-message {
   font-size: 12px;
   position: absolute;
@@ -1700,7 +1700,7 @@ button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
 
-/* line 1622, ../sass/screen.scss */
+/* line 1623, ../sass/screen.scss */
 .container-color-1 {
   background: white;
   background: -moz-linear-gradient(top, white 0%, #a1cca5 100%);
@@ -1712,7 +1712,7 @@ button:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#a1cca5', GradientType=0 );
 }
 
-/* line 1632, ../sass/screen.scss */
+/* line 1633, ../sass/screen.scss */
 .container-color-2 {
   background: #f1e767;
   background: -moz-linear-gradient(top, #f1e767 0%, #fbe083 100%);
@@ -1724,7 +1724,7 @@ button:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#fbe083', GradientType=0 );
 }
 
-/* line 1642, ../sass/screen.scss */
+/* line 1643, ../sass/screen.scss */
 .container-color-3 {
   background-image: -webkit-linear-gradient(top, #dff0d8 0, #c8e5bc 100%);
   background-image: -o-linear-gradient(top, #dff0d8 0, #c8e5bc 100%);
@@ -1734,7 +1734,7 @@ button:hover {
   background-repeat: repeat-x;
 }
 
-/* line 1650, ../sass/screen.scss */
+/* line 1651, ../sass/screen.scss */
 .container-color-4 {
   background: white;
   background: -moz-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
@@ -1746,7 +1746,7 @@ button:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
 }
 
-/* line 1660, ../sass/screen.scss */
+/* line 1661, ../sass/screen.scss */
 .container-color-5 {
   background-image: -webkit-linear-gradient(top, #fcf8e3 0, #f8efc0 100%);
   background-image: -o-linear-gradient(top, #fcf8e3 0, #f8efc0 100%);
@@ -1756,7 +1756,7 @@ button:hover {
   background-repeat: repeat-x;
 }
 
-/* line 1668, ../sass/screen.scss */
+/* line 1669, ../sass/screen.scss */
 .container-color-6 {
   background: #93cede;
   background: -moz-linear-gradient(top, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
@@ -1768,7 +1768,7 @@ button:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=0 );
 }
 
-/* line 1678, ../sass/screen.scss */
+/* line 1679, ../sass/screen.scss */
 .btn {
   font-family: 'Oswald', sans-serif;
   font-size: 16px;
@@ -1780,13 +1780,13 @@ button:hover {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 @media (min-width: 800px) {
-  /* line 1678, ../sass/screen.scss */
+  /* line 1679, ../sass/screen.scss */
   .btn {
     width: 100px;
   }
 }
 
-/* line 1691, ../sass/screen.scss */
+/* line 1692, ../sass/screen.scss */
 .btn-default {
   background: #b3dced;
   background: -moz-linear-gradient(top, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
@@ -1799,31 +1799,31 @@ button:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 );
 }
 
-/* line 1702, ../sass/screen.scss */
+/* line 1703, ../sass/screen.scss */
 .noticia-detalle {
   height: 250px;
   overflow: auto;
   padding: 15px 15px 0 0;
 }
 
-/* line 1707, ../sass/screen.scss */
+/* line 1708, ../sass/screen.scss */
 .container-comentario {
   display: flex;
   flex-direction: column;
 }
 
-/* line 1711, ../sass/screen.scss */
+/* line 1712, ../sass/screen.scss */
 .container-comentarios {
   margin-top: 15px;
 }
 
-/* line 1714, ../sass/screen.scss */
+/* line 1715, ../sass/screen.scss */
 .hacemos-container {
   overflow: auto;
   height: 280px;
 }
 
-/* line 1718, ../sass/screen.scss */
+/* line 1719, ../sass/screen.scss */
 .mision-container {
   overflow: auto;
   height: 380px;
