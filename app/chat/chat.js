@@ -4,12 +4,12 @@
     var scripts = document.getElementsByTagName("script");
     var currentScriptPath = scripts[scripts.length - 1].src;
 
-    angular.module('acdesarrollos.chat', ['ngRoute'])
+    angular.module('acdesarrollos.chat', ['ngRoute', ['mailer/mailer.js']])
         .controller('ChatController', ChatController);
 
-    ChatController.$inject = ['$scope', '$location'];
+    ChatController.$inject = ['$scope', '$location', 'MailerService'];
 
-    function ChatController($scope, $location) {
+    function ChatController($scope, $location, MailerService) {
         var vm = this;
 
         vm.nombre = '';
@@ -32,7 +32,11 @@
             }
 
             vm.idChat = Math.floor((Math.random() * 1000) + 1);
-            //sendMail( vm.email, vm.nombre);
+
+            MailerService.sendMailForChat( vm.email, vm.nombre, function(data){
+                console.log(data);
+            });
+
             myDataRef.push({id: vm.idChat, name: vm.nombre, mail: vm.email, message: vm.nombre + ' se ha conectado'});
             vm.chatIsLogged = true;
         }
