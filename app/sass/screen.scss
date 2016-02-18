@@ -522,17 +522,12 @@ select option {
         position: relative;
         //color: white;
         font-size: 18px;
-        -webkit-transition: opacity .5s ease-in-out;
-        -moz-transition: opacity .5s ease-in-out;
-        -ms-transition: opacity .5s ease-in-out;
-        -o-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
 
       }
 
       .menu-desktop-btn-selected {
         //color: white;
-        color: $color_2;
+        color: #a1cca5;
         //border-radius: 2px;
         //background-color: #406276;
         opacity: 1;
@@ -543,10 +538,15 @@ select option {
       }
       .menu-desktop-btn:hover {
         //color: white;
-        color: $color_2;
+        color:  #a1cca5;
         //border-radius: 2px;
         //background-color: #406276;
         opacity: 1;
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -ms-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
 
         //-webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.44);
         //-moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.44);
