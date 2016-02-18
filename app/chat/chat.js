@@ -34,7 +34,7 @@
             vm.idChat = Math.floor((Math.random() * 1000) + 1);
 
             MailerService.sendMailForChat( vm.email, vm.nombre, function(data){
-                console.log(data);
+                //console.log(data);
             });
 
             myDataRef.push({id: vm.idChat, name: vm.nombre, mail: vm.email, message: vm.nombre + ' se ha conectado'});

@@ -33,7 +33,6 @@
         vm.buscarNoticia = buscarNoticia;
 
         NoticiasService.getNoticias(function (data) {
-            //console.log(data);
             vm.noticias = data;
 
             if(data != null || data.length > 0) {
@@ -76,14 +75,6 @@
                     }
                 }
             }
-
-            /*
-             console.log(vm.noticias_slider_1);
-             console.log(vm.noticias_slider_2);
-             console.log(vm.noticias_slider_3);
-             console.log(vm.noticias_slider_4);
-             console.log(vm.noticias_slider_5);
-             */
         });
 
         vm.slider_nro = 1;
@@ -106,7 +97,7 @@
         }
 
         function goToNoticia(noticia_id) {
-            console.log(noticia_id);
+            //console.log(noticia_id);
 
             for(var i=0; i < vm.noticias.length; i++) {
                 if(vm.noticias[i].noticia_id == noticia_id){

@@ -141,7 +141,7 @@
     vm.links = LinksService.links;
 
     function goTo(location) {
-      console.log(location.path);
+      //console.log(location.path);
       $location.path(location.path);
       vm.selectedPage = location.nombre;
 

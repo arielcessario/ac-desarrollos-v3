@@ -49,7 +49,6 @@
         }
 
         function sendMailForChat(email, nombre, callback) {
-            console.log(email);
             return $http.post('mailer/mailer.php',
                 {
                     function: 'sendMailForChat',

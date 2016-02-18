@@ -25,7 +25,7 @@
 
         if (vm.id > 0) {
             NoticiasService.getNoticiaByID(vm.id, function (data) {
-                console.log(data);
+                //console.log(data);
                 vm.noticia = data;
                 var comentario1 = {fecha:'12/02/2016',detalles:'sfsdfsdfsdfsdfsdf'};
                 var comentario2 = {fecha:'01/02/2016',detalles:'xxxxxxxxxxxxxxxx'};
@@ -68,7 +68,7 @@
         }
 
         function showNoticia(noticia) {
-            console.log(noticia);
+            //console.log(noticia);
         }
 
     };
