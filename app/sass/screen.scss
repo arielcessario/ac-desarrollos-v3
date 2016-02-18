@@ -254,6 +254,7 @@ select option {
 .menu-mobile-panel {
   font-family: 'Oswald', sans-serif;
   width: 100%;
+  font-weight: lighter;
   //background-color: #17384B;
   background: rgba(255,255,255,1);
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
@@ -268,7 +269,16 @@ select option {
   z-index: 500;
   height: 100%;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 50px;
+  opacity: 0;
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:.2s;
+  -moz-animation-duration:.2s;
+  animation-duration:.2s;
 
   //border: 5px solid white;
 
@@ -276,7 +286,7 @@ select option {
     margin-top: 15px;
     margin-left: 15px;
     font-family: 'Oswald', sans-serif;
-    line-height: 35px;
+    line-height: 20px;
     font-size: 18px;
     padding: 5px;
     font-variant: all-petite-caps;
@@ -404,6 +414,20 @@ select option {
 
 }
 
+
+#menu-mobile-logo {
+  opacity: 0;
+  margin-bottom: 30px;
+  -webkit-animation:fadeIn ease-in-out 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in-out 1;
+  animation:fadeIn ease-in-out 1;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:4s;
+  -moz-animation-duration:4s;
+  animation-duration:4s;
+}
+
 @keyframes latido{
   0%{
 
@@ -512,6 +536,7 @@ select option {
         cursor: pointer;
         font-family: 'Oswald', sans-serif;
         color: black;
+        font-weight: lighter;
         //font-weight: lighter;
         //letter-spacing: .9px;
         //margin-top: 10px;
@@ -522,6 +547,15 @@ select option {
         position: relative;
         //color: white;
         font-size: 18px;
+        opacity: 0;
+        -webkit-animation:fadeIn ease-in-out 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+        -moz-animation:fadeIn ease-in-out 1;
+        animation:fadeIn ease-in-out 1;
+        -moz-animation-fill-mode:forwards;
+        animation-fill-mode:forwards;
+        -webkit-animation-duration:5s;
+        -moz-animation-duration:5s;
+        animation-duration:5s;
 
       }
 
@@ -1765,6 +1799,7 @@ button:hover{
   height: 250px;
   overflow: auto;
   padding: 15px 15px 0 0;
+  overflow-y: hidden;
 }
 .container-comentario{
   display: flex;
@@ -1776,8 +1811,11 @@ button:hover{
 .hacemos-container {
   overflow: auto;
   height: 280px;
+  overflow-y: hidden;
+
 }
 .mision-container{
   overflow: auto;
   height: 380px;
+  overflow-y: hidden;
 }
