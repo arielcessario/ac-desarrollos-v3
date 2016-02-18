@@ -7,12 +7,13 @@
     angular.module('acdesarrollos.noticias', ['ngRoute'])
         .controller('NoticiasController', NoticiasController);
 
-    NoticiasController.$inject = ['$scope', '$location', 'NoticiasService', '$interval'];
+    NoticiasController.$inject = ['$scope', '$location', 'NoticiasService', '$interval', 'AcUtils'];
 
-    function NoticiasController($scope, $location, NoticiasService, $interval) {
+    function NoticiasController($scope, $location, NoticiasService, $interval, AcUtils) {
         var vm = this;
 
         vm.titulo = '';
+        vm.filtro = '';
         vm.slider_1 = false;
         vm.slider_2 = false;
         vm.slider_3 = false;
@@ -29,9 +30,10 @@
 
         vm.goToNoticia = goToNoticia;
         vm.showNoticia = showNoticia;
+        vm.buscarNoticia = buscarNoticia;
 
         NoticiasService.getNoticias(function (data) {
-            console.log(data);
+            //console.log(data);
             vm.noticias = data;
 
             if(data != null || data.length > 0) {
@@ -76,12 +78,12 @@
             }
 
             /*
-            console.log(vm.noticias_slider_1);
-            console.log(vm.noticias_slider_2);
-            console.log(vm.noticias_slider_3);
-            console.log(vm.noticias_slider_4);
-            console.log(vm.noticias_slider_5);
-            */
+             console.log(vm.noticias_slider_1);
+             console.log(vm.noticias_slider_2);
+             console.log(vm.noticias_slider_3);
+             console.log(vm.noticias_slider_4);
+             console.log(vm.noticias_slider_5);
+             */
         });
 
         vm.slider_nro = 1;
@@ -118,6 +120,16 @@
 
         function showNoticia(noticia) {
             console.log(noticia);
+        }
+
+        function buscarNoticia(filtro) {
+            if (filtro.length > 2) {
+                AcUtils.getByParams('titulo,detalles', filtro, 'false', vm.noticias, function(data){
+                    console.log(data);
+                })
+            } else {
+
+            }
         }
 
     };

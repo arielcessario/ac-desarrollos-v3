@@ -1,6 +1,20 @@
 <div ng-controller="NoticiasController as noticiasCtrl" class="container-noticias container-color-5 container-menu-margin">
     <div class="container-info">
         <h1>Noticias</h1>
+        <!--div class="noticia-titulo">
+            <h1>Noticias</h1>
+            <div class="noticia-mes">Mes:<div class="arrow-down"></div></div>
+            <div class="noticia-anio">Año:<div class="arrow-down"></div></div>
+        </div-->
+        <div class="buscar">
+            <label>Buscar:</label>
+            <input type="text" class="buscar-control" style="width: 70%;"
+                   ng-model="noticiasCtrl.filtro" ng-keyup="noticiasCtrl.buscarNoticia(noticiasCtrl.filtro);">
+            <div class="back" style="margin: 0">
+                <div class="arrow-left"></div>
+                <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
+            </div>
+        </div>
 
         <div id="main-slider">
             <div ng-class="{'show-slider-proyecto':noticiasCtrl.slider_nro == 1}"
@@ -79,15 +93,6 @@
             <div class="arrow-left"></div>
             <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
         </div-->
-
-        <div class="buscar">
-            <label>Buscar:</label>
-            <input type="text" class="buscar-control" style="width: 70%;">
-            <div class="back" style="margin: 0">
-                <div class="arrow-left"></div>
-                <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
-            </div>
-        </div>
 
         <div class="slider-indicator">
             <div class="slider_1" ng-class="{slider_selected:noticiasCtrl.slider_nro==1}"

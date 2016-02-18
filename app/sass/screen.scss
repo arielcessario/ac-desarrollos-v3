@@ -731,12 +731,14 @@ h3 {
 h5 {
   text-align: left;
   font-family: 'Oswald', sans-serif;
-  font-size: 28px;
+  //font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 5px;
   color: #222222;
   @media (max-width: 360px){
-    font-size: 32px;
+    //font-size: 32px;
+    font-size: 26px;
   }
 
 }
@@ -1131,11 +1133,12 @@ border-radius: 20px;
 
 
 .buscar {
-  margin-top: 70px;
+  //margin-top: 70px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   @media (max-width: 400px) {
-    margin-top: 1000px;
+    //margin-top: 1000px;
   }
 }
 
@@ -1796,10 +1799,10 @@ button:hover{
 //}
 
 .noticia-detalle {
-  height: 250px;
-  overflow: auto;
+  //height: 250px;
+  //overflow: auto;
   padding: 15px 15px 0 0;
-  overflow-y: hidden;
+  //overflow-y: hidden;
 }
 .container-comentario{
   display: flex;
@@ -1815,7 +1818,7 @@ button:hover{
 
 }
 .mision-container{
-  overflow: auto;
-  height: 380px;
-  overflow-y: hidden;
+  //overflow: auto;
+  //height: 380px;
+  //overflow-y: hidden;
 }
