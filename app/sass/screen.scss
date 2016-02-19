@@ -1650,9 +1650,15 @@ button:hover{
   }
 }
 #texto-mensaje {
-  width: 60%;
-  margin-left: 25%;
+  //width: 60%;
+  //margin-left: 25%;
+  margin-right: 10px;
   margin-top: 15px;
+  @media (min-width: 800px) {
+    width: 60%;
+    margin-left: 25%;
+    margin-top: 15px;
+  }
 }
 .arrow-contacto-margin{
   margin-right:0;
