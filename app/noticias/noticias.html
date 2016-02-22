@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div id="main-slider">
+        <div id="main-slider" ng-if="!noticiasCtrl.buscar">
             <div ng-class="{'show-slider-proyecto':noticiasCtrl.slider_nro == 1}"
                  class="main-slider-proyecto">
                 <div ng-repeat="noticia in noticiasCtrl.noticias_slider_1" class="noticia-container">
@@ -94,7 +94,7 @@
             <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
         </div-->
 
-        <div class="slider-indicator">
+        <div class="slider-indicator" ng-if="!noticiasCtrl.buscar">
             <div class="slider_1" ng-class="{slider_selected:noticiasCtrl.slider_nro==1}"
                  ng-if="noticiasCtrl.slider_1"
                  ng-click="noticiasCtrl.slider_nro=1;"></div>
@@ -110,6 +110,20 @@
             <div class="slider_5" ng-class="{slider_selected:noticiasCtrl.slider_nro==5}"
                  ng-if="noticiasCtrl.slider_5"
                  ng-click="noticiasCtrl.slider_nro=5;"></div>
+        </div>
+
+        <div class="" ng-if="noticiasCtrl.buscar">
+            <div ng-repeat="noticia in noticiasCtrl.noticias_resultado" class="noticia-container">
+                <div class="noticia-foto">
+                    <img ng-src="{{noticia.fotos.length > 0 ? 'http://192.185.67.199/~arielces/ac-generador-noticias/img/'+noticia.fotos[0].foto : ''}}"
+                         title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
+                </div>
+                <div class="noticia-info">
+                    <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
+                    <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                    <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

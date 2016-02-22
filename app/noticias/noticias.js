@@ -14,6 +14,7 @@
 
         vm.titulo = '';
         vm.filtro = '';
+        vm.buscar = false;
         vm.slider_1 = false;
         vm.slider_2 = false;
         vm.slider_3 = false;
@@ -21,6 +22,7 @@
         vm.slider_5 = false;
 
         vm.noticias = [];
+        vm.noticias_resultado = [];
         vm.noticia = {};
         vm.noticias_slider_1 = [];
         vm.noticias_slider_2 = [];
@@ -117,9 +119,11 @@
             if (filtro.length > 2) {
                 AcUtils.getByParams('titulo,detalles', filtro, 'false', vm.noticias, function(data){
                     console.log(data);
+                    vm.noticias_resultado = data;
+                    vm.buscar = true;
                 })
             } else {
-
+                vm.buscar = false;
             }
         }
 

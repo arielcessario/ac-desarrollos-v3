@@ -1,0 +1,37 @@
+<div ng-controller="CotizadorController as cotizadorCtrl" class="container container-color-2 container-menu-margin">
+    <div class="container-info">
+        <h1>Cotizador</h1>
+        <div class="cotizador-container">
+            <div class="controls controls-margin">
+                <label>Slider Fijo:</label>
+                <input type="text" class="form-control"
+                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+            </div>
+            <div class="controls controls-margin">
+                <label>Slider Autoadministrable:</label>
+                <input type="text" class="form-control"
+                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+            </div>
+            <div class="controls controls-margin">
+                <label>Contactos:</label>
+                <input type="text" class="form-control"
+                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+            </div>
+            <div class="controls controls-margin">
+                <label>Nombre:</label>
+                <input type="text" class="form-control"
+                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+            </div>
+            <div class="controls controls-margin">
+                <label>Mail:</label>
+                <input type="text" class="form-control"
+                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+            </div>
+            <div class="btn-chat">
+                <div class="arrow-up arrow-chat-margin"></div>
+                <!--a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Ingresar</a-->
+                <button id="contacto-enviar-mobile" ac-validator ng-click="cotizadorCtrl.sendMail();">Pedir Cotización</button>
+            </div>
+        </div>
+    </div>
+</div>
