@@ -200,6 +200,10 @@
                  ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NOTICIAS') > -1 }"
                  ng-click="appCtrl.goTo({nombre: 'NOTICIAS', path: '/noticias'});"> NOTICIAS
             </div>
+            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('COTIZADOR') > -1 }"
+                 ng-click="appCtrl.goTo({nombre: 'COTIZADOR', path: '/cotizador'});"> COTIZADOR
+            </div>
             <div class="menu-desktop-btn ac-ripple"
                  ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CHATEA CON NOSOTROS') > -1 }"
                  ng-click="appCtrl.goTo({nombre: 'CHATEA CON NOSOTROS', path: '/chat'});"> CHATEA CON NOSOTROS!

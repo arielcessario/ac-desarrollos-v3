@@ -121,6 +121,7 @@
       {nombre: 'CONTACTANOS', path: '/contacto'},
       {nombre: 'SABIAS?', path: '/sabias'},
       {nombre: 'NOTICIAS', path: '/noticias'},
+      {nombre: 'COTIZADOR', path: '/cotizador'},
       {nombre: 'CHATEA CON NOSOTROS!', path: '/chat'}
     ];
 
