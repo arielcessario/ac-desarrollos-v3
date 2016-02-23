@@ -1,0 +1,59 @@
+<div ng-controller="HacemosController as hacemosCtrl" class="container container-color-2 container-menu-margin">
+    <div class="container-info">
+        <h1>Que hacemos?</h1>
+
+        <div id="main-slider">
+
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 1}" class="main-slider-proyecto">
+                <h3 class="color-terciary">Ecommerce, Mcommerce y Comercio Social:</h3>
+                <div class="hacemos-container">
+                    <p>El comercio electrónico, también conocido como e-commerce (electronic commerce en inglés), consiste en la compra y venta de productos o de servicios a través de medios electrónicos.</p>
+                    <p>La mayor parte del comercio electrónico consiste en la compra y venta de productos o servicios entre personas y empresas, sin embargo un porcentaje considerable del comercio electrónico consiste en la adquisición de artículos virtuales (software y derivados en su mayoría), tales como el acceso a contenido "premium" de un sitio web..</p>
+                    <p>M-Commerce o comercio móvil (del anglicismo Mobile Commerce) toma sus bases del e-commerce, solo que llevando todas las transacciones a nivel de poder ser ejecutadas desde un teléfono móvil u otro dispositivo inalámbrico móvil.</p>
+                    <p>El comercio social (en inglés: social commerce) es una ramificación del comercio electrónico que supone el uso de redes sociales para ayudar en la compra y venta en línea de productos y servicios.</p>
+                    <p>El término comercio social fue acuñado por Yahoo! en noviembre de 20051 para describir un conjunto de herramientas de compra colaborativa tales como listas compartidas, valoraciones de usuarios y otro tipo de información y consejos generados por usuarios.</p>
+                </div>
+            </div>
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 2}" class="main-slider-proyecto">
+                <h3 class="color-primary">Institucionales:</h3>
+                <p>Los sitios web institucionales están desarrollados para brindar al usuario información concisa sobre los datos de la empresa, a lo que se dedica y las formas de contacto.</p>
+                <p>Están pensadas para que ofrezcan una experienca rápida y amena que permita facilitar todos los medios de contacto posibles hacia la empresa, ya sea a través de mapas, números de teléfono o formularios de contacto.</p>
+                <p>En estas páginas web se muestra solo un resumen de los servicios o productos ofrecidos por la empresa.</p>
+            </div>
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 3}" class="main-slider-proyecto">
+                <h3 class="color-terciary">Sistemas de gestión:</h3>
+                <p>Un sistema robusto y completo que permite realizar la gestión de ventas, stock, clientes y movimientos contables. Un sistema en evolución constante que crece de acuerdo a las necesidades de nuestros clientes.</p>
+            </div>
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 4}" class="main-slider-proyecto">
+                <h3 class="color-primary">Desarrollos a medida:</h3>
+                <p>Si tenés una idea, nosotros te damos un plan para implementarla de una forma seria y aplicando todas las nuevas tecnologias del mercado.</p>
+                <p>No importa como sea tu negocio, siempre podés contar con nosotros para poder llevar a cabu tu proyecto.</p>
+                <p>Todos nuestros diseños y desarrollos estan pensados de acuerdo a las necesidades y el negocio de nuestro cliente, cada página es una experiencia única e irrepetible.</p>
+            </div>
+            <div ng-class="{'show-slider-proyecto':hacemosCtrl.slider_nro == 5}" class="main-slider-proyecto">
+                <h3 class="color-terciary">Analiticas:</h3>
+                <p>Te ofrecemos las mejores herramientas para que puedas ver que está pasando en tu sitio, las páginas más visitadas, los países, los idiomas, los gustos de tus usuarios y mucho más.</p>
+            </div>
+        </div>
+
+
+        <div class="back">
+            <div class="arrow-left"></div>
+            <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
+        </div>
+
+        <div class="slider-indicator">
+            <div class="slider_1" ng-class="{slider_selected:hacemosCtrl.slider_nro==1}"
+                 ng-click="hacemosCtrl.slider_nro=1;"></div>
+            <div class="slider_2" ng-class="{slider_selected:hacemosCtrl.slider_nro==2}"
+                 ng-click="hacemosCtrl.slider_nro=2;"></div>
+            <div class="slider_3" ng-class="{slider_selected:hacemosCtrl.slider_nro==3}"
+                 ng-click="hacemosCtrl.slider_nro=3;"></div>
+            <div class="slider_4" ng-class="{slider_selected:hacemosCtrl.slider_nro==4}"
+                 ng-click="hacemosCtrl.slider_nro=4;"></div>
+            <div class="slider_5" ng-class="{slider_selected:hacemosCtrl.slider_nro==5}"
+                 ng-click="hacemosCtrl.slider_nro=5;"></div>
+        </div>
+    </div>
+</div>
+
