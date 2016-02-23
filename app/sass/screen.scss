@@ -722,7 +722,7 @@ h3 {
   @media (max-width: 600px){
     text-justify: inter-word;
     //font-size: 25px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
 }
@@ -1782,6 +1782,7 @@ button:hover{
   display: inline-block;
   font-size: 1em;
   margin: auto;
+  margin-top: 10px;
   padding: 2px;
   text-decoration: none;
   transition: all 0.5s ease;
