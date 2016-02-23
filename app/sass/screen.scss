@@ -1851,3 +1851,34 @@ button:hover{
   min-height: 320px;
 }
 
+select{
+  border: solid 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  background-color: transparent;
+  margin-left: 5px;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
+}
+.select-control{
+  //display: block;
+  //width: 100%;
+  height: 30px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-image: none;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+select option {
+  background-color: #fff;
+}
