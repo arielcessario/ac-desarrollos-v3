@@ -268,7 +268,7 @@ select option {
   z-index: 500;
   height: 100%;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 24px;
   opacity: 0;
   -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation:fadeIn ease-in 1;
@@ -285,7 +285,7 @@ select option {
     margin-top: 15px;
     margin-left: 15px;
     font-family: 'Oswald', sans-serif;
-    line-height: 20px;
+    line-height: 16px;
     font-size: 18px;
     padding: 5px;
     font-variant: all-petite-caps;
