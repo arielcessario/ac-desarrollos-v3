@@ -21,6 +21,7 @@
 
         service.sendMail = sendMail;
         service.sendMailForChat = sendMailForChat;
+        service.sendCotizacion = sendCotizacion;
 
 
         return service;
@@ -54,6 +55,22 @@
                     function: 'sendMailForChat',
                     'email': email,
                     'nombre': nombre
+                })
+                .success(function (data) {
+                    callback(data);
+                })
+                .error(function (data) {
+                    callback(data);
+                })
+        }
+
+        function sendCotizacion(email, nombre, message, callback) {
+            return $http.post('mailer/mailer.php',
+                {
+                    function: 'sendCotizacion',
+                    'email': email,
+                    'nombre': nombre,
+                    'message': message
                 })
                 .success(function (data) {
                     callback(data);

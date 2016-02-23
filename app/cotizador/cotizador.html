@@ -4,33 +4,111 @@
         <div class="cotizador-container">
             <div class="controls controls-margin">
                 <label>Slider Fijo:</label>
-                <input type="text" class="form-control"
-                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+                <select ng-model="cotizadorCtrl.slider_fijo.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
             </div>
             <div class="controls controls-margin">
                 <label>Slider Autoadministrable:</label>
-                <input type="text" class="form-control"
-                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+                <select ng-model="cotizadorCtrl.slider_administrable.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
             </div>
             <div class="controls controls-margin">
                 <label>Contactos:</label>
-                <input type="text" class="form-control"
-                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+                <select ng-model="cotizadorCtrl.contactos.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
             </div>
             <div class="controls controls-margin">
+                <label>Información de Empresas:</label>
+                <select ng-model="cotizadorCtrl.empresa_info.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Información de Productos:</label>
+                <select ng-model="cotizadorCtrl.producto_info.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Multipágina:</label>
+                <select ng-model="cotizadorCtrl.multipaginas.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Noticias:</label>
+                <select ng-model="cotizadorCtrl.noticias.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Usuarios:</label>
+                <select ng-model="cotizadorCtrl.usuarios.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Ecommerce:</label>
+                <select ng-model="cotizadorCtrl.ecommerce.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Caja:</label>
+                <select ng-model="cotizadorCtrl.caja.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Cobros Online:</label>
+                <select ng-model="cotizadorCtrl.cobros_online.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Administración de Imágenes:</label>
+                <select ng-model="cotizadorCtrl.imagenes_admin.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+            <div class="controls controls-margin">
+                <label>Comentarios:</label>
+                <select ng-model="cotizadorCtrl.comentarios.id" class="select-control">
+                    <option value="1">SI</option>
+                    <option value="2">NO</option>
+                </select>
+            </div>
+
+            <div class="controls controls-margin">
                 <label>Nombre:</label>
-                <input type="text" class="form-control"
-                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+                <input type="text" class="form-control" ng-model="cotizadorCtrl.nombre" >
             </div>
             <div class="controls controls-margin">
                 <label>Mail:</label>
-                <input type="text" class="form-control"
-                       ng-model="cotizadorCtrl.nombre" id="contacto-nombre">
+                <input type="text" class="form-control" ng-model="cotizadorCtrl.email" >
+            </div>
+            <div class="controls controls-margin">
+                <label>Comentario:</label>
+                <textarea ng-model="cotizadorCtrl.message" cols="50" rows="5" class="form-control"></textarea>
             </div>
             <div class="btn-chat">
                 <div class="arrow-up arrow-chat-margin"></div>
-                <!--a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Ingresar</a-->
-                <button id="contacto-enviar-mobile" ac-validator ng-click="cotizadorCtrl.sendMail();">Pedir Cotización</button>
+                <button id="contacto-enviar-mobile" ng-click="cotizadorCtrl.sendMail();">Pedir Cotización</button>
             </div>
         </div>
     </div>
