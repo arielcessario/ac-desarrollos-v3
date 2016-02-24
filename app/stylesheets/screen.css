@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
-/* line 5, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../Users/diegob/.rvm/gems/ruby-head/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -303,7 +303,7 @@ select option {
   z-index: 500;
   height: 100%;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 24px;
   opacity: 0;
   -webkit-animation: fadeIn ease-in 1;
   /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
@@ -325,7 +325,7 @@ select option {
   margin-top: 15px;
   margin-left: 15px;
   font-family: 'Oswald', sans-serif;
-  line-height: 20px;
+  line-height: 16px;
   font-size: 18px;
   padding: 5px;
   font-variant: all-petite-caps;
@@ -712,7 +712,7 @@ h3 {
   /* line 706, ../sass/screen.scss */
   h3 {
     text-justify: inter-word;
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
@@ -1868,6 +1868,7 @@ button:hover {
   display: inline-block;
   font-size: 1em;
   margin: auto;
+  margin-top: 10px;
   padding: 2px;
   text-decoration: none;
   transition: all 0.5s ease;
@@ -1883,7 +1884,7 @@ button:hover {
   }
 }
 
-/* line 1798, ../sass/screen.scss */
+/* line 1799, ../sass/screen.scss */
 .btn:hover {
   color: white;
   cursor: pointer;
@@ -1900,56 +1901,56 @@ button:hover {
   /* IE6-9 */
 }
 
-/* line 1825, ../sass/screen.scss */
+/* line 1826, ../sass/screen.scss */
 .noticia-detalle {
   padding: 15px 15px 0 0;
 }
 
-/* line 1831, ../sass/screen.scss */
+/* line 1832, ../sass/screen.scss */
 .container-comentario {
   display: flex;
   flex-direction: column;
 }
 
-/* line 1835, ../sass/screen.scss */
+/* line 1836, ../sass/screen.scss */
 .container-comentarios {
   margin-top: 15px;
 }
 
-/* line 1838, ../sass/screen.scss */
+/* line 1839, ../sass/screen.scss */
 .hacemos-container {
   overflow: auto;
   height: 280px;
   overflow-y: hidden;
 }
 
-/* line 1850, ../sass/screen.scss */
+/* line 1851, ../sass/screen.scss */
 .slider-container-1 {
   margin: 0 20px 100px;
 }
 @media (min-width: 800px) {
-  /* line 1850, ../sass/screen.scss */
+  /* line 1851, ../sass/screen.scss */
   .slider-container-1 {
     margin: 0 18%;
   }
 }
 
-/* line 1857, ../sass/screen.scss */
+/* line 1858, ../sass/screen.scss */
 .slider-container-2 {
   min-height: 270px;
 }
 
-/* line 1860, ../sass/screen.scss */
+/* line 1861, ../sass/screen.scss */
 .slider-selected {
   display: inline !important;
 }
 
-/* line 1863, ../sass/screen.scss */
+/* line 1864, ../sass/screen.scss */
 .slider-container {
   display: none;
 }
 
-/* line 1866, ../sass/screen.scss */
+/* line 1867, ../sass/screen.scss */
 .slider-alto {
   min-height: 320px;
   font-family: 'Oswald', sans-serif;
@@ -1965,7 +1966,7 @@ button:hover {
   animation-duration: 1.5s;
 }
 
-/* line 1880, ../sass/screen.scss */
+/* line 1881, ../sass/screen.scss */
 select {
   border: solid 0px;
   border-bottom-width: 1px;
@@ -1983,7 +1984,7 @@ select {
   animation-duration: 3s;
 }
 
-/* line 1896, ../sass/screen.scss */
+/* line 1897, ../sass/screen.scss */
 .select-control {
   height: 30px;
   font-size: 14px;
@@ -1995,7 +1996,35 @@ select {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-/* line 1908, ../sass/screen.scss */
+/* line 1909, ../sass/screen.scss */
 select option {
   background-color: #fff;
+}
+
+/* line 1912, ../sass/screen.scss */
+.container-row {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 800px) {
+  /* line 1912, ../sass/screen.scss */
+  .container-row {
+    flex-direction: row;
+  }
+}
+
+/* line 1920, ../sass/screen.scss */
+.container-colum {
+  margin: 15px;
+}
+
+/* line 1923, ../sass/screen.scss */
+.float-right {
+  float: right;
+}
+
+/* line 1926, ../sass/screen.scss */
+.box-row {
+  display: flex;
+  flex-direction: row;
 }

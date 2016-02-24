@@ -1909,3 +1909,22 @@ select{
 select option {
   background-color: #fff;
 }
+.container-row{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+}
+.container-colum{
+  margin: 15px;
+}
+.float-right{
+  float:right;
+}
+.box-row{
+  display: flex;
+  flex-direction: row;
+}
+
