@@ -18,8 +18,9 @@ if ($decoded != null) {
     if ($decoded->function == 'sendMailForChat') {
         sendMailForChat($decoded->email, $decoded->nombre);
     }elseif($decoded->function == 'sendCotizacion') {
-        sendCotizacion($decoded->cliente, $decoded->nuestros_servicios, $decoded->pagina_web,
-            $decoded->comentario);
+        sendCotizacion($decoded->cliente, $decoded->nuestros_servicios, $decoded->nueva_web, $decoded->pagina_web,
+            $decoded->comentario, $decoded->website_referencia, $decoded->dominio_info, $decoded->registro_dominio,
+            $decoded->dominio_deseado, $decoded->graficos, $decoded->otro_disenio_grafico);
     }
 }
 //sendMail($decoded->email, $decoded->nombre, $decoded->mensaje, $decoded->asunto);
@@ -56,8 +57,12 @@ function sendMailForChat($email, $nombre)
     }
 }
 
-function sendCotizacion($cliente, $nuestros_servicios, $pagina_web, $comentario)
+function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, $comentario,
+                        $website_referencia, $dominio_info, $registro_dominio, $dominio_deseado,
+                        $graficos, $otro_disenio_grafico)
 {
+
+
     $contacto = json_decode($cliente);
     $servicios_elegidos = json_decode($nuestros_servicios);
     $disenio_web_elegidos = json_decode($pagina_web);

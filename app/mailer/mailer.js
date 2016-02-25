@@ -73,8 +73,15 @@
                     function: 'sendCotizacion',
                     'cliente': JSON.stringify(cliente),
                     'nuestros_servicios': JSON.stringify(nuestros_servicios),
+                    'nueva_web': JSON.stringify(nueva_web),
                     'pagina_web': JSON.stringify(pagina_web),
-                    'comentario': comentario
+                    'comentario': comentario,
+                    'website_referencia': website_referencia,
+                    'dominio_info': dominio_info,
+                    'registro_dominio': registro_dominio,
+                    'dominio_deseado': dominio_deseado,
+                    'graficos': JSON.stringify(graficos),
+                    'otro_disenio_grafico': otro_disenio_grafico
                 })
                 .success(function (data) {
                     callback(data);

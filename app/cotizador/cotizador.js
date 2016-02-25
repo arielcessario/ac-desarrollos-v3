@@ -13,6 +13,7 @@
         var vm = this;
 
         vm.nombre = '';
+        vm.empresa = '';
         vm.email = '';
         vm.telefono = '';
         vm.message = '';
@@ -23,6 +24,7 @@
         vm.logotipos = false;
         vm.desarrollografico = false;
         vm.dominio = false;
+        vm.impresion = false;
 
         //Diseño de Página Web
         vm.nuevapagina = false;
@@ -36,7 +38,7 @@
         vm.noticias = false;
         vm.usuarios = false;
         vm.ecommerce = false;
-        vm.caja = false;
+        vm.chat = false;
         vm.cobros_online = false;
         vm.imagenes_admin = false;
         vm.website_referencia = '';
@@ -56,6 +58,7 @@
         vm.nuestros_servicios = [];
         vm.pagina_web = [];
         vm.registro_dominio = [];
+        vm.hosting_correo = [];
         vm.graficos = [];
         vm.plan_hosting = [
             {id:1, name:'Plan 1'},
@@ -80,7 +83,7 @@
                 return;
             }
 
-            var cliente = {nombre:vm.nombre, email:vm.email, telefono:vm.telefono, message:vm.message};
+            var cliente = {nombre:vm.nombre, empresa:vm.empresa, email:vm.email, telefono:vm.telefono, message:vm.message};
             //var nueva_web = vm.nuevapagina;
             var nueva_web = 'Diseño de una nueva página web';
             var dominio_info = 'Registrar un nuevo dominio';
@@ -100,6 +103,7 @@
 
                 vm.email = '';
                 vm.nombre = '';
+                vm.empresa = '';
                 vm.telefono = '';
                 vm.message = '';
                 vm.comentario = '';
@@ -129,6 +133,9 @@
             }
             if (vm.dominio) {
                 vm.nuestros_servicios.push({nombre:'Registro de Dominio', precio:'300'});
+            }
+            if (vm.impresion) {
+                vm.nuestros_servicios.push({nombre:'Impresión', precio:'100'});
             }
 
             console.log(vm.nuestros_servicios);
@@ -162,8 +169,8 @@
             if (vm.ecommerce) {
                 vm.pagina_web.push({nombre:'Ecommerce', precio:'100'});
             }
-            if (vm.caja) {
-                vm.pagina_web.push({nombre:'Caja', precio:'150'});
+            if (vm.chat) {
+                vm.pagina_web.push({nombre:'Chat en linea', precio:'150'});
             }
             if (vm.cobros_online) {
                 vm.pagina_web.push({nombre:'Cobros Online', precio:'200'});
