@@ -18,7 +18,7 @@
 
         function nextMovie() {
             vm.movie = vm.movie + 1;
-            if(vm.movie > 10)
+            if(vm.movie > 7)
                 vm.movie = 1;
 
             console.log(vm.movie);
