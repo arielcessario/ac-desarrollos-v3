@@ -68,7 +68,8 @@
                                 comentario, website_referencia, dominio_info,
                                 registro_dominio, dominio_deseado, graficos,
                                 otro_disenio_grafico, como_nos_conocio, desea_reunion,
-                                lugar_reunion, fecha_reunion, hosting_correo, callback) {
+                                lugar_reunion, fecha_reunion, hosting_correo, hosting_plan,
+                                callback) {
             return $http.post('mailer/mailer.php',
                 {
                     function: 'sendCotizacion',
@@ -87,7 +88,8 @@
                     'desea_reunion': desea_reunion,
                     'lugar_reunion': lugar_reunion,
                     'fecha_reunion': fecha_reunion,
-                    'hosting_correo': hosting_correo
+                    'hosting_correo': hosting_correo,
+                    'hosting_plan': hosting_plan
                 })
                 .success(function (data) {
                     callback(data);

@@ -21,7 +21,8 @@ if ($decoded != null) {
         sendCotizacion($decoded->cliente, $decoded->nuestros_servicios, $decoded->nueva_web, $decoded->pagina_web,
             $decoded->comentario, $decoded->website_referencia, $decoded->dominio_info, $decoded->registro_dominio,
             $decoded->dominio_deseado, $decoded->graficos, $decoded->otro_disenio_grafico, $decoded->como_nos_conocio,
-            $decoded->desea_reunion, $decoded->lugar_reunion, $decoded->fecha_reunion, $decoded->hosting_correo);
+            $decoded->desea_reunion, $decoded->lugar_reunion, $decoded->fecha_reunion, $decoded->hosting_correo,
+            $decoded->hosting_plan);
     }
 }
 //sendMail($decoded->email, $decoded->nombre, $decoded->mensaje, $decoded->asunto);
@@ -61,7 +62,7 @@ function sendMailForChat($email, $nombre)
 function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, $comentario,
                         $website_referencia, $dominio_info, $registro_dominio, $dominio_deseado,
                         $graficos, $otro_disenio_grafico, $como_nos_conocio, $desea_reunion,
-                        $lugar_reunion, $fecha_reunion, $hosting_correo)
+                        $lugar_reunion, $fecha_reunion, $hosting_correo, $hosting_plan)
 {
 
 
@@ -121,7 +122,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= '</table></div>';
     $message .= '<h3 style="margin:20px 0 0 15px;">Servicio de Hosting y Correos</h3>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Solicitar: </label>' . $hosting_correo . '</div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Plan del Hosting: </label>' . $hosting_correo . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Plan del Hosting: </label>' . $hosting_plan . '</div>';
     $message .= '<h3 style="margin:20px 0 0 15px;">Registro de Dominios</h3>';
     $message .= '<p style="margin:10px 0 5px 15px;">' . $dominio_info . '</p>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Dominio deseado: </label>' . $dominio_deseado . '</div>';

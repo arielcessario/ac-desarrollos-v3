@@ -115,6 +115,8 @@
                 hosting_correo = 'No estoy seguro';
             }
 
+            var hosting_plan = '';
+
             //Registro de Dominios
             var dominio_info = '';
             if(vm.registro_dominio == 1) {
@@ -150,11 +152,12 @@
             MailerService.sendCotizacion(cliente, vm.nuestros_servicios, nueva_web, vm.pagina_web,
                 vm.comentario, vm.website_referencia, dominio_info, vm.dominio_a_registrar,
                 vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, vm.como_nos_conocio,
-                desea_una_reunion, vm.lugar_reunion, vm.fecha_reunion, hosting_correo, function(data){
+                desea_una_reunion, vm.lugar_reunion, vm.fecha_reunion, hosting_correo, hosting_plan,
+                function(data){
                     console.log(data);
 
                     cleanVariables();
-                });
+            });
         }
 
         function addServicios() {
