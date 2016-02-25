@@ -12,6 +12,7 @@
     function CotizadorController($scope, $location, MailerService) {
         var vm = this;
 
+        //Contacto
         vm.nombre = '';
         vm.empresa = '';
         vm.email = '';
@@ -65,7 +66,7 @@
         vm.pagina_web = [];
         vm.registro_dominio = [];
         vm.dominio_a_registrar = [];
-        vm.hosting_correo = [];
+        vm.hosting_y_correo = [];
         vm.graficos = [];
         vm.plan_hosting = [
             {id:1, name:'Plan 1'},
@@ -75,7 +76,7 @@
 
         vm.hosting_selected = {};
 
-
+        //Funciones
         vm.sendMail = sendMail;
 
 
@@ -90,10 +91,53 @@
                 return;
             }
 
+            console.log(vm.nuevapagina);
+
             var cliente = {nombre:vm.nombre, empresa:vm.empresa, email:vm.email, telefono:vm.telefono, message:vm.message};
-            //var nueva_web = vm.nuevapagina;
-            var nueva_web = 'Diseño de una nueva página web';
-            var dominio_info = 'Registrar un nuevo dominio';
+
+            //Diseño de Página Web
+            var nueva_web = '';
+            if(vm.nuevapagina == 1) {
+                nueva_web = 'Diseño de una nueva página web';
+            } else if(vm.nuevapagina == 2) {
+                nueva_web = 'Rediseño de su página actual';
+            } else if(vm.nuevapagina == 3) {
+                nueva_web = 'Servicio de Mantenimiento';
+            }
+
+            //Servicio de Hosting y Correos
+            var hosting_correo = '';
+            if(vm.hosting_y_correo == 1) {
+                hosting_correo = 'Si';
+            } else if(vm.hosting_y_correo == 2) {
+                hosting_correo = 'No, ya tengo el hosting';
+            } else if(vm.hosting_y_correo == 3) {
+                hosting_correo = 'No estoy seguro';
+            }
+
+            //Registro de Dominios
+            var dominio_info = '';
+            if(vm.registro_dominio == 1) {
+                dominio_info = 'Registrar un nuevo dominio';
+            } else if(vm.registro_dominio == 2) {
+                dominio_info = 'No, ya tengo el dominio';
+            } else if(vm.registro_dominio == 3) {
+                dominio_info = 'No estoy seguro';
+            }
+
+            //Información Adicional
+            var desea_una_reunion = '';
+            if(vm.desea_reunion == 1) {
+                desea_una_reunion = 'SI';
+            } else if(vm.desea_reunion == 2) {
+                desea_una_reunion = 'NO';
+            } else if(vm.desea_reunion == 3) {
+                desea_una_reunion = 'SI';
+            }
+
+            console.log(vm.fecha_reunion);
+            var fecha = new Date((vm.fecha_reunion.getMonth() + 1) + '/' + (vm.fecha_reunion.getDate()) + '/' + vm.fecha_reunion.getFullYear());
+            console.log(fecha);
 
             addServicios();
 
@@ -106,27 +150,10 @@
             MailerService.sendCotizacion(cliente, vm.nuestros_servicios, nueva_web, vm.pagina_web,
                 vm.comentario, vm.website_referencia, dominio_info, vm.dominio_a_registrar,
                 vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, vm.como_nos_conocio,
-                vm.desea_reunion, vm.lugar_reunion, vm.fecha_reunion, function(data){
+                desea_una_reunion, vm.lugar_reunion, vm.fecha_reunion, hosting_correo, function(data){
                     console.log(data);
 
-                    vm.email = '';
-                    vm.nombre = '';
-                    vm.empresa = '';
-                    vm.telefono = '';
-                    vm.message = '';
-                    vm.comentario = '';
-                    vm.website_referencia = '';
-                    vm.dominio_deseado = '';
-                    vm.otro_disenio_grafico = '';
-                    vm.como_nos_conocio = '';
-                    vm.desea_reunion = [];
-                    vm.lugar_reunion = '';
-                    vm.fecha_reunion = '';
-
-                    vm.nuestros_servicios = [];
-                    vm.pagina_web = [];
-                    vm.registro_dominio = [];
-                    vm.graficos = [];
+                    cleanVariables();
                 });
         }
 
@@ -220,6 +247,65 @@
             }
 
             console.log(vm.graficos);
+        }
+
+        function cleanVariables() {
+            //Contacto
+            vm.nombre = '';
+            vm.empresa = '';
+            vm.email = '';
+            vm.telefono = '';
+            vm.message = '';
+
+            //Nuestros Servicios
+            vm.desarrolloweb = false;
+            vm.hosting = false;
+            vm.logotipos = false;
+            vm.desarrollografico = false;
+            vm.dominio = false;
+            vm.impresion = false;
+
+            //Diseño de Página Web
+            vm.nuevapagina = false;
+            vm.comentario = '';
+            vm.slider_fijo = false;
+            vm.slider_administrable = false;
+            vm.contactos = false;
+            vm.empresa_info = false;
+            vm.producto_info = false;
+            vm.multipaginas = false;
+            vm.noticias = false;
+            vm.usuarios = false;
+            vm.ecommerce = false;
+            vm.chat = false;
+            vm.cobros_online = false;
+            vm.imagenes_admin = false;
+            vm.website_referencia = '';
+
+            //Registro de Dominios
+            vm.extension_1 = false;
+            vm.extension_2 = false;
+            vm.extension_3 = false;
+            vm.dominio_deseado = '';
+
+            //Diseño Gráfico
+            vm.logotipo = false;
+            vm.tarjeta = false;
+            vm.catalogo = false;
+            vm.otro_disenio_grafico = '';
+
+            //Información adicional
+            vm.como_nos_conocio = '';
+            vm.desea_reunion = [];
+            vm.lugar_reunion = '';
+            vm.fecha_reunion = '';
+
+            vm.nuestros_servicios = [];
+            vm.pagina_web = [];
+            vm.registro_dominio = [];
+            vm.dominio_a_registrar = [];
+            vm.hosting_y_correo = [];
+            vm.graficos = [];
         }
 
     };
