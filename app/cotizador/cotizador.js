@@ -59,6 +59,7 @@
         vm.como_nos_conocio = '';
         vm.desea_reunion = [];
         vm.lugar_reunion = '';
+        vm.fecha_reunion = '';
 
         vm.nuestros_servicios = [];
         vm.pagina_web = [];
@@ -104,7 +105,8 @@
 
             MailerService.sendCotizacion(cliente, vm.nuestros_servicios, nueva_web, vm.pagina_web,
                 vm.comentario, vm.website_referencia, dominio_info, vm.dominio_a_registrar,
-                vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, function(data){
+                vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, vm.como_nos_conocio,
+                vm.desea_reunion, vm.lugar_reunion, vm.fecha_reunion, function(data){
                     console.log(data);
 
                     vm.email = '';
@@ -116,6 +118,10 @@
                     vm.website_referencia = '';
                     vm.dominio_deseado = '';
                     vm.otro_disenio_grafico = '';
+                    vm.como_nos_conocio = '';
+                    vm.desea_reunion = [];
+                    vm.lugar_reunion = '';
+                    vm.fecha_reunion = '';
 
                     vm.nuestros_servicios = [];
                     vm.pagina_web = [];

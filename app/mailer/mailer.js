@@ -67,7 +67,8 @@
         function sendCotizacion(cliente, nuestros_servicios, nueva_web, pagina_web,
                                 comentario, website_referencia, dominio_info,
                                 registro_dominio, dominio_deseado, graficos,
-                                otro_disenio_grafico, callback) {
+                                otro_disenio_grafico, como_nos_conocio, desea_reunion,
+                                lugar_reunion, fecha_reunion, callback) {
             return $http.post('mailer/mailer.php',
                 {
                     function: 'sendCotizacion',
@@ -81,7 +82,11 @@
                     'registro_dominio': JSON.stringify(registro_dominio),
                     'dominio_deseado': dominio_deseado,
                     'graficos': JSON.stringify(graficos),
-                    'otro_disenio_grafico': otro_disenio_grafico
+                    'otro_disenio_grafico': otro_disenio_grafico,
+                    'como_nos_conocio': como_nos_conocio,
+                    'desea_reunion': desea_reunion,
+                    'lugar_reunion': lugar_reunion,
+                    'fecha_reunion': fecha_reunion
                 })
                 .success(function (data) {
                     callback(data);

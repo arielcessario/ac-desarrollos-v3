@@ -20,7 +20,8 @@ if ($decoded != null) {
     }elseif($decoded->function == 'sendCotizacion') {
         sendCotizacion($decoded->cliente, $decoded->nuestros_servicios, $decoded->nueva_web, $decoded->pagina_web,
             $decoded->comentario, $decoded->website_referencia, $decoded->dominio_info, $decoded->registro_dominio,
-            $decoded->dominio_deseado, $decoded->graficos, $decoded->otro_disenio_grafico);
+            $decoded->dominio_deseado, $decoded->graficos, $decoded->otro_disenio_grafico, $decoded->como_nos_conocio,
+            $decoded->desea_reunion, $decoded->lugar_reunion, $decoded->fecha_reunion);
     }
 }
 //sendMail($decoded->email, $decoded->nombre, $decoded->mensaje, $decoded->asunto);
@@ -59,7 +60,8 @@ function sendMailForChat($email, $nombre)
 
 function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, $comentario,
                         $website_referencia, $dominio_info, $registro_dominio, $dominio_deseado,
-                        $graficos, $otro_disenio_grafico)
+                        $graficos, $otro_disenio_grafico, $como_nos_conocio, $desea_reunion,
+                        $lugar_reunion, $fecha_reunion)
 {
 
 
@@ -133,6 +135,11 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= '<table style="font-size:12px;color:#000;width:100%"><tr><th style="font-size:16px;text-align:left;color:lightseagreen;">Diseño</th><th style="font-size:16px;text-align:right;color:lightseagreen;">Precio</th></tr>';
     $message .= ''. $graficos_2 .'';
     $message .= '</table></div>';
+    $message .= '<h3 style="margin:20px 0 0 15px;">Información Adicional</h3>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Cómo nos conoció? </label>' . $como_nos_conocio . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Desea una reunión? </label>' . $desea_reunion . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Lugar de la reunión </label>' . $lugar_reunion . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Fecha y hora de reunión </label>' . $fecha_reunion . '</div>';
     $message .= '</div></div>';
     $message .= '</table>';
     $message .= '</div></body></html>';
