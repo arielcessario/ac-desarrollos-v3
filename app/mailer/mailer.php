@@ -69,6 +69,8 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
 
     $servicios = '';
     $disenios = '';
+    $registros = '';
+    $graficos_2 = '';
 
     foreach ($servicios_elegidos as $item) {
         $precio_1 = number_format((float)$item->precio, 2, '.', '');
@@ -80,26 +82,55 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
         $disenios = $disenios . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
     }
 
+    foreach ($registro_dominio as $item) {
+        $precio_3 = number_format((float)$item->precio, 2, '.', '');
+        $registros = $registros . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_3 . '</td></tr>';
+    }
+
+    foreach ($graficos as $item) {
+        $precio_4 = number_format((float)$item->precio, 2, '.', '');
+        $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_4 . '</td></tr>';
+    }
+
     $message = '<html><body><div style="font-family:Arial,sans-serif;font-size:15px;margin:0 auto; width:635px;">';
-    $message .= '<div style="border-style:Solid; border-color:#000000; border-color:rgba(0, 0, 0, 1); border-width:1px; left:-14px; top:-7px; width:635px;">';
+    $message .= '<div style="left:-14px; top:-7px; width:635px;">';
     $message .= '<div style="text-align: center; margin-top: 10px;"><img src="http://192.185.67.199/~arielces/ac-desarrollos-v3/images/logo.png" width="150px"></div>';
     $message .= '<div style="color:#000;background:#FFFFFF; background:rgba(255,255,255,1); border-style:Solid; border-color:#000000; border-color:rgba(0,0,0,1); border-width:1px; margin: 10px 10px 0 10px; border-radius:12px; -moz-border-radius: 12px; -webkit-border-radius: 12px;padding-bottom: 35px;">';
     $message .= '<div style="font-weight:bold;text-align:center;font-size:1.5em; margin-top:10px;">Pedido de Cotización</div>';
-    $message .= '<div style="margin-top:20px;text-align:center;">El cliente + '. $contacto->nombre .' + solicitó la siguiente cotización</div>';
-    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">E-mail: </label>' . $contacto->email . '</div>';
-    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Teléfono: </label>' . $contacto->telefono . '</div>';
-    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Comentario: </label>' . $contacto->message . '</div>';
+    $message .= '<div style="margin-top:20px;text-align:center;">El cliente '. $contacto->nombre .' solicitó la siguiente cotización</div>';
+    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Empresa: </label>' . $contacto->empresa . '</div>';
+    $message .= '<div style="margin:10px 0 0 15px;"><label style="font-weight:bold">E-mail: </label>' . $contacto->email . '</div>';
+    $message .= '<div style="margin:10px 0 0 15px;"><label style="font-weight:bold">Teléfono: </label>' . $contacto->telefono . '</div>';
+    $message .= '<div style="margin:10px 0 0 15px;"><label style="font-weight:bold">Comentario: </label>' . $contacto->message . '</div>';
     $message .= '<h3 style="margin:20px 0 0 15px;">Servicios Solicitados</h3>';
-    $message .= '<div style="background: #f1e767; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 200px; margin-left: 5px;margin-right: 5px;">';
-    $message .= '<table style="font-size:12px;color:#fff;width:100%"><tr><th style="font-size:14px;text-align:left">Servicio</th><th style="font-size:14px;text-align:right">Precio</th></tr>';
+    $message .= '<div style="background: #f1e767; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 150px; margin-left: 5px;margin-right: 5px;">';
+    $message .= '<table style="font-size:12px;color:#000;width:100%"><tr><th style="font-size:16px;text-align:left;color:lightseagreen;">Servicio</th><th style="font-size:16px;text-align:right;color:lightseagreen;">Precio</th></tr>';
     $message .= ''. $servicios .'';
     $message .= '</table></div>';
     $message .= '<h3 style="margin:20px 0 0 15px;">Diseño de Página Web</h3>';
+    $message .= '<p style="margin:10px 0 5px 15px;">' . $nueva_web . '</p>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Su proyecto: </label>' . $comentario . '</div>';
+    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Website de referencia: </label>' . $website_referencia . '</div>';
     $message .= '<div style="background: #f1e767; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 200px; margin-left: 5px;margin-right: 5px;">';
-    $message .= '<table style="font-size:12px;color:#fff;width:100%"><tr><th style="font-size:14px;text-align:left">Servicio</th><th style="font-size:14px;text-align:right">Precio</th></tr>';
+    $message .= '<table style="font-size:12px;color:#000;width:100%"><tr><th style="font-size:16px;text-align:left;color:lightseagreen;">A desarrollar</th><th style="font-size:16px;text-align:right;color:lightseagreen;">Precio</th></tr>';
     $message .= ''. $disenios .'';
     $message .= '</table></div>';
-    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Website de referencia: </label>' . $contacto->message . '</div>';
+    $message .= '<h3 style="margin:20px 0 0 15px;">Servicio de Hosting y Correos</h3>';
+    $message .= '<p style="margin:10px 0 5px 15px;">' . $nueva_web . '</p>';
+
+    $message .= '<h3 style="margin:20px 0 0 15px;">Registro de Dominios</h3>';
+    $message .= '<p style="margin:10px 0 5px 15px;">' . $dominio_info . '</p>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Dominio deseado: </label>' . $dominio_deseado . '</div>';
+    $message .= '<div style="background: #f1e767; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 100px; margin-left: 5px;margin-right: 5px;">';
+    $message .= '<table style="font-size:12px;color:#000;width:100%"><tr><th style="font-size:16px;text-align:left;color:lightseagreen;">Dominios solicitados</th><th style="font-size:16px;text-align:right;color:lightseagreen;">Precio</th></tr>';
+    $message .= ''. $registros .'';
+    $message .= '</table></div>';
+    $message .= '<h3 style="margin:20px 0 0 15px;">Diseño Gráfico</h3>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Otro: </label>' . $otro_disenio_grafico . '</div>';
+    $message .= '<div style="background: #f1e767; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 100px; margin-left: 5px;margin-right: 5px;">';
+    $message .= '<table style="font-size:12px;color:#000;width:100%"><tr><th style="font-size:16px;text-align:left;color:lightseagreen;">Diseño</th><th style="font-size:16px;text-align:right;color:lightseagreen;">Precio</th></tr>';
+    $message .= ''. $graficos_2 .'';
+    $message .= '</table></div>';
     $message .= '</div></div>';
     $message .= '</table>';
     $message .= '</div></body></html>';
