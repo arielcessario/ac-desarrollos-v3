@@ -69,12 +69,12 @@
         vm.hosting_y_correo = [];
         vm.graficos = [];
         vm.plan_hosting = [
-            {id:1, name:'Plan 1'},
-            {id:2, name:'Plan 2'},
-            {id:3, name:'Plan 3'},
+            {id:0, name:'--- Seleccione un plan ---'},
+            {id:1, name:'Hosting dedicado (1 dominio + Espacio Web ILIMITADO)'},
+            {id:2, name:'Hosting compartido (N dominios + Espacio Web ILIMITADO)'}
         ];
 
-        vm.hosting_selected = {};
+        vm.hosting_selected = vm.plan_hosting[0];
 
         //Funciones
         vm.sendMail = sendMail;
