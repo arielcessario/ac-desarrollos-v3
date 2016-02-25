@@ -58,6 +58,7 @@
         vm.nuestros_servicios = [];
         vm.pagina_web = [];
         vm.registro_dominio = [];
+        vm.dominio_a_registrar = [];
         vm.hosting_correo = [];
         vm.graficos = [];
         vm.plan_hosting = [
@@ -97,25 +98,25 @@
             addDisenioGrafico();
 
             MailerService.sendCotizacion(cliente, vm.nuestros_servicios, nueva_web, vm.pagina_web,
-                vm.comentario, vm.website_referencia, dominio_info, vm.registro_dominio,
+                vm.comentario, vm.website_referencia, dominio_info, vm.dominio_a_registrar,
                 vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, function(data){
-                console.log(data);
+                    console.log(data);
 
-                vm.email = '';
-                vm.nombre = '';
-                vm.empresa = '';
-                vm.telefono = '';
-                vm.message = '';
-                vm.comentario = '';
-                vm.website_referencia = '';
-                vm.dominio_deseado = '';
-                vm.otro_disenio_grafico = '';
+                    vm.email = '';
+                    vm.nombre = '';
+                    vm.empresa = '';
+                    vm.telefono = '';
+                    vm.message = '';
+                    vm.comentario = '';
+                    vm.website_referencia = '';
+                    vm.dominio_deseado = '';
+                    vm.otro_disenio_grafico = '';
 
-                vm.nuestros_servicios = [];
-                vm.pagina_web = [];
-                vm.registro_dominio = [];
-                vm.graficos = [];
-            });
+                    vm.nuestros_servicios = [];
+                    vm.pagina_web = [];
+                    vm.registro_dominio = [];
+                    vm.graficos = [];
+                });
         }
 
         function addServicios() {
@@ -184,16 +185,16 @@
 
         function addRegistroDominio() {
             if (vm.extension_1) {
-                vm.registro_dominio.push({nombre:'.com / .net /', precio:'550'});
+                vm.dominio_a_registrar.push({nombre:'.com / .net /', precio:'550'});
             }
             if (vm.extension_2) {
-                vm.registro_dominio.push({nombre:'.com.do / .do', precio:'100'});
+                vm.dominio_a_registrar.push({nombre:'.com.do / .do', precio:'100'});
             }
             if (vm.extension_3) {
-                vm.registro_dominio.push({nombre:'otro', precio:'250'});
+                vm.dominio_a_registrar.push({nombre:'otro', precio:'250'});
             }
 
-            console.log(vm.registro_dominio);
+            console.log(vm.dominio_a_registrar);
         }
 
         function addDisenioGrafico(){

@@ -64,30 +64,32 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
 
 
     $contacto = json_decode($cliente);
-    $servicios_elegidos = json_decode($nuestros_servicios);
-    $disenio_web_elegidos = json_decode($pagina_web);
+    $serviciosList = json_decode($nuestros_servicios);
+    $disenioList = json_decode($pagina_web);
+    $dominiosList = json_decode($registro_dominio);
+    $graficosList = json_decode($graficos);
 
     $servicios = '';
     $disenios = '';
     $registros = '';
     $graficos_2 = '';
 
-    foreach ($servicios_elegidos as $item) {
+    foreach ($serviciosList as $item) {
         $precio_1 = number_format((float)$item->precio, 2, '.', '');
         $servicios = $servicios . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_1 . '</td></tr>';
     }
 
-    foreach ($disenio_web_elegidos as $item) {
+    foreach ($disenioList as $item) {
         $precio_2 = number_format((float)$item->precio, 2, '.', '');
         $disenios = $disenios . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
     }
 
-    foreach ($registro_dominio as $item) {
+    foreach ($dominiosList as $item) {
         $precio_3 = number_format((float)$item->precio, 2, '.', '');
         $registros = $registros . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_3 . '</td></tr>';
     }
 
-    foreach ($graficos as $item) {
+    foreach ($graficosList as $item) {
         $precio_4 = number_format((float)$item->precio, 2, '.', '');
         $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_4 . '</td></tr>';
     }

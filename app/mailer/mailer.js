@@ -78,7 +78,7 @@
                     'comentario': comentario,
                     'website_referencia': website_referencia,
                     'dominio_info': dominio_info,
-                    'registro_dominio': registro_dominio,
+                    'registro_dominio': JSON.stringify(registro_dominio),
                     'dominio_deseado': dominio_deseado,
                     'graficos': JSON.stringify(graficos),
                     'otro_disenio_grafico': otro_disenio_grafico
