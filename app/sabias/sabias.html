@@ -3,33 +3,48 @@
         <div class="sabias-slider">
             <h1>Sab&iacute;as qué?</h1>
             <div class="sabias-container">
-                <div class="sabias-container-2">
-                    <div id="main-slider">
-                        <div ng-class="{'show-slider-proyecto':sabiasCtrl.slider_nro == 1}" class="main-slider-proyecto">
-                            <h3 class="color-default">Estadistica 1</h3>
-                        </div>
-                        <div ng-class="{'show-slider-proyecto':sabiasCtrl.slider_nro == 2}" class="main-slider-proyecto">
-                            <h3 class="color-primary">Estadistica 2</h3>
-                        </div>
-                        <div ng-class="{'show-slider-proyecto':sabiasCtrl.slider_nro == 3}" class="main-slider-proyecto">
-                            <h3 class="color-default">Estadistica 3</h3>
-                        </div>
-                        <div ng-class="{'show-slider-proyecto':sabiasCtrl.slider_nro == 4}" class="main-slider-proyecto">
-                            <h3 class="color-primary">Estadistica 4</h3>
-                        </div>
-                    </div>
-                </div>
+                <video width="75%" autoplay autobuffer="autobuffer" autoplay="autoplay"
+                       controls loop="loop" ng-if="sabiasCtrl.movie == 1">
+                    <!--source id="mp4_src" src="movies/movie1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                    <source src="movies/movie1.ogg" type="video/ogg"-->
+                    <source id="3gp_src" src="movies/movie1.3gp" type='video/3gpp; codecs="mp4v.20.8, samr"'>
+                    Your browser does not support the <code>video</code> element.
+                </video>
+                <video width="75%" autoplay ng-if="sabiasCtrl.movie == 2">
+                    <!--source src="movies/movie2.mp4" type="video/mp4">
+                    <source src="movies/movie2.ogg" type="video/ogg"-->
+                    <source src="movies/movie2.3gp" type='video/3gpp; codecs="mp4v.20.8, samr"'>
+                    Your browser does not support the video tag.
+                </video>
+                <video width="75%" autoplay ng-if="sabiasCtrl.movie == 3">
+                    <!--source src="movies/movie3.mp4" type="video/mp4">
+                    <source src="movies/movie3.ogg" type="video/ogg"-->
+                    <source src="movies/movie3.3gp" type='video/3gpp; codecs="mp4v.20.8, samr"'>
+                    Your browser does not support the video tag.
+                </video>
+                <video width="75%" autoplay ng-if="sabiasCtrl.movie == 4">
+                    <!--source src="movies/movie4.mp4" type="video/mp4">
+                    <source src="movies/movie4.ogg" type="video/ogg"-->
+                    <source src="movies/movie4.3gp" type='video/3gpp; codecs="mp4v.20.8, samr"'>
+                    Your browser does not support the video tag.
+                </video>
+                <video width="75%" autoplay ng-if="sabiasCtrl.movie == 5">
+                    <!--source src="movies/movie5.mp4" type="video/mp4">
+                    <source src="movies/movie5.ogg" type="video/ogg"-->
+                    <source src="movies/movie5.3gp" type='video/3gpp; codecs="mp4v.20.8, samr"'>
+                    Your browser does not support the video tag.
+                </video>
+                <video width="75%" autoplay ng-if="sabiasCtrl.movie == 6">
+                    <!--source src="movies/movie6.mp4" type="video/mp4">
+                    <source src="movies/movie6.ogg" type="video/ogg"-->
+                    <source src="movies/movie6.3gp" type='video/3gpp; codecs="mp4v.20.8, samr"'>
+                    Your browser does not support the video tag.
+                </video>
             </div>
 
-            <div class="slider-indicator">
-                <div class="slider_1" ng-class="{slider_selected:sabiasCtrl.slider_nro==1}"
-                     ng-click="sabiasCtrl.slider_nro=1;"></div>
-                <div class="slider_2" ng-class="{slider_selected:sabiasCtrl.slider_nro==2}"
-                     ng-click="sabiasCtrl.slider_nro=2;"></div>
-                <div class="slider_3" ng-class="{slider_selected:sabiasCtrl.slider_nro==3}"
-                     ng-click="sabiasCtrl.slider_nro=3;"></div>
-                <div class="slider_4" ng-class="{slider_selected:sabiasCtrl.slider_nro==4}"
-                     ng-click="sabiasCtrl.slider_nro=4;"></div>
+            <div class="btn-chat">
+                <div class="arrow-up arrow-chat-margin"></div>
+                <button id="cotizar" ng-click="sabiasCtrl.nextMovie();">Siguiente</button>
             </div>
         </div>
     </div>

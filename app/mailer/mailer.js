@@ -64,13 +64,17 @@
                 })
         }
 
-        function sendCotizacion(email, nombre, message, callback) {
+        function sendCotizacion(cliente, nuestros_servicios, nueva_web, pagina_web,
+                                comentario, website_referencia, dominio_info,
+                                registro_dominio, dominio_deseado, graficos,
+                                otro_disenio_grafico, callback) {
             return $http.post('mailer/mailer.php',
                 {
                     function: 'sendCotizacion',
-                    'email': email,
-                    'nombre': nombre,
-                    'message': message
+                    'cliente': JSON.stringify(cliente),
+                    'nuestros_servicios': JSON.stringify(nuestros_servicios),
+                    'pagina_web': JSON.stringify(pagina_web),
+                    'comentario': comentario
                 })
                 .success(function (data) {
                     callback(data);

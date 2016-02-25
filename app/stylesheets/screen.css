@@ -2028,3 +2028,16 @@ select option {
   display: flex;
   flex-direction: row;
 }
+
+/* line 1930, ../sass/screen.scss */
+input[type="radio"] {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  left: 0;
+  right: auto;
+}

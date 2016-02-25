@@ -7,22 +7,21 @@
     angular.module('acdesarrollos.sabias', ['ngRoute'])
         .controller('SabiasController', SabiasController);
 
-    SabiasController.$inject = ['$scope', '$interval'];
+    SabiasController.$inject = ['$scope'];
 
-    function SabiasController($scope, $interval) {
+    function SabiasController($scope) {
         var vm = this;
 
-        vm.slider_01 = {titulo: '', descripcion:''};
-        vm.slider_02 = {titulo: '', descripcion:''};
-        vm.slider_03 = {titulo: '', descripcion:''};
-        vm.slider_04 = {titulo: '', descripcion:''};
+        vm.movie = 1;
 
-        vm.slider_nro = 1;
+        vm.nextMovie = nextMovie;
 
-        $interval(changeSlider, 8000);
+        function nextMovie() {
+            vm.movie = vm.movie + 1;
+            if(vm.movie > 10)
+                vm.movie = 1;
 
-        function changeSlider() {
-            vm.slider_nro = (vm.slider_nro == 4) ? 1 : vm.slider_nro + 1;
+            console.log(vm.movie);
         }
 
     };
