@@ -55,6 +55,11 @@
         vm.catalogo = false;
         vm.otro_disenio_grafico = '';
 
+        //Información adicional
+        vm.como_nos_conocio = '';
+        vm.desea_reunion = [];
+        vm.lugar_reunion = '';
+
         vm.nuestros_servicios = [];
         vm.pagina_web = [];
         vm.registro_dominio = [];

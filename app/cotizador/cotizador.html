@@ -219,7 +219,7 @@
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>¿Cómo nos conoció?</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.dominio_deseado" >
+                        <input type="text" class="form-control" ng-model="cotizadorCtrl.como_nos_conocio" >
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
@@ -227,19 +227,20 @@
                         <label>¿Desea una reunión?</label>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="1"><span class="">Registrar un nuevo dominio</span>
+                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="1"><span class="">SI</span>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="2"><span class="">No, ya tengo el dominio</span>
+                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="2"><span class="">NO</span>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="3"><span class="">No estoy seguro</span>
+                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="3"><span class="">SI. ¿Donde?</span>
+                        <input type="text" class="form-control" ng-model="cotizadorCtrl.lugar_reunion" >
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>Fecha y hora de reunión</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.dominio_deseado" >
+                        <input type="text" class="form-control" ng-model="cotizadorCtrl.fecha_reunion" >
                     </div>
                 </div>
             </div>
