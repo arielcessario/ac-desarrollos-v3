@@ -156,6 +156,7 @@
                 function(data){
                     console.log(data);
 
+                    //Limpio las variables
                     cleanVariables();
             });
         }
