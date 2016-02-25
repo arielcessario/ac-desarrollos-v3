@@ -70,8 +70,8 @@
         vm.graficos = [];
         vm.plan_hosting = [
             {id:0, name:'--- Seleccione un plan ---'},
-            {id:1, name:'Hosting dedicado (1 dominio + Espacio Web ILIMITADO)'},
-            {id:2, name:'Hosting compartido (N dominios + Espacio Web ILIMITADO)'}
+            {id:1, name:'Hosting Emprendedores (1 GB de espacio)'},
+            {id:2, name:'Hosting Empresarial (10 GB de espacio)'}
         ];
 
         vm.hosting_selected = vm.plan_hosting[0];
@@ -156,7 +156,6 @@
                 function(data){
                     console.log(data);
 
-                    //Limpio las variables
                     cleanVariables();
             });
         }

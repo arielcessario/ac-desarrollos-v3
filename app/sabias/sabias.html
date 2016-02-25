@@ -38,6 +38,23 @@
                 <div class="arrow-up arrow-chat-margin"></div>
                 <button id="cotizar" ng-click="sabiasCtrl.nextMovie();">Siguiente</button>
             </div>
+
+            <div class="slider-indicator">
+                <div class="slider_1" ng-class="{slider_selected:sabiasCtrl.slider_nro==1}"
+                     ng-click="sabiasCtrl.slider_nro=1;" title="{{sabiasCtrl.videos[0].title}}"></div>
+                <div class="slider_2" ng-class="{slider_selected:sabiasCtrl.slider_nro==2}"
+                     ng-click="sabiasCtrl.slider_nro=2;" title="{{sabiasCtrl.videos[1].title}}"></div>
+                <div class="slider_3" ng-class="{slider_selected:sabiasCtrl.slider_nro==3}"
+                     ng-click="sabiasCtrl.slider_nro=3;" title="{{sabiasCtrl.videos[2].title}}"></div>
+                <div class="slider_4" ng-class="{slider_selected:sabiasCtrl.slider_nro==4}"
+                     ng-click="sabiasCtrl.slider_nro=4;" title="{{sabiasCtrl.videos[3].title}}"></div>
+                <div class="slider_5" ng-class="{slider_selected:sabiasCtrl.slider_nro==5}"
+                     ng-click="sabiasCtrl.slider_nro=5;" title="{{sabiasCtrl.videos[4].title}}"></div>
+                <div class="slider_6" ng-class="{slider_selected:sabiasCtrl.slider_nro==6}"
+                     ng-click="sabiasCtrl.slider_nro=6;" title="{{sabiasCtrl.videos[5].title}}"></div>
+                <div class="slider_7" ng-class="{slider_selected:sabiasCtrl.slider_nro==7}"
+                     ng-click="sabiasCtrl.slider_nro=7;" title="{{sabiasCtrl.videos[6].title}}"></div>
+            </div>
         </div>
     </div>
 </div>
