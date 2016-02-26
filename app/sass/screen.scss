@@ -1020,7 +1020,20 @@ textarea {
   -webkit-animation-duration:3s;
   -moz-animation-duration:3s;
   animation-duration:3s;
+  }
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-bottom-color: black;
+
 }
+
+
+
 
 label {
   display: inline-block;
@@ -1351,9 +1364,9 @@ input[type="checkbox"] {
   padding-right: 10px;
   position: relative;
   width: 20px;
-  margin-right: 10px;
+  margin-right: 30px;
   -webkit-appearance: none;
-  -webkit-transition: .15s;
+  -webkit-transition: .15s ease;
 }
 
 
@@ -1380,9 +1393,9 @@ input[type="checkbox"]:checked {
   padding-right: 0;
 }
 input[type="checkbox"]:hover:before {
-  background: hsla(0,0%,0%,.25);
+  background: white;
   border-radius: 10px;
-  color: #e4ded4;
+  color: red;
   content: '✘';
   font: 12px/20px sans-serif;
   height: 20px;
@@ -1396,6 +1409,7 @@ input[type="checkbox"]:hover:before {
 }
 input[type="checkbox"]:checked:hover:before {
   content: '✔';
+  color: #8CC63F;
 }
 
 
@@ -2038,14 +2052,18 @@ input[type="radio"]{
   width: 12px;
   height: 12px;
   cursor: pointer;
+  margin-right: 30px;
   left: 0;
-  margin-right: 10px;
   -webkit-appearance: none;
   -webkit-transition: .15s;
 }
 input[type="radio"]:checked {
   background-color: #6cf;
+
     }
+
+
+
 
 
 
@@ -2059,9 +2077,13 @@ input[type="radio"]:checked {
 #cotizador-form h3{
   margin-top: 20px;
   //text-decoration: underline;
-  color: lightseagreen;
   opacity: 0;
   font-size: 42px;
+  color: lightyellow;
+  text-shadow: 0 1px 0 #ccc, 0 1px 0 #c9c9c9, 0 1px 0 #bbb, 0 2px 0 #b9b9b9, 0 2px 0 #aaa, 0 3px 1px rgba(0,0,0,.1), 0 0 4px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.3), 0 2px 2px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.25), 0 5px 2px rgba(0,0,0,.2), 0 5px 5px rgba(0,0,0,.15);
+
+
+
   -webkit-animation: fadeIn ease-in 1;
   -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
@@ -2072,6 +2094,8 @@ input[type="radio"]:checked {
   animation-duration: 3s;
 
 }
+
+
 div[title]:hover:after {
   content: attr(title);
   padding: 4px 8px;
