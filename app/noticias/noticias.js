@@ -106,19 +106,18 @@
                     vm.noticia = vm.noticias[i];
                 }
             }
-
-            console.log(vm.noticia);
+            //console.log(vm.noticia);
             $location.path('/noticia/' + noticia_id);
         }
 
         function showNoticia(noticia) {
-            console.log(noticia);
+            //console.log(noticia);
         }
 
         function buscarNoticia(filtro) {
             if (filtro.length > 2) {
                 AcUtils.getByParams('titulo,detalles', filtro, 'false', vm.noticias, function(data){
-                    console.log(data);
+                    //console.log(data);
                     vm.noticias_resultado = data;
                     vm.buscar = true;
                 })
