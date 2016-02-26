@@ -14,9 +14,8 @@
 
         vm.movie = 1;
         vm.titulo_video = '';
-        vm.btn_titulo = 'Play';
         vm.show_btn = true;
-        var video = document.getElementsByTagName('video')[0];;
+
         vm.videos = [
             {title:'Video 1', name:'movie1.mov'},
             {title:'Video 2', name:'movie2.mov'},
@@ -27,24 +26,51 @@
             {title:'Video 7', name:'movie7.mov'}
         ];
 
+        vm.btn_titulo = 'Play (' + vm.videos[0].title + ')';
+
+        var video = document.getElementsByTagName('video')[0];
+
+
         vm.nextMovie = nextMovie;
+        vm.playMovie = playMovie;
 
 
-        $interval(changeVideo, 10000);
+        //$interval(changeVideo, 10000);
 
         function changeVideo() {
             if(video != undefined) {
                 if(video.paused){
                     console.log('Video detenido');
+                    $interval.cancel(changeVideo);
                     vm.show_btn = true;
                 } else {
+                    console.log('Video corriendo');
                     vm.show_btn = false;
                 }
             } else {
+                console.log('undefined');
                 vm.show_btn = false;
             }
         }
 
+        function playMovie() {
+            var index = vm.movie - 1;
+            console.log(index);
+
+            video = document.getElementsByTagName('video')[0];
+            console.log(video);
+            video.play();
+            vm.show_btn = false;
+            //vm.btn_titulo = vm.videos[index].title;
+            //vm.titulo_video = vm.videos[index].title;
+            vm.btn_titulo = 'Play (' + vm.videos[vm.movie].title + ')';
+            vm.titulo_video = vm.videos[vm.movie].title;
+
+            vm.movie = vm.movie + 1;
+            console.log(vm.movie);
+
+            //$interval(changeVideo, 10000);
+        }
 
         function nextMovie(movie) {
             vm.movie = movie;

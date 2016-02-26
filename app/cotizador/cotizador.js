@@ -13,12 +13,13 @@
         var vm = this;
 
         //Contacto
+        /*
         vm.nombre = '';
         vm.empresa = '';
         vm.email = '';
         vm.telefono = '';
         vm.message = '';
-
+*/
         //Nuestros Servicios
         vm.desarrolloweb = false;
         vm.hosting = false;
@@ -62,6 +63,10 @@
         vm.lugar_reunion = '';
         vm.fecha_reunion = '';
 
+        vm.clienteEntity = {};
+        vm.reunionEntity = {};
+        vm.hostingEntity = {};
+
         vm.nuestros_servicios = [];
         vm.pagina_web = [];
         vm.registro_dominio = [];
@@ -69,9 +74,9 @@
         vm.hosting_y_correo = [];
         vm.graficos = [];
         vm.plan_hosting = [
-            {id:0, name:'--- Seleccione un plan ---'},
-            {id:1, name:'Hosting Emprendedores (1 GB de espacio)'},
-            {id:2, name:'Hosting Empresarial (10 GB de espacio)'}
+            {id:0, nombre:'--- Seleccione un plan ---'},
+            {id:1, nombre:'Hosting Emprendedores (1 GB de espacio)', precio: 50},
+            {id:2, nombre:'Hosting Empresarial (10 GB de espacio)', precio: 150}
         ];
 
         vm.hosting_selected = vm.plan_hosting[0];
@@ -81,19 +86,19 @@
 
 
         function sendMail() {
-            if (vm.nombre.trim() == '') {
+            if (vm.clienteEntity.nombre.trim() == '') {
                 return;
             }
-            if (vm.email.trim() == '') {
+            if (vm.clienteEntity.email.trim() == '') {
                 return;
             }
-            if (vm.telefono.trim() == '') {
+            if (vm.clienteEntity.telefono.trim() == '') {
                 return;
             }
 
             console.log(vm.nuevapagina);
 
-            var cliente = {nombre:vm.nombre, empresa:vm.empresa, email:vm.email, telefono:vm.telefono, message:vm.message};
+            //var cliente = {nombre:vm.nombre, empresa:vm.empresa, email:vm.email, telefono:vm.telefono, message:vm.message};
 
             //Diseño de Página Web
             var nueva_web = '';
@@ -106,16 +111,7 @@
             }
 
             //Servicio de Hosting y Correos
-            var hosting_correo = '';
-            if(vm.hosting_y_correo == 1) {
-                hosting_correo = 'Si';
-            } else if(vm.hosting_y_correo == 2) {
-                hosting_correo = 'No, ya tengo el hosting';
-            } else if(vm.hosting_y_correo == 3) {
-                hosting_correo = 'No estoy seguro';
-            }
-
-            var hosting_plan = '';
+            createHosting();
 
             //Registro de Dominios
             var dominio_info = '';
@@ -128,18 +124,10 @@
             }
 
             //Información Adicional
-            var desea_una_reunion = '';
-            if(vm.desea_reunion == 1) {
-                desea_una_reunion = 'SI';
-            } else if(vm.desea_reunion == 2) {
-                desea_una_reunion = 'NO';
-            } else if(vm.desea_reunion == 3) {
-                desea_una_reunion = 'SI';
+            if(vm.desea_reunion == 1 || vm.desea_reunion == 3) {
+                if(fecha == undefined)
+                    return;
             }
-
-            console.log(vm.fecha_reunion);
-            var fecha = new Date((vm.fecha_reunion.getMonth() + 1) + '/' + (vm.fecha_reunion.getDate()) + '/' + vm.fecha_reunion.getFullYear());
-            console.log(fecha);
 
             addServicios();
 
@@ -149,16 +137,54 @@
 
             addDisenioGrafico();
 
-            MailerService.sendCotizacion(cliente, vm.nuestros_servicios, nueva_web, vm.pagina_web,
+            createReunion();
+
+
+            MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web, vm.pagina_web,
                 vm.comentario, vm.website_referencia, dominio_info, vm.dominio_a_registrar,
-                vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, vm.como_nos_conocio,
-                desea_una_reunion, vm.lugar_reunion, vm.fecha_reunion, hosting_correo, hosting_plan,
+                vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, vm.reunionEntity, vm.hostingEntity,
                 function(data){
                     console.log(data);
 
                     cleanVariables();
             });
         }
+
+        function createHosting() {
+            var hosting_correo = '';
+            if(vm.hosting_y_correo == 1) {
+                hosting_correo = 'Si';
+            } else if(vm.hosting_y_correo == 2) {
+                hosting_correo = 'No, ya tengo el hosting';
+            } else if(vm.hosting_y_correo == 3) {
+                hosting_correo = 'No estoy seguro';
+            }
+
+            console.log(vm.hosting_selected);
+
+            vm.hostingEntity = {
+                solicitar_hosting: hosting_correo,
+                plan: vm.hosting_selected.nombre,
+                precio: vm.hosting_selected.precio
+            }
+        }
+
+        function createReunion() {
+            var desea_una_reunion = '';
+            if(vm.desea_reunion == 1 || vm.desea_reunion == 3) {
+                desea_una_reunion = 'SI';
+            } else if(vm.desea_reunion == 2) {
+                desea_una_reunion = 'NO';
+            }
+
+            vm.reunionEntity = {
+                como_nos_conocio: vm.como_nos_conocio,
+                desea_reunion: desea_una_reunion,
+                lugar_reunion: vm.lugar_reunion,
+                fecha_reunion: formattedDate(vm.fecha_reunion)
+            };
+        }
+
 
         function addServicios() {
             if (vm.desarrolloweb) {
@@ -252,13 +278,22 @@
             console.log(vm.graficos);
         }
 
+        function formattedDate(date) {
+            var d = new Date(date || Date.now()),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2) month = '0' + month;
+            if (day.length < 2) day = '0' + day;
+
+            return [day, month, year].join('/');
+        }
+
         function cleanVariables() {
-            //Contacto
-            vm.nombre = '';
-            vm.empresa = '';
-            vm.email = '';
-            vm.telefono = '';
-            vm.message = '';
+            vm.clienteEntity = {};
+            vm.reunionEntity = {};
+            vm.hostingEntity = {};
 
             //Nuestros Servicios
             vm.desarrolloweb = false;

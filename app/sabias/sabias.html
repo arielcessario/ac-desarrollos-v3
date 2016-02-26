@@ -3,34 +3,34 @@
         <div class="sabias-slider">
             <h1>Sab&iacute;as qué?</h1>
             <div class="sabias-container" style="position: relative">
-                <button ng-click="sabiasCtrl.nextMovie(sabiasCtrl.movie + 1);"
+                <button ng-click="sabiasCtrl.playMovie();"
                         ng-if="sabiasCtrl.show_btn" class="btn-movie">{{sabiasCtrl.btn_titulo}}</button>
 
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 1">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 1">
                     <source src="movies/movie1.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 2">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 2">
                     <source src="movies/movie2.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 3">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 3">
                     <source src="movies/movie3.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 4">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 4">
                     <source src="movies/movie4.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 5">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 5">
                     <source src="movies/movie5.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 6">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 6">
                     <source src="movies/movie6.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>
-                <video class="video-screen" autoplay ng-if="sabiasCtrl.movie == 7">
+                <video class="video-screen" ng-if="sabiasCtrl.movie == 7">
                     <source src="movies/movie7.mov" >
                     Your browser does not support the <code>video</code> element.
                 </video>

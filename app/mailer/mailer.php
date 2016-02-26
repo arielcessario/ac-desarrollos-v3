@@ -20,9 +20,8 @@ if ($decoded != null) {
     }elseif($decoded->function == 'sendCotizacion') {
         sendCotizacion($decoded->cliente, $decoded->nuestros_servicios, $decoded->nueva_web, $decoded->pagina_web,
             $decoded->comentario, $decoded->website_referencia, $decoded->dominio_info, $decoded->registro_dominio,
-            $decoded->dominio_deseado, $decoded->graficos, $decoded->otro_disenio_grafico, $decoded->como_nos_conocio,
-            $decoded->desea_reunion, $decoded->lugar_reunion, $decoded->fecha_reunion, $decoded->hosting_correo,
-            $decoded->hosting_plan);
+            $decoded->dominio_deseado, $decoded->graficos, $decoded->otro_disenio_grafico, $decoded->reunion,
+            $decoded->hosting);
     }
 }
 //sendMail($decoded->email, $decoded->nombre, $decoded->mensaje, $decoded->asunto);
@@ -61,16 +60,17 @@ function sendMailForChat($email, $nombre)
 
 function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, $comentario,
                         $website_referencia, $dominio_info, $registro_dominio, $dominio_deseado,
-                        $graficos, $otro_disenio_grafico, $como_nos_conocio, $desea_reunion,
-                        $lugar_reunion, $fecha_reunion, $hosting_correo, $hosting_plan)
+                        $graficos, $otro_disenio_grafico, $reunion, $hosting)
 {
 
-
-    $contacto = json_decode($cliente);
     $serviciosList = json_decode($nuestros_servicios);
     $disenioList = json_decode($pagina_web);
     $dominiosList = json_decode($registro_dominio);
     $graficosList = json_decode($graficos);
+
+    $contacto = json_decode($cliente);
+    $hosting_info = json_decode($hosting);
+    $reunion_info = json_decode($reunion);
 
     $servicios = '';
     $disenios = '';
@@ -121,8 +121,9 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= ''. $disenios .'';
     $message .= '</table></div>';
     $message .= '<h3 style="margin:20px 0 0 15px;color:#f548a2;font-size:24px">Servicio de Hosting y Correos</h3>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Solicitar: </label>' . $hosting_correo . '</div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Plan del Hosting: </label>' . $hosting_plan . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Solicitar: </label>' . $hosting_info->solicitar_hosting . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Plan del Hosting: </label>' . $hosting_info->plan . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Hosting (Precio): </label>' . $hosting_info->precio . '</div>';
     $message .= '<h3 style="margin:20px 0 0 15px;">Registro de Dominios</h3>';
     $message .= '<p style="margin:10px 0 5px 15px;">' . $dominio_info . '</p>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Dominio deseado: </label>' . $dominio_deseado . '</div>';
@@ -137,10 +138,10 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= ''. $graficos_2 .'';
     $message .= '</table></div>';
     $message .= '<h3 style="margin:20px 0 0 15px;color:#f548a2;font-size:24px">Información Adicional</h3>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Cómo nos conoció? </label>' . $como_nos_conocio . '</div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Desea una reunión? </label>' . $desea_reunion . '</div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Lugar de la reunión </label>' . $lugar_reunion . '</div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Fecha y hora de reunión </label>' . $fecha_reunion . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Cómo nos conoció? </label>' . $reunion_info->como_nos_conocio . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Desea una reunión? </label>' . $reunion_info->desea_reunion . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Lugar de la reunión </label>' . $reunion_info->lugar_reunion . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Fecha y hora de reunión </label>' . $reunion_info->fecha_reunion . '</div>';
     $message .= '</div></div>';
     $message .= '</table>';
     $message .= '</div></body></html>';

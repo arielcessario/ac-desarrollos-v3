@@ -9,29 +9,29 @@
                     <div class="controls controls-margin">
                         <label>Nombre:</label>
                         <input ac-validator is-required="Debe ingresar un nombre" type="text"
-                               class="form-control" ng-model="cotizadorCtrl.nombre" id="cotizador-nombre">
+                               class="form-control" ng-model="cotizadorCtrl.clienteEntity.nombre" id="cotizador-nombre">
                     </div>
                     <div class="controls controls-margin">
                         <label>Empresa:</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.empresa">
+                        <input type="text" class="form-control" ng-model="cotizadorCtrl.clienteEntity.empresa">
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>Teléfono:</label>
                         <input ac-validator is-required="Debe ingresar un teléfono" type="text"
-                               class="form-control" ng-model="cotizadorCtrl.telefono" id="cotizador-telefono">
+                               class="form-control" ng-model="cotizadorCtrl.clienteEntity.telefono" id="cotizador-telefono">
                     </div>
                     <div class="controls controls-margin">
                         <label>Mail:</label>
                         <input ac-validator is-required="Debe ingresar un email" type="text"
-                               class="form-control" ng-model="cotizadorCtrl.email" id="cotizador-email">
+                               class="form-control" ng-model="cotizadorCtrl.clienteEntity.email" id="cotizador-email">
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>Comentario:</label>
-                        <textarea ng-model="cotizadorCtrl.message" cols="50" rows="5" class="form-control"></textarea>
+                        <textarea ng-model="cotizadorCtrl.clienteEntity.message" cols="50" rows="5" class="form-control"></textarea>
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
                     <div class="controls controls-margin">
                         <label>Plan del Hosting:</label>
                         <select ng-model="cotizadorCtrl.hosting_selected"
-                                ng-options="plan_hosting.name for plan_hosting in cotizadorCtrl.plan_hosting"
+                                ng-options="plan_hosting.nombre for plan_hosting in cotizadorCtrl.plan_hosting"
                                 class="form-control">
                         </select>
                     </div>
