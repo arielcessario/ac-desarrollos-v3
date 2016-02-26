@@ -124,10 +124,7 @@
             }
 
             //Información Adicional
-            if(vm.desea_reunion == 1 || vm.desea_reunion == 3) {
-                if(fecha == undefined)
-                    return;
-            }
+
 
             addServicios();
 
