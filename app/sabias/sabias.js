@@ -7,12 +7,16 @@
     angular.module('acdesarrollos.sabias', ['ngRoute'])
         .controller('SabiasController', SabiasController);
 
-    SabiasController.$inject = ['$scope'];
+    SabiasController.$inject = ['$scope', '$interval'];
 
-    function SabiasController($scope) {
+    function SabiasController($scope, $interval) {
         var vm = this;
 
         vm.movie = 1;
+        vm.titulo_video = '';
+        vm.btn_titulo = 'Play';
+        vm.show_btn = true;
+        var video = document.getElementsByTagName('video')[0];;
         vm.videos = [
             {title:'Video 1', name:'movie1.mov'},
             {title:'Video 2', name:'movie2.mov'},
@@ -25,13 +29,37 @@
 
         vm.nextMovie = nextMovie;
 
-        function nextMovie() {
-            vm.movie = vm.movie + 1;
-            if(vm.movie > 7)
-                vm.movie = 1;
+
+        $interval(changeVideo, 10000);
+
+        function changeVideo() {
+            if(video != undefined) {
+                if(video.paused){
+                    console.log('Video detenido');
+                    vm.show_btn = true;
+                } else {
+                    vm.show_btn = false;
+                }
+            } else {
+                vm.show_btn = false;
+            }
+        }
+
+
+        function nextMovie(movie) {
+            vm.movie = movie;
+
+            video = document.getElementsByTagName('video')[0];
+            console.log(video);
+
+            video.play();
+            vm.show_btn = false;
+
+            vm.titulo_video = vm.videos[movie - 1].title;
 
             console.log(vm.movie);
         }
+
 
     };
 

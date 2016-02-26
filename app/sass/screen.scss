@@ -2119,3 +2119,21 @@ div[title]:hover:after {
   background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
 }
 
+.btn-movie{
+  position: absolute;
+  background-color: #fff;
+  padding: 15px;
+  left: 45%;
+  top:40%;
+  border: 3px solid darkgray;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.29);
+  z-index: 1;
+}
+.btn-movie:hover{
+  color: #000;
+}
