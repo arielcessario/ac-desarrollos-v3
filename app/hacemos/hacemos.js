@@ -21,7 +21,7 @@
         vm.slider_nro = 1;
         //vm.slideSelected = 1;
 
-        $interval(changeSlider, 10000);
+        $interval(changeSlider, 30000);
 
         function changeSlider() {
             vm.slider_nro = (vm.slider_nro == 5) ? 1 : vm.slider_nro + 1;

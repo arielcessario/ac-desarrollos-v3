@@ -28,54 +28,70 @@
 
         vm.btn_titulo = 'Play (' + vm.videos[0].title + ')';
 
-        var video = document.getElementsByTagName('video')[0];
-
+        //var video = document.getElementsByTagName('video')[0];
+        //var video = document.getElementById('video1');
+        //console.log(video);
+        var video = null;
 
         vm.nextMovie = nextMovie;
         vm.playMovie = playMovie;
 
-
-        //$interval(changeVideo, 10000);
-
         function changeVideo() {
-            if(video != undefined) {
-                if(video.paused){
-                    console.log('Video detenido');
-                    $interval.cancel(changeVideo);
-                    vm.show_btn = true;
-                } else {
-                    console.log('Video corriendo');
-                    vm.show_btn = false;
-                }
+            if(video.paused){
+                $interval.cancel(changeVideo);
+
+                vm.movie = vm.movie + 1;
+                console.log('Proximo video ' + vm.movie);
+
+                if(vm.movie > 7)
+                    vm.movie = 1;
+
+                var index = vm.movie - 1;
+                console.log('index: ' + index);
+
+                vm.btn_titulo = 'Play (' + vm.videos[index].title + ')';
+                vm.titulo_video = vm.videos[index].title;
+                console.log('Video detenido');
+                vm.show_btn = true;
             } else {
-                console.log('undefined');
+                console.log('Video corriendo');
                 vm.show_btn = false;
             }
-        }
+         }
 
         function playMovie() {
-            var index = vm.movie - 1;
-            console.log(index);
+            console.log('video actual ' + vm.movie);
 
-            video = document.getElementsByTagName('video')[0];
+            if(vm.movie == 1)
+                video = document.getElementById('video1');
+            else if(vm.movie == 2)
+                video = document.getElementById('video2');
+            else if(vm.movie == 3)
+                video = document.getElementById('video3');
+            else if(vm.movie == 4)
+                video = document.getElementById('video4');
+            else if(vm.movie == 5)
+                video = document.getElementById('video5');
+            else if(vm.movie == 6)
+                video = document.getElementById('video6');
+            else if(vm.movie == 7)
+                video = document.getElementById('video7');
+
             console.log(video);
             video.play();
             vm.show_btn = false;
             //vm.btn_titulo = vm.videos[index].title;
             //vm.titulo_video = vm.videos[index].title;
-            vm.btn_titulo = 'Play (' + vm.videos[vm.movie].title + ')';
-            vm.titulo_video = vm.videos[vm.movie].title;
 
-            vm.movie = vm.movie + 1;
-            console.log(vm.movie);
-
-            //$interval(changeVideo, 10000);
+            $interval(changeVideo, 10000);
         }
 
         function nextMovie(movie) {
             vm.movie = movie;
 
-            video = document.getElementsByTagName('video')[0];
+            if(video == undefined || video == null) {
+                video = document.getElementById('video1');
+            }
             console.log(video);
 
             video.play();

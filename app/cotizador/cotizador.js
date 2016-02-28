@@ -13,13 +13,7 @@
         var vm = this;
 
         //Contacto
-        /*
-        vm.nombre = '';
-        vm.empresa = '';
-        vm.email = '';
-        vm.telefono = '';
-        vm.message = '';
-*/
+
         //Nuestros Servicios
         vm.desarrolloweb = false;
         vm.hosting = false;
@@ -341,6 +335,8 @@
             vm.dominio_a_registrar = [];
             vm.hosting_y_correo = [];
             vm.graficos = [];
+
+            vm.hosting_selected = vm.plan_hosting[0];
         }
 
     };
