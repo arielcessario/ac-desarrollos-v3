@@ -11,8 +11,9 @@
     'ac.noticias'
   ]).config(['$routeProvider', function($routeProvider) {
 
-        $routeProvider.otherwise('/main');
+        $routeProvider.otherwise('/');
 
+        /*
         $routeProvider.when('/main', {
           templateUrl: 'main/main.html',
           controller: 'MainController',
@@ -24,6 +25,7 @@
             }]
           }
         });
+        */
 
         $routeProvider.when('/contacto', {
           templateUrl: 'contactanos/contacto.html',
