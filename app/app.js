@@ -145,6 +145,7 @@
   function AppController($scope, $location, LinksService) {
 
     var vm = this;
+    vm.hideLoader = true;
 
     vm.goTo = goTo;
     vm.selectedPage = 'INICIO';
