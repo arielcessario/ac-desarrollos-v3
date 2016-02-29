@@ -2195,7 +2195,7 @@ div[title]:hover:after {
   position: absolute;
   background-color: #fff;
   padding: 15px;
-  left: 45%;
+  left: 42%;
   top: 40%;
   border: 3px solid darkgray;
   -webkit-border-radius: 20px;
@@ -2210,4 +2210,15 @@ div[title]:hover:after {
 /* line 2137, ../sass/screen.scss */
 .btn-movie:hover {
   color: #000;
+}
+
+/* line 2140, ../sass/screen.scss */
+.arrow_animate {
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  /* Firefox */
+  -webkit-transform: rotate(360deg);
+  /* Chrome - Safari */
+  -o-transform: rotate(360deg);
+  /* Opera */
 }

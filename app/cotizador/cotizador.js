@@ -12,7 +12,6 @@
     function CotizadorController($scope, $location, MailerService) {
         var vm = this;
 
-        //Contacto
 
         //Nuestros Servicios
         vm.desarrolloweb = false;
@@ -89,10 +88,13 @@
             if (vm.clienteEntity.telefono.trim() == '') {
                 return;
             }
+            if (vm.fecha_reunion != undefined || vm.fecha_reunion != null) {
+                var currentDate = new Date();
+                if(vm.fecha_reunion < currentDate)
+                    return;
+            }
 
             console.log(vm.nuevapagina);
-
-            //var cliente = {nombre:vm.nombre, empresa:vm.empresa, email:vm.email, telefono:vm.telefono, message:vm.message};
 
             //Diseño de Página Web
             var nueva_web = '';
@@ -117,9 +119,6 @@
                 dominio_info = 'No estoy seguro';
             }
 
-            //Información Adicional
-
-
             addServicios();
 
             addPaginaWeb();
@@ -128,13 +127,14 @@
 
             addDisenioGrafico();
 
+            //Información Adicional
             createReunion();
 
 
-            MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web, vm.pagina_web,
-                vm.comentario, vm.website_referencia, dominio_info, vm.dominio_a_registrar,
-                vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico, vm.reunionEntity, vm.hostingEntity,
-                function(data){
+            MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web,
+                vm.pagina_web, vm.comentario, vm.website_referencia, dominio_info,
+                vm.dominio_a_registrar, vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico,
+                vm.reunionEntity, vm.hostingEntity, function(data){
                     console.log(data);
 
                     cleanVariables();

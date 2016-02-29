@@ -17,6 +17,7 @@
         vm.movie = 1;
         vm.titulo_video = '';
         vm.show_btn = true;
+        var video = null;
         var stop;
 
         vm.videos = [
@@ -31,13 +32,10 @@
 
         vm.btn_titulo = 'Play (' + vm.videos[0].title + ')';
 
-        //var video = document.getElementsByTagName('video')[0];
-        //var video = document.getElementById('video1');
-        //console.log(video);
-        var video = null;
-
+        //Declaro funciones
         vm.nextMovie = nextMovie;
         vm.playMovie = playMovie;
+
 
         function changeVideo() {
             //if ( angular.isDefined(stop) ) return;
@@ -58,7 +56,7 @@
                 vm.movie = vm.movie + 1;
                 console.log('Proximo video ' + vm.movie);
 
-                if(vm.movie > 7)
+                if(vm.movie > 5)
                     vm.movie = 1;
 
                 var index = vm.movie - 1;
@@ -92,8 +90,6 @@
             console.log(video);
             video.play();
             vm.show_btn = false;
-            //vm.btn_titulo = vm.videos[index].title;
-            //vm.titulo_video = vm.videos[index].title;
 
             stop = $interval(changeVideo, 10000);
         }
@@ -101,17 +97,11 @@
         function nextMovie(movie) {
             vm.movie = movie;
 
-            if(video == undefined || video == null) {
-                video = document.getElementById('video1');
-            }
-            console.log(video);
+            var index = vm.movie - 1;
+            console.log('index: ' + index);
 
-            video.play();
-            vm.show_btn = false;
-
-            vm.titulo_video = vm.videos[movie - 1].title;
-
-            console.log(vm.movie);
+            vm.btn_titulo = 'Play (' + vm.videos[index].title + ')';
+            vm.titulo_video = vm.videos[index].title;
         }
 
 

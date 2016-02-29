@@ -80,7 +80,7 @@
           resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
             loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
               // you can lazy load files for an existing module
-              return $ocLazyLoad.load('sabias/sabias.js');
+              return $ocLazyLoad.load('sabias/sabias.min.js');
             }]
           }
         });
@@ -116,7 +116,7 @@
           resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
             loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
               // you can lazy load files for an existing module
-              return $ocLazyLoad.load('cotizador/cotizador.js');
+              return $ocLazyLoad.load('cotizador/cotizador.min.js');
             }]
           }
         });

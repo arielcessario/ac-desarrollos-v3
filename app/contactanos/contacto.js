@@ -26,7 +26,7 @@
 
         function sendMail() {
             //console.log(vm.nombre);
-
+            vm.enviando = true;
             /*
             if(vm.enviando){
                 return;
@@ -47,6 +47,8 @@
                     vm.nombre = '';
                     vm.asunto = '';
                     vm.mensaje = '';
+
+                    vm.enviando = false;
 
                 });
 
