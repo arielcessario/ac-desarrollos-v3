@@ -1,5 +1,7 @@
 (function () {
 
+    //https://docs.angularjs.org/api/ng/service/$interval
+
     'use strict';
     var scripts = document.getElementsByTagName("script");
     var currentScriptPath = scripts[scripts.length - 1].src;
@@ -15,6 +17,7 @@
         vm.movie = 1;
         vm.titulo_video = '';
         vm.show_btn = true;
+        var stop;
 
         vm.videos = [
             {title:'Video 1', name:'movie1.mov'},
@@ -37,8 +40,20 @@
         vm.playMovie = playMovie;
 
         function changeVideo() {
+            //if ( angular.isDefined(stop) ) return;
+
             if(video.paused){
-                $interval.cancel(changeVideo);
+                stopVideo();
+            } else {
+                console.log('Video corriendo');
+                vm.show_btn = false;
+            }
+        }
+
+        function stopVideo() {
+            if (angular.isDefined(stop)) {
+                $interval.cancel(stop);
+                stop = undefined;
 
                 vm.movie = vm.movie + 1;
                 console.log('Proximo video ' + vm.movie);
@@ -53,11 +68,8 @@
                 vm.titulo_video = vm.videos[index].title;
                 console.log('Video detenido');
                 vm.show_btn = true;
-            } else {
-                console.log('Video corriendo');
-                vm.show_btn = false;
             }
-         }
+        }
 
         function playMovie() {
             console.log('video actual ' + vm.movie);
@@ -83,7 +95,7 @@
             //vm.btn_titulo = vm.videos[index].title;
             //vm.titulo_video = vm.videos[index].title;
 
-            $interval(changeVideo, 10000);
+            stop = $interval(changeVideo, 10000);
         }
 
         function nextMovie(movie) {
