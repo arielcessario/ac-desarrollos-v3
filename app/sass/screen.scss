@@ -65,11 +65,11 @@ html {
 }
 
 .color-primary {
-  color: white;
+  color: chocolate;
 }
 
 .color-terciary {
-  color: white;
+  color: chocolate;
 }
 
 //SECCION PARA EL MENU
@@ -705,7 +705,7 @@ h1 {
 }
 
 h3 {
-  font-size: 31px;
+  font-size: 35px;
   font-family: 'Oswald', sans-serif;
   padding: 10px 0;
   color: white;
@@ -723,7 +723,7 @@ h3 {
   @media (max-width: 600px){
     text-justify: inter-word;
     //font-size: 25px;
-    font-size: 24px;
+    font-size: 26px;
   }
 
 }
@@ -825,7 +825,7 @@ strong {
   animation-duration:2.7s;
   text-align: left;
   @media (min-width: 800px) {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 60px;
 
   }
@@ -1978,7 +1978,7 @@ button:hover{
 .slider-alto{
   min-height: 320px;
   font-family: 'Oswald', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   -webkit-animation:fadeIn ease-in-out 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
   -moz-animation:fadeIn ease-in-out 1;
   animation:fadeIn ease-in-out 1;
