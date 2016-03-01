@@ -31,7 +31,7 @@
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>Comentario:</label>
-                        <textarea ng-model="cotizadorCtrl.clienteEntity.message" cols="50" rows="5" class="form-control"></textarea>
+                        <textarea ng-model="cotizadorCtrl.clienteEntity.message" cols="50" rows="5" class="form-control tu-comentario"></textarea>
                     </div>
                 </div>
             </div>
@@ -40,179 +40,188 @@
             <div class="container-row">
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.desarrolloweb" ><span class="">Diseño de Página Web</span>
+                        <input type="checkbox" ng-model="cotizadorCtrl.desarrolloweb" ><span class="" ng-click="cotizadorCtrl.desarrolloweb = (cotizadorCtrl.desarrolloweb) ? false : true">Diseño de Página Web</span>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.hosting" ><span class="">Hosting</span>
+                        <input type="checkbox" ng-model="cotizadorCtrl.hosting" ><span class="" ng-click="cotizadorCtrl.hosting = (cotizadorCtrl.hosting) ? false : true">Hosting</span>
                     </div>
-                    <div class="controls controls-margin">
+                    <!--div class="controls controls-margin">
                         <input type="checkbox" ng-model="cotizadorCtrl.logotipos" ><span class="">Diseño de Logotipos</span>
-                    </div>
+                    </div-->
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.desarrollografico" ><span class="">Diseño Gráfico</span>
+                        <input type="checkbox" ng-model="cotizadorCtrl.desarrollografico" ><span class="" ng-click="cotizadorCtrl.desarrollografico = (cotizadorCtrl.desarrollografico) ? false : true">Diseño Gráfico</span>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.dominio" ><span class="">Registro de Dominio</span>
+                        <input type="checkbox" ng-model="cotizadorCtrl.dominio" ><span class="" ng-click="cotizadorCtrl.dominio = (cotizadorCtrl.dominio) ? false : true">Registro de Dominio</span>
                     </div>
-                    <div class="controls controls-margin">
+                    <!--div class="controls controls-margin">
                         <input type="checkbox" ng-model="cotizadorCtrl.impresion" ><span class="">Impresión</span>
+                    </div-->
+                </div>
+            </div>
+
+            <div ng-if="cotizadorCtrl.desarrolloweb">
+                <h3>Diseño de Página Web</h3>
+                <div class="container-row" >
+                    <div class="container-colum">
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.nuevapagina" value="1"><span class="">Diseño de una nueva página web</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.nuevapagina" value="2"><span class="">Rediseño de su página actual</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.nuevapagina" value="3"><span class="">Servicio de Mantenimiento</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-colum">
+                        <div class="controls controls-margin">
+                            <label>Su proyecto:</label>
+                            <textarea ng-model="cotizadorCtrl.comentario" cols="50" rows="5" class="form-control text-area"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.slider_fijo" ><span class="">Slider Fijo</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.slider_administrable" ><span class="">Slider Autoadministrable</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.contactos" ><span class="">Contactos</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.empresa_info" ><span class="">Información de Empresas</span>
+                        </div>
+                    </div>
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.producto_info" ><span class="">Información de Productos</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.multipaginas" ><span class="">Multipágina</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.noticias" ><span class="">Noticias</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.usuarios" ><span class="">Usuarios</span>
+                        </div>
+                    </div>
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.ecommerce" ><span class="">Ecommerce</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.chat" ><span class="">Chat en línea</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.cobros_online" ><span class="">Cobros Online</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.imagenes_admin" ><span class="">Administración de Imágenes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-row">
+                    <div class="container-colum">
+                        <div class="controls controls-margin">
+                            <label>Website de referencia:</label>
+                            <input type="text" class="form-control" ng-model="cotizadorCtrl.website_referencia" >
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h3>Diseño de Página Web</h3>
-            <div class="container-row">
-                <div class="container-colum">
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.nuevapagina" value="1"><span class="">Diseño de una nueva página web</span>
+            <div ng-if="cotizadorCtrl.hosting">
+                <h3>Servicio de Hosting y Correos</h3>
+                <div class="container-row">
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <label>Solicitar:</label>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.hosting_y_correo" value="1"><span class="">Sí</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.hosting_y_correo" value="2"><span class="">No, ya tengo el hosting</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.hosting_y_correo" value="3"><span class="">No estoy seguro</span>
+                        </div>
                     </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.nuevapagina" value="2"><span class="">Rediseño de su página actual</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.nuevapagina" value="3"><span class="">Servicio de Mantenimiento</span>
-                    </div>
-                </div>
-            </div>
-            <div class="container-row">
-                <div class="container-colum">
-                    <div class="controls controls-margin">
-                        <label>Su proyecto:</label>
-                        <textarea ng-model="cotizadorCtrl.comentario" cols="50" rows="5" class="form-control"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="container-row">
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.slider_fijo" ><span class="">Slider Fijo</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.slider_administrable" ><span class="">Slider Autoadministrable</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.contactos" ><span class="">Contactos</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.empresa_info" ><span class="">Información de Empresas</span>
-                    </div>
-                </div>
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.producto_info" ><span class="">Información de Productos</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.multipaginas" ><span class="">Multipágina</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.noticias" ><span class="">Noticias</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.usuarios" ><span class="">Usuarios</span>
-                    </div>
-                </div>
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.ecommerce" ><span class="">Ecommerce</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.chat" ><span class="">Chat en línea</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.cobros_online" ><span class="">Cobros Online</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.imagenes_admin" ><span class="">Administración de Imágenes</span>
-                    </div>
-                </div>
-            </div>
-            <div class="container-row">
-                <div class="container-colum">
-                    <div class="controls controls-margin">
-                        <label>Website de referencia:</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.website_referencia" >
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <label>Plan del Hosting:</label>
+                            <select ng-model="cotizadorCtrl.hosting_selected"
+                                    ng-options="plan_hosting.nombre for plan_hosting in cotizadorCtrl.plan_hosting"
+                                    class="form-control">
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h3>Servicio de Hosting y Correos</h3>
-            <div class="container-row">
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <label>Solicitar:</label>
+            <div ng-if="cotizadorCtrl.dominio">
+                <h3>Registro de Dominios</h3>
+                <div class="container-row">
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="1"><span class="">Registrar un nuevo dominio</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="2"><span class="">No, ya tengo el dominio</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="3"><span class="">No estoy seguro</span>
+                        </div>
                     </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.hosting_y_correo" value="1"><span class="">Sí</span>
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.extension_1" ><span class="">.com / .net /</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.extension_2" ><span class="">.com.ar / .org</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.extension_3" ><span class="">otro</span>
+                        </div>
                     </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.hosting_y_correo" value="2"><span class="">No, ya tengo el hosting</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.hosting_y_correo" value="3"><span class="">No estoy seguro</span>
-                    </div>
-                </div>
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <label>Plan del Hosting:</label>
-                        <select ng-model="cotizadorCtrl.hosting_selected"
-                                ng-options="plan_hosting.nombre for plan_hosting in cotizadorCtrl.plan_hosting"
-                                class="form-control">
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <h3>Registro de Dominios</h3>
-            <div class="container-row">
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="1"><span class="">Registrar un nuevo dominio</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="2"><span class="">No, ya tengo el dominio</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="3"><span class="">No estoy seguro</span>
-                    </div>
-                </div>
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.extension_1" ><span class="">.com / .net /</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.extension_2" ><span class="">.com.ar / .org</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.extension_3" ><span class="">otro</span>
-                    </div>
-                </div>
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <label>Dominio deseado:</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.dominio_deseado" >
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <label>Dominio deseado:</label>
+                            <input type="text" class="form-control" ng-model="cotizadorCtrl.dominio_deseado" >
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <h3>Diseño Gráfico</h3>
-            <div class="container-row">
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.logotipo" ><span class="">Diseño de Logotipo</span>
+            <div ng-if="cotizadorCtrl.desarrollografico">
+                <h3>Diseño Gráfico</h3>
+                <div class="container-row">
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.logotipo" ><span class="">Diseño de Logotipo</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.tarjeta" ><span class="">Tarjetas</span>
+                        </div>
+                        <div class="controls controls-margin">
+                            <input type="checkbox" ng-model="cotizadorCtrl.catalogo" ><span class="">Catálogo</span>
+                        </div>
                     </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.tarjeta" ><span class="">Tarjetas</span>
-                    </div>
-                    <div class="controls controls-margin">
-                        <input type="checkbox" ng-model="cotizadorCtrl.catalogo" ><span class="">Catálogo</span>
-                    </div>
-                </div>
-                <div class="container-colum" style="flex: 1 1 auto;">
-                    <div class="controls controls-margin">
-                        <label>Otro:</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.otro_disenio_grafico" >
+                    <div class="container-colum" style="flex: 1 1 auto;">
+                        <div class="controls controls-margin">
+                            <label>Otro:</label>
+                        <textarea ng-model="cotizadorCtrl.otro_disenio_grafico" cols="50" rows="5"
+                                  class="form-control text-area"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,7 +231,8 @@
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>¿Cómo nos conoció?</label>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.como_nos_conocio" >
+                        <textarea ng-model="cotizadorCtrl.como_nos_conocio" cols="50" rows="5"
+                                  class="form-control text-area"></textarea>
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
@@ -237,7 +247,8 @@
                     </div>
                     <div class="controls controls-margin">
                         <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="3"><span class="">SI. ¿Donde?</span>
-                        <input type="text" class="form-control" ng-model="cotizadorCtrl.lugar_reunion" >
+                        <textarea ng-model="cotizadorCtrl.lugar_reunion" cols="50" rows="5"
+                                  class="form-control text-area"></textarea>
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
@@ -253,6 +264,10 @@
         <div class="btn-chat">
             <div class="arrow-up arrow-chat-margin"></div>
             <button id="cotizar" ac-validator ng-click="cotizadorCtrl.sendMail();">Pedir Cotización</button>
+        </div>
+
+        <div class="send-mail ac-mensaje-custom-show" ng-if="cotizadorCtrl.enviando">
+            Su cotización en breve será enviada
         </div>
 
     </div>

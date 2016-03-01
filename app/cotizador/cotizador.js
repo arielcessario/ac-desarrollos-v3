@@ -12,6 +12,7 @@
     function CotizadorController($scope, $location, MailerService) {
         var vm = this;
 
+        vm.enviando = false;
 
         //Nuestros Servicios
         vm.desarrolloweb = false;
@@ -68,8 +69,8 @@
         vm.graficos = [];
         vm.plan_hosting = [
             {id:0, nombre:'--- Seleccione un plan ---'},
-            {id:1, nombre:'Hosting Emprendedores (1 GB de espacio)', precio: 50},
-            {id:2, nombre:'Hosting Empresarial (10 GB de espacio)', precio: 150}
+            {id:1, nombre:'Hosting Emprendedores', precio: 50},
+            {id:2, nombre:'Hosting Empresarial', precio: 150}
         ];
 
         vm.hosting_selected = vm.plan_hosting[0];

@@ -16,6 +16,7 @@
         vm.email = '';
         vm.message = '';
         vm.chatIsLogged = false;
+        vm.enviando = false;
         vm.idChat = 0;
         var myDataRef = new Firebase('https://chat-acdesarrollos.firebaseio.com/');
 
@@ -30,11 +31,16 @@
             if (vm.email.trim() == '') {
                 return;
             }
+            if(vm.enviando){
+                return;
+            }
+            vm.enviando = true;
 
             vm.idChat = Math.floor((Math.random() * 1000) + 1);
 
             MailerService.sendMailForChat( vm.email, vm.nombre, function(data){
                 //console.log(data);
+                vm.enviando = false;
             });
 
             myDataRef.push({id: vm.idChat, name: vm.nombre, mail: vm.email, message: vm.nombre + ' se ha conectado'});

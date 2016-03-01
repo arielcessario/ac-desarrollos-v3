@@ -21,8 +21,10 @@
             </div>
             <div class="btn-chat">
                 <div class="arrow-up arrow-chat-margin"></div>
-                <!--a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Ingresar</a-->
                 <button id="contacto-enviar-mobile" ac-validator ng-click="chatCtrl.loginChat();">Ingresar</button>
+            </div>
+            <div class="send-mail ac-mensaje-custom-show" ng-if="chatCtrl.enviando">
+                En breve se estará contactando alguien con usted
             </div>
         </div>
 

@@ -24,20 +24,21 @@
                     </div>
                     <div class="controls controls-margin">
                         <label>Consulta:</label>
-                        <textarea ac-validator is-required="Debe ingresar una consulta" ng-model="contactoCtrl.mensaje"
-                                  class="form-control" name="" id="contacto-consulta" rows="10" style="height: 60px;"></textarea>
+                        <textarea ac-validator is-required="Debe ingresar una consulta"
+                                  ng-model="contactoCtrl.mensaje"
+                                  class="form-control text-area" name="" id="contacto-consulta"
+                                  rows="10" cols="50"></textarea>
                     </div>
                 </div>
             </div>
-            <div class="btn-action">
+            <div class="btn-action" ng-disabled="contactoCtrl.enviando">
                 <div class="arrow-up arrow-contacto-margin" ng-class="{arrow_animate:contactoCtrl.enviando}"></div>
-                <!--a href="" ng-click="contactoCtrl.sendMail();">Enviar</a-->
                 <button id="contacto-enviar-mobile" ac-validator ng-click="contactoCtrl.sendMail();">Enviar</button>
             </div>
+            <div class="send-mail ac-mensaje-custom-show" ng-if="contactoCtrl.enviando">
+                Su consulta fue enviada
+            </div>
         </div>
-        <!--div class="logo-container" style="margin-top: 5%">
-            <img class="" src="images/logo.png" width="140px">
-        </div-->
     </div>
 </div>
 

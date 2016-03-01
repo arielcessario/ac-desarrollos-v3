@@ -1020,8 +1020,7 @@ textarea {
   -webkit-animation-duration:3s;
   -moz-animation-duration:3s;
   animation-duration:3s;
-  }
-
+}
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
@@ -1032,7 +1031,9 @@ textarea:focus {
 
 }
 
-
+.text-area{
+  height:65px!important;
+}
 
 
 label {
@@ -1734,7 +1735,8 @@ button:hover{
   transition: all .3s;
 }
 .ac-mensaje-custom-show{
-  background-color: $color_4;
+  padding: 15px;
+  background-color: chocolate;
   text-align: center;
   border: 1px solid $color_6;
   -webkit-border-radius: 10px;
@@ -2139,9 +2141,23 @@ div[title]:hover:after {
 .btn-movie:hover{
   color: #000;
 }
-.arrow_animate{
-  transform : rotate(360deg);
-  -moz-transform : rotate(360deg); /* Firefox */
-  -webkit-transform : rotate(360deg); /* Chrome - Safari */
-  -o-transform : rotate(360deg); /* Opera */
+
+.back:hover {
+  .arrow-left {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg); /* Firefox */
+    -webkit-transform: rotate(360deg); /* Chrome - Safari */
+    -o-transform: rotate(360deg); /* Opera */
+  }
+}
+
+.send-mail{
+  position: fixed;
+  height: 100px;
+  width: 250px;
+  top: 50%;
+  left: calc(50% - 125px);
+}
+.tu-comentario{
+  height: 109px;
 }

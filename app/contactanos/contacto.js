@@ -17,7 +17,7 @@
         vm.nombre = '';
         vm.mensaje = '';
         vm.asunto = '';
-        vm.enviado = false;
+        //vm.enviado = false;
         vm.enviando = false;
 
 
@@ -25,14 +25,11 @@
         vm.sendMail = sendMail;
 
         function sendMail() {
-            //console.log(vm.nombre);
-            vm.enviando = true;
-            /*
             if(vm.enviando){
                 return;
             }
             vm.enviando = true;
-            */
+
             ContactsService.sendMail(vm.email,
                 [{mail: 'mmaneff@gmail.com'}],
                 vm.nombre,

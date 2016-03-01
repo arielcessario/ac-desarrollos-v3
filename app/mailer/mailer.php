@@ -76,6 +76,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $disenios = '';
     $registros = '';
     $graficos_2 = '';
+    $message = '';
 
     foreach ($serviciosList as $item) {
         $precio_1 = number_format((float)$item->precio, 2, '.', '');
@@ -166,7 +167,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     // Activo condificacción utf-8 para evitar problemas de codificación de caracteres (eñes, tildes…)
     $mail->CharSet = 'UTF-8';
 
-    $mail->Subject = 'Nueva cotización del Cliente ' + $contacto->nombre;
+    $mail->Subject = 'Nueva cotización del Cliente ' . $contacto->nombre;
     $mail->Body    = $message;
     //$mail->AltBody = $message;
 
