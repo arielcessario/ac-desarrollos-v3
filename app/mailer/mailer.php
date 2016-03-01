@@ -86,18 +86,18 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
         foreach ($serviciosList as $item) {
             $subtotal_1 = $subtotal_1 + $item->precio;
             $precio_1 = number_format((float)$item->precio, 2, '.', '');
-            $servicios = $servicios . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_1 . '</td></tr>';
+            $servicios = $servicios . '<tr><td style="text-align:left;">' . $item->nombre . '</td><td style="text-align:right">' . $precio_1 . '</td></tr>';
         }
-        $servicios = $servicios . '<tr><td style="text-align:left">SubTotal: </td><td style="text-align:right">' . $subtotal_1 . '</td></tr>';
+        $servicios = $servicios . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_1, 2, '.', '') . '</td></tr>';
     }
 
     if(count($disenioList) > 1) {
         foreach ($disenioList as $item) {
             $subtotal_2 = $subtotal_2 + $item->precio;
             $precio_2 = number_format((float)$item->precio, 2, '.', '');
-            $disenios = $disenios . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
+            $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;">' . $item->nombre . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
         }
-        $disenios = $disenios . '<tr><td style="text-align:left">SubTotal: </td><td style="text-align:right">' . $subtotal_2 . '</td></tr>';
+        $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_2, 2, '.', '') . '</td></tr>';
     }
 
     if(count($dominiosList) > 1) {
@@ -106,7 +106,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
             $precio_3 = number_format((float)$item->precio, 2, '.', '');
             $registros = $registros . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_3 . '</td></tr>';
         }
-        $registros = $registros . '<tr><td style="text-align:left">SubTotal: </td><td style="text-align:right">' . $subtotal_3 . '</td></tr>';
+        $registros = $registros . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_3, 2, '.', '') . '</td></tr>';
     }
 
     if(count($graficosList) > 1) {
@@ -115,7 +115,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
             $precio_4 = number_format((float)$item->precio, 2, '.', '');
             $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_4 . '</td></tr>';
         }
-        $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">SubTotal: </td><td style="text-align:right">' . $subtotal_4 . '</td></tr>';
+        $graficos_2 = $graficos_2 . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_4, 2, '.', '') . '</td></tr>';
     }
 
     $total = $subtotal_1 + $subtotal_2 + $subtotal_3 + $subtotal_4;
@@ -146,7 +146,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= '<h3 style="margin:20px 0 0 15px;color:#f548a2;font-size:24px">Servicio de Hosting y Correos</h3>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Solicitar: </label>' . $hosting_info->solicitar_hosting . '</div>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Plan del Hosting: </label>' . $hosting_info->plan . '</div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Hosting (Precio/mes): </label>' . $hosting_info->precio . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Hosting (Precio/mes): </label>' . number_format((float)$hosting_info->precio, 2, '.', '') . '</div>';
     $message .= '<h3 style="margin:20px 0 0 15px;">Registro de Dominios</h3>';
     $message .= '<p style="margin:10px 0 5px 15px;">' . $dominio_info . '</p>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Dominio deseado: </label>' . $dominio_deseado . '</div>';
@@ -160,7 +160,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= '<table style="font-size:12px;color:#000;width:100%"><tr><th style="font-size:16px;text-align:left;color:lightseagreen;">Diseño</th><th style="font-size:16px;text-align:right;color:lightseagreen;">Precio</th></tr>';
     $message .= ''. $graficos_2 .'';
     $message .= '</table></div>';
-    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Total Presupuestado: </label>' . $total . '</div>';
+    $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Total Presupuestado: </label>' . number_format((float)$total, 2, '.', '') . '</div>';
     $message .= '<h3 style="margin:20px 0 0 15px;color:#f548a2;font-size:24px">Información Adicional</h3>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Cómo nos conoció? </label>' . $reunion_info->como_nos_conocio . '</div>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">¿Desea una reunión? </label>' . $reunion_info->desea_reunion . '</div>';
