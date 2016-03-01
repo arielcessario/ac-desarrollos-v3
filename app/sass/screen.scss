@@ -1952,10 +1952,11 @@ button:hover{
   overflow-y: hidden;
 
 }
-.mision-container{
+.mision-container p{
   //overflow: auto;
   //height: 380px;
   //overflow-y: hidden;
+  color: white;
 }
 
 .slider-container-1{
@@ -2120,6 +2121,7 @@ div[title]:hover:after {
 }
 
 .btn-movie{
+  font-family: 'Oswald', sans-serif;
   position: absolute;
   background-color: #fff;
   padding: 15px;
