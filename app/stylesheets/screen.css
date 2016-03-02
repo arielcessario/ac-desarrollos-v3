@@ -912,7 +912,7 @@ strong {
   color: #ce5f2d;
 }
 
-/* line 897, ../sass/screen.scss */
+/*
 .arrow-up {
   width: 0;
   height: 0;
@@ -920,7 +920,7 @@ strong {
   border-right: 15px solid transparent;
   border-bottom: 15px solid white;
 }
-
+*/
 /* line 905, ../sass/screen.scss */
 .arrow-down {
   width: 0;
@@ -960,8 +960,8 @@ strong {
   cursor: pointer;
 }
 
-/* line 941, ../sass/screen.scss */
-.arrow-up:hover {
+/*
+.arrow-up:hover{
   border-bottom: 15px solid darkorange;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -970,7 +970,7 @@ strong {
   transition: all .3s;
   cursor: pointer;
 }
-
+*/
 /* line 951, ../sass/screen.scss */
 .back {
   display: flex;
@@ -2241,9 +2241,43 @@ div[title]:hover:after {
 .back-2 {
   width: 200px;
   margin: 5% calc(50% - 100px);
+  text-align: center;
 }
 
-/* line 2157, ../sass/screen.scss */
+/* line 2158, ../sass/screen.scss */
+.back-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  /* line 2158, ../sass/screen.scss */
+  .back-3 {
+    align-items: flex-end;
+  }
+}
+
+/* line 2167, ../sass/screen.scss */
+.arrow-up {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  /****/
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  transition: all .25s ease;
+  /****/
+}
+
+/* line 2176, ../sass/screen.scss */
+.position-up {
+  margin-top: -20px;
+  position: absolute;
+}
+
+/* line 2180, ../sass/screen.scss */
 .arrow-left {
   margin-right: 5px;
   height: 0px;
@@ -2256,10 +2290,24 @@ div[title]:hover:after {
   /****/
 }
 
-/* line 2167, ../sass/screen.scss */
+/* line 2190, ../sass/screen.scss */
 a:hover .arrow-left {
   margin-right: 5px;
   border-right: 15px solid darkorange;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+/* line 2205, ../sass/screen.scss */
+a:hover .arrow-up {
+  border-bottom: 15px solid darkorange;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
