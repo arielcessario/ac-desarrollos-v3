@@ -893,7 +893,7 @@ strong {
 .menu-ul > li > a:hover {
   color: $color_2;
 }
-
+/*
 .arrow-up {
   width: 0;
   height: 0;
@@ -901,7 +901,7 @@ strong {
   border-right: 15px solid transparent;
   border-bottom: 15px solid white;
 }
-
+*/
 .arrow-down {
   width: 0;
   height: 0;
@@ -937,7 +937,7 @@ strong {
   transition: all .3s;
   cursor: pointer;
 }
-
+/*
 .arrow-up:hover{
   border-bottom: 15px solid darkorange;
   -webkit-transition: all .3s;
@@ -947,7 +947,7 @@ strong {
   transition: all .3s;
   cursor: pointer;
 }
-
+*/
 .back {
   display: flex;
   justify-content: center;
@@ -2153,6 +2153,29 @@ div[title]:hover:after {
 .back-2{
   width: 200px;
   margin: 5% calc(50% - 100px);
+  text-align: center;
+}
+.back-3{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 800px) {
+    align-items: flex-end;
+  }
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  display: inline-block; /****/
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  transition: all .25s ease; /****/
+}
+.position-up{
+  margin-top: -20px;
+  position: absolute;
 }
 .arrow-left {
   margin-right: 5px;
@@ -2167,6 +2190,20 @@ a:hover{
   .arrow-left {
     margin-right: 5px;
     border-right: 15px solid darkorange;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+  .arrow-up {
+    border-bottom: 15px solid darkorange;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -ms-transition: all .3s;

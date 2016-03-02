@@ -31,9 +31,15 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-action" ng-disabled="contactoCtrl.enviando">
-                <div class="arrow-up arrow-contacto-margin" ng-class="{arrow_animate:contactoCtrl.enviando}"></div>
+            <!--div class="btn-action" ng-disabled="contactoCtrl.enviando">
+                <div class="arrow-up arrow-contacto-margin"></div>
                 <button id="contacto-enviar-mobile" ac-validator ng-click="contactoCtrl.sendMail();">Enviar</button>
+            </div-->
+            <div class="back-3">
+                <a href="" id="contacto-enviar-mobile" ac-validator ng-click="contactoCtrl.sendMail();"
+                   style="margin-top: 50px;">
+                    <div class="arrow-up position-up"></div> Enviar
+                </a>
             </div>
             <div class="send-mail ac-mensaje-custom-show" ng-if="contactoCtrl.enviando">
                 Su consulta fue enviada
