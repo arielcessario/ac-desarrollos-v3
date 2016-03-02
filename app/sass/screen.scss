@@ -918,17 +918,16 @@ strong {
   border-left: 15px solid $color_6;
   margin-left: 5px;
 }
-
+/*
 .arrow-left {
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-right: 15px solid white;
-
 }
-
-.arrow-left:hover,
+*/
+//.arrow-left:hover,
 .arrow-right:hover{
   border-right: 15px solid darkorange;
   -webkit-transition: all .3s;
@@ -2141,16 +2140,6 @@ div[title]:hover:after {
 .btn-movie:hover{
   color: #000;
 }
-
-.back:hover {
-  .arrow-left {
-    transform: rotate(360deg);
-    -moz-transform: rotate(360deg); /* Firefox */
-    -webkit-transform: rotate(360deg); /* Chrome - Safari */
-    -o-transform: rotate(360deg); /* Opera */
-  }
-}
-
 .send-mail{
   position: fixed;
   height: 100px;
@@ -2160,4 +2149,34 @@ div[title]:hover:after {
 }
 .tu-comentario{
   height: 109px;
+}
+.back-2{
+  width: 200px;
+  margin: 5% calc(50% - 100px);
+}
+.arrow-left {
+  margin-right: 5px;
+  height: 0px;
+  width: 0px;
+  display: inline-block; /****/
+  border: solid 10px transparent;
+  border-right: solid #fff 11px;
+  transition: all .25s ease; /****/
+}
+a:hover{
+  .arrow-left {
+    margin-right: 5px;
+    border-right: 15px solid darkorange;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
 }
