@@ -2206,8 +2206,8 @@ div[title]:hover:after {
   position: absolute;
   background-color: #fff;
   padding: 15px;
-  left: 42%;
-  top: 40%;
+  left: 35%;
+  top: 35%;
   border: 3px solid darkgray;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -2217,13 +2217,20 @@ div[title]:hover:after {
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.29);
   z-index: 1;
 }
+@media (min-width: 800px) {
+  /* line 2124, ../sass/screen.scss */
+  .btn-movie {
+    left: 42%;
+    top: 40%;
+  }
+}
 
-/* line 2140, ../sass/screen.scss */
+/* line 2144, ../sass/screen.scss */
 .btn-movie:hover {
   color: #000;
 }
 
-/* line 2143, ../sass/screen.scss */
+/* line 2147, ../sass/screen.scss */
 .send-mail {
   position: fixed;
   height: 100px;
@@ -2232,19 +2239,19 @@ div[title]:hover:after {
   left: calc(50% - 125px);
 }
 
-/* line 2150, ../sass/screen.scss */
+/* line 2154, ../sass/screen.scss */
 .tu-comentario {
   height: 109px;
 }
 
-/* line 2153, ../sass/screen.scss */
+/* line 2157, ../sass/screen.scss */
 .back-2 {
   width: 200px;
   margin: 5% calc(50% - 100px);
   text-align: center;
 }
 
-/* line 2158, ../sass/screen.scss */
+/* line 2162, ../sass/screen.scss */
 .back-3 {
   width: 100%;
   display: flex;
@@ -2252,13 +2259,13 @@ div[title]:hover:after {
   align-items: center;
 }
 @media (min-width: 800px) {
-  /* line 2158, ../sass/screen.scss */
+  /* line 2162, ../sass/screen.scss */
   .back-3 {
     align-items: flex-end;
   }
 }
 
-/* line 2167, ../sass/screen.scss */
+/* line 2171, ../sass/screen.scss */
 .arrow-up {
   width: 0;
   height: 0;
@@ -2271,13 +2278,13 @@ div[title]:hover:after {
   /****/
 }
 
-/* line 2176, ../sass/screen.scss */
+/* line 2180, ../sass/screen.scss */
 .position-up {
   margin-top: -20px;
   position: absolute;
 }
 
-/* line 2180, ../sass/screen.scss */
+/* line 2184, ../sass/screen.scss */
 .arrow-left {
   margin-right: 5px;
   height: 0px;
@@ -2290,7 +2297,7 @@ div[title]:hover:after {
   /****/
 }
 
-/* line 2190, ../sass/screen.scss */
+/* line 2194, ../sass/screen.scss */
 a:hover .arrow-left {
   margin-right: 5px;
   border-right: 15px solid darkorange;
@@ -2305,7 +2312,7 @@ a:hover .arrow-left {
   -webkit-transform: rotate(360deg);
   -o-transform: rotate(360deg);
 }
-/* line 2205, ../sass/screen.scss */
+/* line 2209, ../sass/screen.scss */
 a:hover .arrow-up {
   border-bottom: 15px solid darkorange;
   -webkit-transition: all .3s;
@@ -2318,4 +2325,39 @@ a:hover .arrow-up {
   -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   -o-transform: rotate(360deg);
+}
+
+/* line 2225, ../sass/screen.scss */
+button:hover .arrow-left {
+  margin-right: 5px;
+  border-right: 15px solid darkorange;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+/* line 2240, ../sass/screen.scss */
+button:hover .arrow-up {
+  border-bottom: 15px solid darkorange;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  cursor: pointer;
+  transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+}
+
+/* line 2255, ../sass/screen.scss */
+#chat-login, #enviar-consulta, #enviar-cotizacio {
+  margin-top: 50px;
 }

@@ -2221,3 +2221,37 @@ a:hover{
     -o-transform: rotate(360deg);
   }
 }
+button:hover{
+  .arrow-left {
+    margin-right: 5px;
+    border-right: 15px solid darkorange;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+  .arrow-up {
+    border-bottom: 15px solid darkorange;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
+#chat-login, #enviar-consulta, #enviar-cotizacion{
+  margin-top: 50px;
+}
