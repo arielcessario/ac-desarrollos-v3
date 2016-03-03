@@ -19,7 +19,7 @@
         vm.show_btn = true;
         var video = null;
         var stop;
-
+        /*
         vm.videos = [
             {title:'Video 1', name:'movie1.mov'},
             {title:'Video 2', name:'movie2.mov'},
@@ -28,6 +28,12 @@
             {title:'Video 5', name:'movie5.mov'},
             {title:'Video 6', name:'movie6.mov'},
             {title:'Video 7', name:'movie7.mov'}
+        ];
+        */
+        vm.videos = [
+            {title:'Video 1', name:'movie1.mp4'},
+            {title:'Video 2', name:'movie2.mp4'},
+            {title:'Video 3', name:'movie3.mp4'}
         ];
 
         vm.btn_titulo = 'Play (' + vm.videos[0].title + ')';
@@ -56,7 +62,7 @@
                 vm.movie = vm.movie + 1;
                 console.log('Proximo video ' + vm.movie);
 
-                if(vm.movie > 5)
+                if(vm.movie > 3)
                     vm.movie = 1;
 
                 var index = vm.movie - 1;
@@ -78,6 +84,7 @@
                 video = document.getElementById('video2');
             else if(vm.movie == 3)
                 video = document.getElementById('video3');
+            /*
             else if(vm.movie == 4)
                 video = document.getElementById('video4');
             else if(vm.movie == 5)
@@ -86,12 +93,13 @@
                 video = document.getElementById('video6');
             else if(vm.movie == 7)
                 video = document.getElementById('video7');
+            */
 
             console.log(video);
             video.play();
             vm.show_btn = false;
 
-            stop = $interval(changeVideo, 10000);
+            stop = $interval(changeVideo, 6000);
         }
 
         function nextMovie(movie) {
