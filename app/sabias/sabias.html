@@ -6,8 +6,10 @@
                 <button ng-click="sabiasCtrl.playMovie();"
                         ng-if="sabiasCtrl.show_btn" class="btn-movie">{{sabiasCtrl.btn_titulo}}</button>
 
-                <video id="video1" class="video-screen" ng-if="sabiasCtrl.movie == 1">
+                <video id="video1" class="video-screen" width="320" height="240" ng-if="sabiasCtrl.movie == 1">
+                    <source src="movies/movie1.ogg" >
                     <source src="movies/movie1.mov" >
+                    <source src="movies/movie1.avi" >
                     Your browser does not support the <code>video</code> element.
                 </video>
 
