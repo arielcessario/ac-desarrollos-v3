@@ -2074,6 +2074,11 @@ input[type="radio"]:checked {
   height: 100%;
   overflow: hidden;
   //height:100%;
+  @media (max-width: 800px) {
+    width:92%;
+    margin: 0 auto;
+    display: flex;
+  }
 }
 
 #cotizador-form h3{
