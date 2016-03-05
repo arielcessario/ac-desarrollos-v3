@@ -96,11 +96,11 @@
                     <div class="container-colum" style="flex: 1 1 auto;">
                         <div class="controls controls-margin">
                             <input type="checkbox" ng-model="cotizadorCtrl.slider_fijo" >
-                            <span class="" ng-click="cotizadorCtrl.slider_fijo = (cotizadorCtrl.slider_fijo) ? false : true">Slider Fijo</span>
+                            <span class="" ng-click="cotizadorCtrl.setSliderFijo((cotizadorCtrl.slider_fijo) ? false : true);">Slider Fijo</span>
                         </div>
                         <div class="controls controls-margin">
                             <input type="checkbox" ng-model="cotizadorCtrl.slider_administrable" >
-                            <span class="" ng-click="cotizadorCtrl.slider_administrable = (cotizadorCtrl.slider_administrable) ? false : true">Slider Autoadministrable</span>
+                            <span class="" ng-click="cotizadorCtrl.setSliderAdministrable((cotizadorCtrl.slider_administrable) ? false : true);">Slider Autoadministrable</span>
                         </div>
                         <div class="controls controls-margin">
                             <input type="checkbox" ng-model="cotizadorCtrl.contactos" >
@@ -192,33 +192,41 @@
                 <div class="container-row">
                     <div class="container-colum" style="flex: 1 1 auto;">
                         <div class="controls controls-margin">
-                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="1"><span class="">Registrar un nuevo dominio</span>
+                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="1">
+                            <span class="">Registrar un nuevo dominio</span>
                         </div>
                         <div class="controls controls-margin">
-                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="2"><span class="">No, ya tengo el dominio</span>
+                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="2">
+                            <span class="">No, ya tengo el dominio</span>
                         </div>
                         <div class="controls controls-margin">
-                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="3"><span class="">No estoy seguro</span>
+                            <input type="radio" ng-model="cotizadorCtrl.registro_dominio" value="3">
+                            <span class="">No estoy seguro</span>
                         </div>
                     </div>
                     <div class="container-colum" style="flex: 1 1 auto;">
                         <div class="controls controls-margin">
-                            <input type="checkbox" ng-model="cotizadorCtrl.extension_1" >
-                            <span class="" ng-click="cotizadorCtrl.extension_1 = (cotizadorCtrl.extension_1) ? false : true">.com / .net /</span>
+                            <input type="radio" ng-model="cotizadorCtrl.extension_1" value="1"
+                                   ng-click="cotizadorCtrl.enableDominioDeseado(1);">
+                            <span class="" >.com / .net /</span>
                         </div>
                         <div class="controls controls-margin">
-                            <input type="checkbox" ng-model="cotizadorCtrl.extension_2" >
-                            <span class="" ng-click="cotizadorCtrl.extension_2 = (cotizadorCtrl.extension_2) ? false : true">.com.ar / .org</span>
+                            <input type="radio" ng-model="cotizadorCtrl.extension_1" value="2"
+                                   ng-click="cotizadorCtrl.enableDominioDeseado(2);">
+                            <span class="" >.com.ar / .org</span>
                         </div>
                         <div class="controls controls-margin">
-                            <input type="checkbox" ng-model="cotizadorCtrl.extension_3" >
-                            <span class="" ng-click="cotizadorCtrl.extension_3 = (cotizadorCtrl.extension_3) ? false : true">otro</span>
+                            <input type="radio" ng-model="cotizadorCtrl.extension_1" value="3"
+                                    ng-click="cotizadorCtrl.enableDominioDeseado(3);">
+                            <span class="" >otro</span>
                         </div>
                     </div>
                     <div class="container-colum" style="flex: 1 1 auto;">
                         <div class="controls controls-margin">
                             <label>Dominio deseado:</label>
-                            <input type="text" class="form-control" ng-model="cotizadorCtrl.dominio_deseado" >
+                            <input type="text" class="form-control"
+                                   ng-model="cotizadorCtrl.dominio_deseado"
+                                   ng-disabled="!cotizadorCtrl.enableDominio" >
                         </div>
                     </div>
                 </div>
@@ -265,21 +273,30 @@
                         <label>¿Desea una reunión?</label>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="1"><span class="">SI</span>
+                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="1"
+                               ng-click="cotizadorCtrl.enableDeseaReunion(1);">
+                        <span class="">SI</span>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="2"><span class="">NO</span>
+                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="2"
+                               ng-click="cotizadorCtrl.enableDeseaReunion(2);">
+                        <span class="">NO</span>
                     </div>
                     <div class="controls controls-margin">
-                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="3"><span class="">SI. ¿Donde?</span>
+                        <input type="radio" ng-model="cotizadorCtrl.desea_reunion" value="3"
+                               ng-click="cotizadorCtrl.enableDeseaReunion(3);">
+                        <span class="">SI. ¿Donde?</span>
                         <textarea ng-model="cotizadorCtrl.lugar_reunion" cols="50" rows="5"
+                                  ng-disabled="!cotizadorCtrl.enableReunion"
                                   class="form-control text-area"></textarea>
                     </div>
                 </div>
                 <div class="container-colum" style="flex: 1 1 auto;">
                     <div class="controls controls-margin">
                         <label>Fecha y hora de reunión</label>
-                        <input ac-validator min-date="today;La fecha debe ser mayor a hoy" class="form-control"
+                        <input ac-validator min-date="today;La fecha debe ser mayor a hoy"
+                               ng-disabled="!cotizadorCtrl.enableFecha"
+                               class="form-control"
                                type="date" id="fecha_reunion" ng-model="cotizadorCtrl.fecha_reunion">
                     </div>
                 </div>

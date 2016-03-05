@@ -13,6 +13,9 @@
         var vm = this;
 
         vm.enviando = false;
+        vm.enableDominio = false;
+        vm.enableReunion = false;
+        vm.enableFecha = false;
 
         //Nuestros Servicios
         vm.desarrolloweb = false;
@@ -76,8 +79,54 @@
         vm.hosting_selected = vm.plan_hosting[0];
 
         //Funciones
+        vm.setSliderFijo = setSliderFijo;
+        vm.setSliderAdministrable = setSliderAdministrable;
+        vm.enableDominioDeseado = enableDominioDeseado;
+        vm.enableDeseaReunion = enableDeseaReunion;
         vm.sendMail = sendMail;
 
+
+        function setSliderFijo(value) {
+            if(!value) {
+                vm.slider_fijo = false;
+            } else if(value) {
+                vm.slider_fijo = true;
+                vm.slider_administrable = false;
+            }
+        }
+
+        function setSliderAdministrable(value) {
+            if(!value) {
+                vm.slider_administrable = false;
+            } else if(value) {
+                vm.slider_administrable = true;
+                vm.slider_fijo = false;
+            }
+        }
+
+        function enableDominioDeseado(value) {
+            if(value == 3) {
+                vm.enableDominio = true;
+            }
+            else {
+                vm.enableDominio = false;
+                vm.dominio_deseado = '';
+            }
+        }
+
+        function enableDeseaReunion(value) {
+            if(value == 3) {
+                vm.enableReunion = true;
+            }
+            else {
+                vm.enableReunion = false;
+                vm.lugar_reunion = '';
+            }
+            if(value == 1 || value == 3)
+                vm.enableFecha = true;
+            else
+                vm.enableFecha = false;
+        }
 
         function sendMail() {
             if (vm.clienteEntity.nombre.trim() == '') {
@@ -247,7 +296,7 @@
                 vm.dominio_a_registrar.push({nombre:'.com / .net /', precio:'550'});
             }
             if (vm.extension_2) {
-                vm.dominio_a_registrar.push({nombre:'.com.do / .do', precio:'100'});
+                vm.dominio_a_registrar.push({nombre:'.com.ar / .org', precio:'100'});
             }
             if (vm.extension_3) {
                 vm.dominio_a_registrar.push({nombre:'otro', precio:'250'});

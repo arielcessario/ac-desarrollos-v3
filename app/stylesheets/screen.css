@@ -2369,3 +2369,13 @@ button:hover .arrow-up {
 #chat-login, #enviar-consulta, #enviar-cotizacion {
   margin-top: 50px;
 }
+
+/* line 2263, ../sass/screen.scss */
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+
+/* line 2266, ../sass/screen.scss */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  opacity: 1;
+}
