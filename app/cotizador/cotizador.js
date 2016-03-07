@@ -205,8 +205,8 @@
 
             vm.hostingEntity = {
                 solicitar_hosting: hosting_correo,
-                plan: vm.hosting_selected.nombre,
-                precio: vm.hosting_selected.precio
+                plan: (vm.hosting_selected.id == 0) ? "" : vm.hosting_selected.nombre,
+                precio: (vm.hosting_selected.id == 0) ? "" : vm.hosting_selected.precio
             }
         }
 
