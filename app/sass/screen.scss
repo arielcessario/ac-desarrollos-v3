@@ -1722,6 +1722,7 @@ button {
   background-color: transparent;
   font-weight: bold;
   cursor: pointer;
+  position: relative;
 }
 button:hover{
   color: white;
@@ -2206,10 +2207,16 @@ a:hover{
     transition: all .3s;
     cursor: pointer;
 
+    /*
     transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    */
+    transform: translate(-1em,0);
+    -moz-transform: translate(-1em,0);
+    -webkit-transform: translate(-1em,0);
+    -o-transform: translate(-1em,0);
   }
   .arrow-up {
     border-bottom: 15px solid darkorange;
@@ -2220,10 +2227,16 @@ a:hover{
     transition: all .3s;
     cursor: pointer;
 
+    /*
     transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    */
+    transform: translate(0,-1em);
+    -moz-transform: translate(0,-1em);
+    -webkit-transform: translate(0,-1em);
+    -o-transform: translate(0,-1em);
   }
 }
 button:hover{
@@ -2237,10 +2250,16 @@ button:hover{
     transition: all .3s;
     cursor: pointer;
 
+    /*
     transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    */
+    transform: translate(-1em,0);
+    -moz-transform: translate(-1em,0);
+    -webkit-transform: translate(-1em,0);
+    -o-transform: translate(-1em,0);
   }
   .arrow-up {
     border-bottom: 15px solid darkorange;
@@ -2251,10 +2270,16 @@ button:hover{
     transition: all .3s;
     cursor: pointer;
 
+    /*
     transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    */
+    transform: translate(0,-1em);
+    -moz-transform: translate(0,-1em);
+    -webkit-transform: translate(0,-1em);
+    -o-transform: translate(0,-1em);
   }
 }
 #chat-login, #enviar-consulta, #enviar-cotizacion{

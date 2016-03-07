@@ -188,7 +188,7 @@
                     console.log(data);
 
                     cleanVariables();
-            });
+                });
         }
 
         function createHosting() {
@@ -229,16 +229,16 @@
 
         function addServicios() {
             if (vm.desarrolloweb) {
-                vm.nuestros_servicios.push({nombre:'Diseño de Página Web', precio:'150'});
+                vm.nuestros_servicios.push({nombre:'Diseño de Página Web', precio:'2500'});
             }
-            if (vm.hosting) {
-                vm.nuestros_servicios.push({nombre:'Hosting', precio:'100'});
-            }
+            //if (vm.hosting) {
+            //    vm.nuestros_servicios.push({nombre:'Hosting', precio:'100'});
+            //}
             if (vm.logotipos) {
                 vm.nuestros_servicios.push({nombre:'Diseño de Logotipos', precio:'250'});
             }
             if (vm.desarrollografico) {
-                vm.nuestros_servicios.push({nombre:'Diseño Gráfico', precio:'120'});
+                vm.nuestros_servicios.push({nombre:'Diseño Gráfico', precio:'1500'});
             }
             if (vm.dominio) {
                 vm.nuestros_servicios.push({nombre:'Registro de Dominio', precio:'300'});
@@ -258,10 +258,10 @@
                 vm.pagina_web.push({nombre:'Slider Autoadministrable', precio:'100'});
             }
             if (vm.contactos) {
-                vm.pagina_web.push({nombre:'Contactos', precio:'250'});
+                vm.pagina_web.push({nombre:'Contactos', precio:'300'});
             }
             if (vm.empresa_info) {
-                vm.pagina_web.push({nombre:'Información de Empresas', precio:'120'});
+                vm.pagina_web.push({nombre:'Información de Empresas', precio:'300'});
             }
             if (vm.producto_info) {
                 vm.pagina_web.push({nombre:'Información de Productos', precio:'300'});
@@ -270,7 +270,7 @@
                 vm.pagina_web.push({nombre:'Multipágina', precio:'500'});
             }
             if (vm.noticias) {
-                vm.pagina_web.push({nombre:'Noticias', precio:'400'});
+                vm.pagina_web.push({nombre:'Noticias', precio:'1000'});
             }
             if (vm.usuarios) {
                 vm.pagina_web.push({nombre:'Usuarios', precio:'230'});
@@ -292,13 +292,11 @@
         }
 
         function addRegistroDominio() {
-            if (vm.extension_1) {
+            if (vm.extension_1 == 1) {
                 vm.dominio_a_registrar.push({nombre:'.com / .net /', precio:'550'});
-            }
-            if (vm.extension_2) {
+            } else if (vm.extension_1 == 2) {
                 vm.dominio_a_registrar.push({nombre:'.com.ar / .org', precio:'100'});
-            }
-            if (vm.extension_3) {
+            } else if (vm.extension_1 == 3) {
                 vm.dominio_a_registrar.push({nombre:'otro', precio:'250'});
             }
 
@@ -307,7 +305,7 @@
 
         function addDisenioGrafico(){
             if (vm.logotipo) {
-                vm.graficos.push({nombre:'Diseño de Logotipo', precio:'550'});
+                vm.graficos.push({nombre:'Diseño de Logotipo', precio:'1500'});
             }
             if (vm.tarjeta) {
                 vm.graficos.push({nombre:'Tarjetas', precio:'100'});
@@ -392,4 +390,5 @@
     };
 
 })();
+
 

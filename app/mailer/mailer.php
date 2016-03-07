@@ -147,7 +147,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Solicitar: </label>' . $hosting_info->solicitar_hosting . '</div>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Plan del Hosting: </label>' . $hosting_info->plan . '</div>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Hosting (Precio/mes): </label>' . number_format((float)$hosting_info->precio, 2, '.', '') . '</div>';
-    $message .= '<h3 style="margin:20px 0 0 15px;">Registro de Dominios</h3>';
+    $message .= '<h3 style="margin:20px 0 0 15px;color:#f548a2;font-size:24px">Registro de Dominios</h3>';
     $message .= '<p style="margin:10px 0 5px 15px;">' . $dominio_info . '</p>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Dominio deseado: </label>' . $dominio_deseado . '</div>';
     $message .= '<div style="background: #eee; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 100px; margin-left: 5px;margin-right: 5px;">';
