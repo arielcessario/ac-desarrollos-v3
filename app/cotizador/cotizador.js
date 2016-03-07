@@ -15,6 +15,7 @@
         vm.enviando = false;
         vm.enableDominio = false;
         vm.enableReunion = false;
+        vm.enableHosting = false;
         vm.enableFecha = false;
 
         //Nuestros Servicios
@@ -83,6 +84,7 @@
         vm.setSliderAdministrable = setSliderAdministrable;
         vm.enableDominioDeseado = enableDominioDeseado;
         vm.enableDeseaReunion = enableDeseaReunion;
+        vm.enablePlanHosting = enablePlanHosting;
         vm.sendMail = sendMail;
 
 
@@ -126,6 +128,16 @@
                 vm.enableFecha = true;
             else
                 vm.enableFecha = false;
+        }
+
+        function enablePlanHosting(value) {
+            if(value == 1 || value == 3) {
+                vm.enableHosting = true;
+            }
+            else {
+                vm.enableHosting = false;
+                vm.hosting_selected = vm.plan_hosting[0];
+            }
         }
 
         function sendMail() {
