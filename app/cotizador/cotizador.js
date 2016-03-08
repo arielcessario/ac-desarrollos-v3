@@ -26,7 +26,7 @@
         vm.dominio = false;
         vm.impresion = false;
 
-        //Diseño de Página Web
+        //Diseï¿½o de Pï¿½gina Web
         vm.nuevapagina = false;
         vm.comentario = '';
         vm.slider_fijo = false;
@@ -49,13 +49,13 @@
         vm.extension_3 = false;
         vm.dominio_deseado = '';
 
-        //Diseño Gráfico
+        //Diseï¿½o Grï¿½fico
         vm.logotipo = false;
         vm.tarjeta = false;
         vm.catalogo = false;
         vm.otro_disenio_grafico = '';
 
-        //Información adicional
+        //Informaciï¿½n adicional
         vm.como_nos_conocio = '';
         vm.desea_reunion = [];
         vm.lugar_reunion = '';
@@ -164,12 +164,12 @@
 
             console.log(vm.nuevapagina);
 
-            //Diseño de Página Web
+            //Diseï¿½o de Pï¿½gina Web
             var nueva_web = '';
             if(vm.nuevapagina == 1) {
-                nueva_web = 'Diseño de una nueva página web';
+                nueva_web = 'DiseÃ±o de una nueva pÃ¡gina web';
             } else if(vm.nuevapagina == 2) {
-                nueva_web = 'Rediseño de su página actual';
+                nueva_web = 'RediseÃ±o de su pÃ¡gina actual';
             } else if(vm.nuevapagina == 3) {
                 nueva_web = 'Servicio de Mantenimiento';
             }
@@ -195,7 +195,7 @@
 
             addDisenioGrafico();
 
-            //Información Adicional
+            //Informaciï¿½n Adicional
             createReunion();
 
 
@@ -247,22 +247,22 @@
 
         function addServicios() {
             if (vm.desarrolloweb) {
-                vm.nuestros_servicios.push({nombre:'Diseño de Página Web', precio:'2500'});
+                vm.nuestros_servicios.push({nombre:'DiseÃ±o de PÃ¡gina Web', precio:'2500'});
             }
             //if (vm.hosting) {
             //    vm.nuestros_servicios.push({nombre:'Hosting', precio:'100'});
             //}
             if (vm.logotipos) {
-                vm.nuestros_servicios.push({nombre:'Diseño de Logotipos', precio:'250'});
+                vm.nuestros_servicios.push({nombre:'DiseÃ±o de Logotipos', precio:'250'});
             }
             if (vm.desarrollografico) {
-                vm.nuestros_servicios.push({nombre:'Diseño Gráfico', precio:'1500'});
+                vm.nuestros_servicios.push({nombre:'DiseÃ±o GrÃ¡fico', precio:'1500'});
             }
             if (vm.dominio) {
                 vm.nuestros_servicios.push({nombre:'Registro de Dominio', precio:'300'});
             }
             if (vm.impresion) {
-                vm.nuestros_servicios.push({nombre:'Impresión', precio:'100'});
+                vm.nuestros_servicios.push({nombre:'ImpresiÃ³n', precio:'100'});
             }
 
             console.log(vm.nuestros_servicios);
@@ -273,37 +273,37 @@
                 vm.pagina_web.push({nombre:'Slider Fijo', precio:'550'});
             }
             if (vm.slider_administrable) {
-                vm.pagina_web.push({nombre:'Slider Autoadministrable', precio:'100'});
+                vm.pagina_web.push({nombre:'Slider Autoadministrable', precio:'1000'});
             }
             if (vm.contactos) {
                 vm.pagina_web.push({nombre:'Contactos', precio:'300'});
             }
             if (vm.empresa_info) {
-                vm.pagina_web.push({nombre:'Información de Empresas', precio:'300'});
+                vm.pagina_web.push({nombre:'InformaciÃ³n de Empresas', precio:'300'});
             }
             if (vm.producto_info) {
-                vm.pagina_web.push({nombre:'Información de Productos', precio:'300'});
+                vm.pagina_web.push({nombre:'InformaciÃ³n de Productos', precio:'300'});
             }
             if (vm.multipaginas) {
-                vm.pagina_web.push({nombre:'Multipágina', precio:'500'});
+                vm.pagina_web.push({nombre:'MultipÃ¡gina', precio:'500'});
             }
             if (vm.noticias) {
                 vm.pagina_web.push({nombre:'Noticias', precio:'1000'});
             }
             if (vm.usuarios) {
-                vm.pagina_web.push({nombre:'Usuarios', precio:'230'});
+                vm.pagina_web.push({nombre:'Usuarios', precio:'1000'});
             }
             if (vm.ecommerce) {
-                vm.pagina_web.push({nombre:'Ecommerce', precio:'100'});
+                vm.pagina_web.push({nombre:'Ecommerce', precio:'1000'});
             }
             if (vm.chat) {
-                vm.pagina_web.push({nombre:'Chat en linea', precio:'150'});
+                vm.pagina_web.push({nombre:'Chat en linea', precio:'500'});
             }
             if (vm.cobros_online) {
-                vm.pagina_web.push({nombre:'Cobros Online', precio:'200'});
+                vm.pagina_web.push({nombre:'Cobros Online', precio:'2500'});
             }
             if (vm.imagenes_admin) {
-                vm.pagina_web.push({nombre:'Administración de Imágenes', precio:'300'});
+                vm.pagina_web.push({nombre:'AdministraciÃ³n de ImÃ¡genes', precio:'500'});
             }
 
             console.log(vm.pagina_web);
@@ -323,13 +323,13 @@
 
         function addDisenioGrafico(){
             if (vm.logotipo) {
-                vm.graficos.push({nombre:'Diseño de Logotipo', precio:'1500'});
+                vm.graficos.push({nombre:'DiseÃ±o de Logotipo', precio:'1500'});
             }
             if (vm.tarjeta) {
                 vm.graficos.push({nombre:'Tarjetas', precio:'100'});
             }
             if (vm.catalogo) {
-                vm.graficos.push({nombre:'Catálogo', precio:'250'});
+                vm.graficos.push({nombre:'CatÃ¡logo', precio:'250'});
             }
 
             console.log(vm.graficos);
@@ -360,7 +360,7 @@
             vm.dominio = false;
             vm.impresion = false;
 
-            //Diseño de Página Web
+            //Diseï¿½o de Pï¿½gina Web
             vm.nuevapagina = false;
             vm.comentario = '';
             vm.slider_fijo = false;
@@ -383,13 +383,13 @@
             vm.extension_3 = false;
             vm.dominio_deseado = '';
 
-            //Diseño Gráfico
+            //Diseï¿½o Grï¿½fico
             vm.logotipo = false;
             vm.tarjeta = false;
             vm.catalogo = false;
             vm.otro_disenio_grafico = '';
 
-            //Información adicional
+            //Informaciï¿½n adicional
             vm.como_nos_conocio = '';
             vm.desea_reunion = [];
             vm.lugar_reunion = '';
