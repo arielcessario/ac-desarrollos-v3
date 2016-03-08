@@ -80,6 +80,20 @@
             </div>
         </div>
 
+        <div class="" ng-if="noticiasCtrl.buscar">
+            <div ng-repeat="noticia in noticiasCtrl.noticias_resultado" class="noticia-container">
+                <div class="noticia-foto">
+                    <img ng-src="{{noticia.fotos.length > 0 ? 'http://192.185.67.199/~arielces/ac-generador-noticias/img/'+noticia.fotos[0].foto : ''}}"
+                         title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
+                </div>
+                <div class="noticia-info">
+                    <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
+                    <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                    <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
+                </div>
+            </div>
+        </div>
+
         <div class="back-2">
             <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/#'});">
                 <div class="arrow-left"></div> Volver
@@ -102,20 +116,6 @@
             <div class="slider_5" ng-class="{slider_selected:noticiasCtrl.slider_nro==5}"
                  ng-if="noticiasCtrl.slider_5"
                  ng-click="noticiasCtrl.slider_nro=5;"></div>
-        </div>
-
-        <div class="" ng-if="noticiasCtrl.buscar">
-            <div ng-repeat="noticia in noticiasCtrl.noticias_resultado" class="noticia-container">
-                <div class="noticia-foto">
-                    <img ng-src="{{noticia.fotos.length > 0 ? 'http://192.185.67.199/~arielces/ac-generador-noticias/img/'+noticia.fotos[0].foto : ''}}"
-                         title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
-                </div>
-                <div class="noticia-info">
-                    <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                    <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
-                    <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
-                </div>
-            </div>
         </div>
     </div>
 </div>

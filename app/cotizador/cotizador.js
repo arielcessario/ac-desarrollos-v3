@@ -219,7 +219,7 @@
                 hosting_correo = 'No estoy seguro';
             }
 
-            console.log(vm.hosting_selected);
+            //console.log(vm.hosting_selected);
 
             vm.hostingEntity = {
                 solicitar_hosting: hosting_correo,
@@ -318,7 +318,7 @@
                 vm.dominio_a_registrar.push({nombre:'otro', precio:'250'});
             }
 
-            console.log(vm.dominio_a_registrar);
+            //console.log(vm.dominio_a_registrar);
         }
 
         function addDisenioGrafico(){
