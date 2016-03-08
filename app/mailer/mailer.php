@@ -86,7 +86,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
         foreach ($serviciosList as $item) {
             $subtotal_1 = $subtotal_1 + $item->precio;
             $precio_1 = number_format((float)$item->precio, 2, '.', '');
-            $servicios = $servicios . '<tr><td style="text-align:left;">' . $item->nombre . '</td><td style="text-align:right">' . $precio_1 . '</td></tr>';
+            $servicios = $servicios . '<tr><td style="text-align:left;">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_1 . '</td></tr>';
         }
         $servicios = $servicios . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_1, 2, '.', '') . '</td></tr>';
     }
@@ -95,7 +95,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
         foreach ($disenioList as $item) {
             $subtotal_2 = $subtotal_2 + $item->precio;
             $precio_2 = number_format((float)$item->precio, 2, '.', '');
-            $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;">' . $item->nombre . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
+            $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
         }
         $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_2, 2, '.', '') . '</td></tr>';
     }
@@ -104,7 +104,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
         foreach ($dominiosList as $item) {
             $subtotal_3 = $subtotal_3 + $item->precio;
             $precio_3 = number_format((float)$item->precio, 2, '.', '');
-            $registros = $registros . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_3 . '</td></tr>';
+            $registros = $registros . '<tr><td style="text-align:left">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_3 . '</td></tr>';
         }
         $registros = $registros . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_3, 2, '.', '') . '</td></tr>';
     }
@@ -113,7 +113,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
         foreach ($graficosList as $item) {
             $subtotal_4 = $subtotal_4 + $item->precio;
             $precio_4 = number_format((float)$item->precio, 2, '.', '');
-            $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">' . $item->nombre . '</td><td style="text-align:right">' . $precio_4 . '</td></tr>';
+            $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_4 . '</td></tr>';
         }
         $graficos_2 = $graficos_2 . '<tr><td style="text-align:left;font-weight: bold;">SubTotal: </td><td style="text-align:right;font-weight: bold;">' . number_format((float)$subtotal_4, 2, '.', '') . '</td></tr>';
     }
@@ -136,7 +136,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
     $message .= ''. $servicios .'';
     $message .= '</table></div>';
     $message .= '<h3 style="margin:20px 0 0 15px;color:#f548a2;font-size:24px">Diseño de Página Web</h3>';
-    $message .= '<p style="margin:10px 0 5px 15px;">' . $nueva_web . '</p>';
+    $message .= '<p style="margin:10px 0 5px 15px;">' . utf8_decode($nueva_web) . '</p>';
     $message .= '<div style="margin:5px 0 5px 15px;"><label style="font-weight:bold">Su proyecto: </label>' . $comentario . '</div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Website de referencia: </label>' . $website_referencia . '</div>';
     $message .= '<div style="background: #eee; margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 200px; margin-left: 5px;margin-right: 5px;">';

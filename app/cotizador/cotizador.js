@@ -141,6 +141,10 @@
         }
 
         function sendMail() {
+            console.log(vm.clienteEntity);
+            console.log(vm.fecha_reunion);
+            console.log(vm.fecha_reunion.length);
+
             if (vm.clienteEntity.nombre.trim() == '') {
                 return;
             }
@@ -150,7 +154,9 @@
             if (vm.clienteEntity.telefono.trim() == '') {
                 return;
             }
-            if (vm.fecha_reunion != undefined || vm.fecha_reunion != null) {
+
+            if (vm.fecha_reunion != undefined || vm.fecha_reunion != null || vm.fecha_reunion.trim() != '') {
+                console.log('hay fecha');
                 var currentDate = new Date();
                 if(vm.fecha_reunion < currentDate)
                     return;
