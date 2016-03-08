@@ -141,10 +141,6 @@
         }
 
         function sendMail() {
-            console.log(vm.clienteEntity);
-            console.log(vm.fecha_reunion);
-            console.log(vm.fecha_reunion.length);
-
             if (vm.clienteEntity.nombre.trim() == '') {
                 return;
             }
@@ -155,14 +151,18 @@
                 return;
             }
 
-            if (vm.fecha_reunion != undefined || vm.fecha_reunion != null || vm.fecha_reunion.trim() != '') {
-                console.log('hay fecha');
-                var currentDate = new Date();
-                if(vm.fecha_reunion < currentDate)
-                    return;
+            if(vm.desea_reunion.length > 0) {
+                if(vm.desea_reunion == 1 || vm.desea_reunion == 3) {
+                    if (vm.fecha_reunion != undefined || vm.fecha_reunion != null || vm.fecha_reunion.trim() != '') {
+                        //console.log('hay fecha');
+                        var currentDate = new Date();
+                        if(vm.fecha_reunion < currentDate) {
+                            //console.log('fecha reunion menor');
+                            return;
+                        }
+                    }
+                }
             }
-
-            console.log(vm.nuevapagina);
 
             //Dise�o de P�gina Web
             var nueva_web = '';
@@ -203,7 +203,7 @@
                 vm.pagina_web, vm.comentario, vm.website_referencia, dominio_info,
                 vm.dominio_a_registrar, vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico,
                 vm.reunionEntity, vm.hostingEntity, function(data){
-                    console.log(data);
+                    //console.log(data);
 
                     cleanVariables();
                 });
