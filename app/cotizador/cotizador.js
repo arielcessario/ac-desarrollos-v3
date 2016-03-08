@@ -265,7 +265,7 @@
                 vm.nuestros_servicios.push({nombre:'Impresión', precio:'100'});
             }
 
-            console.log(vm.nuestros_servicios);
+            //console.log(vm.nuestros_servicios);
         }
 
         function addPaginaWeb() {
@@ -306,7 +306,7 @@
                 vm.pagina_web.push({nombre:'Administración de Imágenes', precio:'500'});
             }
 
-            console.log(vm.pagina_web);
+            //console.log(vm.pagina_web);
         }
 
         function addRegistroDominio() {
@@ -332,7 +332,7 @@
                 vm.graficos.push({nombre:'Catálogo', precio:'250'});
             }
 
-            console.log(vm.graficos);
+            //console.log(vm.graficos);
         }
 
         function formattedDate(date) {
