@@ -1152,9 +1152,13 @@ border-radius: 20px;
   font-family: 'Oswald', sans-serif;
   text-align: left;
   margin-top: 5px;
+  text-decoration:none;
+  color: #000;
 }
-
-
+.back-2 > a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
 
 .buscar {
   //margin-top: 70px;
