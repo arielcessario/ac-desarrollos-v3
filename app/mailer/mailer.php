@@ -88,7 +88,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
             $precio_1 = number_format((float)$item->precio, 2, '.', '');
             $servicios = $servicios . '<tr><td style="text-align:left;">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_1 . '</td></tr>';
         }
-        $servicios = $servicios . '<tr><td style="text-align:left;font-weight: bold;font-size: 16px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 16px;">' . number_format((float)$subtotal_1, 2, '.', '') . '</td></tr>';
+        $servicios = $servicios . '<tr><td style="text-align:left;font-weight: bold;font-size: 15px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 15px;">' . number_format((float)$subtotal_1, 2, '.', '') . '</td></tr>';
     }
 
     if(count($disenioList) > 0) {
@@ -97,7 +97,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
             $precio_2 = number_format((float)$item->precio, 2, '.', '');
             $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_2 . '</td></tr>';
         }
-        $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;font-size: 16px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 16px;">' . number_format((float)$subtotal_2, 2, '.', '') . '</td></tr>';
+        $disenios = $disenios . '<tr><td style="text-align:left;font-weight: bold;font-size: 15px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 15px;">' . number_format((float)$subtotal_2, 2, '.', '') . '</td></tr>';
     }
 
     if(count($dominiosList) > 0) {
@@ -106,7 +106,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
             $precio_3 = number_format((float)$item->precio, 2, '.', '');
             $registros = $registros . '<tr><td style="text-align:left">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_3 . '</td></tr>';
         }
-        $registros = $registros . '<tr><td style="text-align:left;font-weight: bold;font-size: 16px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 16px;">' . number_format((float)$subtotal_3, 2, '.', '') . '</td></tr>';
+        $registros = $registros . '<tr><td style="text-align:left;font-weight: bold;font-size: 15px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 15px;">' . number_format((float)$subtotal_3, 2, '.', '') . '</td></tr>';
     }
 
     if(count($graficosList) > 0) {
@@ -115,7 +115,7 @@ function sendCotizacion($cliente, $nuestros_servicios, $nueva_web, $pagina_web, 
             $precio_4 = number_format((float)$item->precio, 2, '.', '');
             $graficos_2 = $graficos_2 . '<tr><td style="text-align:left">' . utf8_decode($item->nombre) . '</td><td style="text-align:right">' . $precio_4 . '</td></tr>';
         }
-        $graficos_2 = $graficos_2 . '<tr><td style="text-align:left;font-weight: bold;font-size: 16px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 16px;">' . number_format((float)$subtotal_4, 2, '.', '') . '</td></tr>';
+        $graficos_2 = $graficos_2 . '<tr><td style="text-align:left;font-weight: bold;font-size: 15px;">SubTotal: </td><td style="text-align:right;font-weight: bold;font-size: 15px;">' . number_format((float)$subtotal_4, 2, '.', '') . '</td></tr>';
     }
 
     $total = $subtotal_1 + $subtotal_2 + $subtotal_3 + $subtotal_4;
