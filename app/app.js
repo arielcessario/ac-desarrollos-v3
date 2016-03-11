@@ -142,9 +142,9 @@
   }
 
 
-  AppController.$inject = ['$scope', '$location', 'LinksService'];
+  AppController.$inject = ['$scope', '$location', 'LinksService', '$window'];
 
-  function AppController($scope, $location, LinksService) {
+  function AppController($scope, $location, LinksService, $window) {
 
     var vm = this;
     vm.hideLoader = true;
@@ -156,20 +156,28 @@
     vm.display_header = true;
     vm.links = LinksService.links;
 
+    if($window.location.hash != "#/") {
+      var path = $window.location.hash.replace("#", "");
+      goTo({nombre: '', path: path});
+    }
+
     function goTo(location) {
-      //console.log(location.path);
       $location.path(location.path);
       vm.selectedPage = location.nombre;
 
-      if(location.nombre != 'INICIO') {
-        vm.display_menu = true;
-        vm.display_header = true;
-      } else {
-        vm.display_menu = true;
-        vm.display_header = true;
-        vm.selectedPage = 'INICIO';
-      }
+      vm.display_menu = true;
+      vm.display_header = true;
 
+      /*
+       if(location.nombre != 'INICIO') {
+       //vm.display_menu = true;
+       //vm.display_header = true;
+       } else {
+       //vm.display_menu = true;
+       //vm.display_header = true;
+       vm.selectedPage = 'INICIO';
+       }
+       */
     }
 
   }
