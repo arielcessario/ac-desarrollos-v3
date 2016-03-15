@@ -8,9 +8,9 @@
     angular.module('acdesarrollos.contacto', ['ngRoute'])
         .controller('ContactoController', ContactoController);
 
-    ContactoController.$inject = ['$scope', 'ContactsService'];
+    ContactoController.$inject = ['$scope', 'ContactsService', '$location'];
 
-    function ContactoController($scope, ContactsService) {
+    function ContactoController($scope, ContactsService, $location) {
         var vm = this;
 
         vm.email = '';
@@ -31,14 +31,17 @@
             vm.enviando = true;
 
             ContactsService.sendMail(vm.email,
-                [{mail: 'mmaneff@gmail.com'}],
+                [{mail: 'arielcessario@gmail.com'}, {mail: 'mmaneff@gmail.com'}, {mail: 'diegoyankelevich@gmail.com'}],
                 vm.nombre,
                 vm.mensaje,
                 vm.asunto,
                 function (data, result) {
+                    //console.log($location);
+                    //console.log($location.absUrl());
                     vm.enviando = false;
-                    console.log(data);
-                    console.log(result);
+                    goog_report_conversion($location.absUrl());
+                    //console.log(data);
+                    //console.log(result);
 
                     vm.email = '';
                     vm.nombre = '';
