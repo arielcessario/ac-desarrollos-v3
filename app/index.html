@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <head>
-  <!--meta charset="utf-8"-->
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AC-Desarrollos</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--meta charset="utf-8"-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AC-Desarrollos</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <style>
         .loader-img {
@@ -424,7 +424,8 @@
                 'bower_components/ac-angular-contacts/ac-contacts.min.js',
                 'bower_components/ac-angular-noticias/ac-noticias.js',
                 'https://cdn.firebase.com/js/client/2.2.1/firebase.js',
-                'http://www.googleadservices.com/pagead/conversion_async.js'
+                'http://www.googleadservices.com/pagead/conversion_async.js',
+                'http://www.googleadservices.com/pagead/conversion.js'
             ], 'segundo');
 
             $script.ready('segundo', function () {
@@ -454,9 +455,8 @@
     </script>
 
     <!-- Google Code for Contacto Conversion Page
-    In your html page, add the snippet and call
-    goog_report_conversion when someone clicks on the
-    chosen link or button. -->
+    In your html page, add the snippet and call goog_report_conversion
+    when someone clicks on the chosen link or button. -->
     <script type="text/javascript">
         /* <![CDATA[ */
         goog_snippet_vars = function() {
@@ -485,6 +485,25 @@
     <!--script type="text/javascript"
             src="//www.googleadservices.com/pagead/conversion_async.js">
     </script-->
+
+    <!-- Google Code for Cotizar Conversion Page -->
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 956728168;
+        var google_conversion_language = "en";
+        var google_conversion_format = "3";
+        var google_conversion_color = "ffffff";
+        var google_conversion_label = "xMWQCOyv2mQQ6IaayAM";
+        var google_remarketing_only = false;
+        /* ]]> */
+    </script>
+
+    <noscript>
+        <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt=""
+                 src="//www.googleadservices.com/pagead/conversion/956728168/?label=xMWQCOyv2mQQ6IaayAM&amp;guid=ON&amp;script=0"/>
+        </div>
+    </noscript>
 
 </head>
 <body ng-controller="AppController as appCtrl" style="position: relative;">
@@ -547,89 +566,89 @@
 </div>
 
 
-  <div class="header"
-       ng-class="{'display-header': !appCtrl.display_header, 'header-as-main': appCtrl.selectedPage == 'INICIO'}">
+<div class="header"
+     ng-class="{'display-header': !appCtrl.display_header, 'header-as-main': appCtrl.selectedPage == 'INICIO'}">
     <div class="menu-mobile menu-type-mobile">
-      <div class="nav-button"
-           ng-click="appCtrl.menu_mobile_open = !appCtrl.menu_mobile_open;"
-           ng-class="{'nav-button-transformed':appCtrl.menu_mobile_open}">
-        <div ng-class="{'nav-button-top-transformed':appCtrl.menu_mobile_open}"></div>
-        <div ng-class="{'nav-button-mid-transformed':appCtrl.menu_mobile_open}"></div>
-        <div ng-class="{'nav-button-bot-transformed':appCtrl.menu_mobile_open}"></div>
-      </div>
+        <div class="nav-button"
+             ng-click="appCtrl.menu_mobile_open = !appCtrl.menu_mobile_open;"
+             ng-class="{'nav-button-transformed':appCtrl.menu_mobile_open}">
+            <div ng-class="{'nav-button-top-transformed':appCtrl.menu_mobile_open}"></div>
+            <div ng-class="{'nav-button-mid-transformed':appCtrl.menu_mobile_open}"></div>
+            <div ng-class="{'nav-button-bot-transformed':appCtrl.menu_mobile_open}"></div>
+        </div>
 
-      <div class="logo">
-        <img src="images/logom.png" alt="logo" height="54px" width="166px">
-      </div>
+        <div class="logo">
+            <img src="images/logom.png" alt="logo" height="54px" width="166px">
+        </div>
     </div>
 
     <div class="menu-desktop menu-type-desktop"
          ng-class="{'display-menu-desktop':appCtrl.display_menu != true }" >
-      <div id="menu-desktop-logo" ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">
-        <img src="images/logo.png" alt="logo" height="45">
-      </div>
-      <div id="menu-desktop-right">
-        <div id="menu-desktop-upper"></div>
-        <div id="menu-desktop-lower">
-          <div id="menu-desktop-lower-inner">
-            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NUESTRA MISION') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'NUESTRA MISION', path: '/mision'});"> NUESTRA MISION
-            </div>
-            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('QUE HACEMOS') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'QUE HACEMOS', path: '/hacemos'});"> QUE HACEMOS
-            </div>
-            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CONTACTANOS') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'CONTACTANOS', path: '/contacto'});"> CONTACTANOS
-            </div>
-            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('SABIAS') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'SABIAS', path: '/sabias'});"> SABIAS?
-            </div>
-            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NOTICIAS') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'NOTICIAS', path: '/noticias'});"> NOTICIAS
-            </div>
-            <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('COTIZADOR') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'COTIZADOR', path: '/cotizador'});"> COTIZADOR
-            </div>
-            <div class="menu-desktop-btn ac-ripple"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CHATEA CON NOSOTROS') > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'CHATEA CON NOSOTROS', path: '/chat'});"> CHATEA CON NOSOTROS!
-            </div>
-            <!--div class="menu-desktop-btn ac-ripple"
-                 ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(appCtrl.links[6].nombre) > -1 }"
-                 ng-click="appCtrl.goTo({nombre: 'INGRESO', path: '/ingreso'});">{{appCtrl.links[6].nombre}}
-            </div-->
-          </div>
+        <div id="menu-desktop-logo" ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">
+            <img src="images/logo.png" alt="logo" height="45">
         </div>
-      </div>
+        <div id="menu-desktop-right">
+            <div id="menu-desktop-upper"></div>
+            <div id="menu-desktop-lower">
+                <div id="menu-desktop-lower-inner">
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NUESTRA MISION') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'NUESTRA MISION', path: '/mision'});"> NUESTRA MISION
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('QUE HACEMOS') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'QUE HACEMOS', path: '/hacemos'});"> QUE HACEMOS
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CONTACTANOS') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'CONTACTANOS', path: '/contacto'});"> CONTACTANOS
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('SABIAS') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'SABIAS', path: '/sabias'});"> SABIAS?
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NOTICIAS') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'NOTICIAS', path: '/noticias'});"> NOTICIAS
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('COTIZADOR') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'COTIZADOR', path: '/cotizador'});"> COTIZADOR
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CHATEA CON NOSOTROS') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'CHATEA CON NOSOTROS', path: '/chat'});"> CHATEA CON NOSOTROS!
+                    </div>
+                    <!--div class="menu-desktop-btn ac-ripple"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(appCtrl.links[6].nombre) > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'INGRESO', path: '/ingreso'});">{{appCtrl.links[6].nombre}}
+                    </div-->
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 
-  <div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
-      <div id="menu-mobile-logo" ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">
-          <img src="images/logo.png" alt="logo" width="50%">
-      </div>
+<div class="menu-mobile-panel" ng-class="{'menu-mobile-panel-show':appCtrl.menu_mobile_open}">
+    <div id="menu-mobile-logo" ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/'});">
+        <img src="images/logo.png" alt="logo" width="50%">
+    </div>
     <div class="menu-desktop-btn ac-ripple"
          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf(link.nombre) > -1 }"
          ripple-color="#ffffff"
          ng-repeat="link in appCtrl.links"
          ng-click="appCtrl.goTo(link); appCtrl.menu_mobile_open=false;"> {{link.nombre}}
     </div>
-  </div>
+</div>
 
-  <div ng-view class="view-container" autoscroll="true"></div>
+<div ng-view class="view-container" autoscroll="true"></div>
 
-  <div class="footer">
+<div class="footer">
     <p>
-      Copyright © 2016 - All Rights Reserved - <a href="http://ac-desarrollos.com/" class="footer-link">www.ac-desarrollos.com </a>
-      - Tel (011) 3111-5006 - <a href="http://ac-desarrollos.com/" class="footer-link">ventas@ac-desarrollos.com</a>
+        Copyright © 2016 - All Rights Reserved - <a href="http://ac-desarrollos.com/" class="footer-link">www.ac-desarrollos.com </a>
+        - Tel (011) 3111-5006 - <a href="http://ac-desarrollos.com/" class="footer-link">ventas@ac-desarrollos.com</a>
     </p>
-  </div>
+</div>
 
 </body>
 </html>
