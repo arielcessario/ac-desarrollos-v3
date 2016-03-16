@@ -198,7 +198,6 @@
             //Informaci�n Adicional
             createReunion();
 
-
             MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web,
                 vm.pagina_web, vm.comentario, vm.website_referencia, dominio_info,
                 vm.dominio_a_registrar, vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico,
@@ -404,6 +403,7 @@
 
             vm.hosting_selected = vm.plan_hosting[0];
         }
+
 
     };
 

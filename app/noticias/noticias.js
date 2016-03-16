@@ -44,6 +44,8 @@
                     noticia.titulo = data[i].titulo;
                     noticia.detalles = data[i].detalles;
                     noticia.fotos = data[i].fotos;
+                    //noticia.fecha = data[i].fecha;
+                    noticia.fecha = convertDate(data[i].fecha);
 
                     if(i < 3) {
                         noticia.slider = 1;
@@ -124,6 +126,12 @@
             } else {
                 vm.buscar = false;
             }
+        }
+
+        function convertDate(inputFormat) {
+            function pad(s) { return (s < 10) ? '0' + s : s; }
+            var d = new Date(inputFormat);
+            return [pad(d.getDate()), pad(d.getMonth()+1), d.getFullYear()].join('/');
         }
 
     };
