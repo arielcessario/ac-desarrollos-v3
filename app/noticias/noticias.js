@@ -4,12 +4,14 @@
     var scripts = document.getElementsByTagName("script");
     var currentScriptPath = scripts[scripts.length - 1].src;
 
-    angular.module('acdesarrollos.noticias', ['ngRoute'])
+    angular.module('acdesarrollos.noticias', ['ngRoute', 'ngSanitize'])
         .controller('NoticiasController', NoticiasController);
 
-    NoticiasController.$inject = ['$scope', '$location', 'NoticiasService', '$interval', 'AcUtils'];
+    NoticiasController.$inject = ['$scope', '$location', 'NoticiasService', '$interval',
+        'AcUtils', '$sce'];
 
-    function NoticiasController($scope, $location, NoticiasService, $interval, AcUtils) {
+    function NoticiasController($scope, $location, NoticiasService, $interval,
+                                AcUtils, $sce) {
         var vm = this;
 
         vm.titulo = '';
@@ -36,13 +38,14 @@
 
         NoticiasService.getNoticias(function (data) {
             vm.noticias = data;
+            console.log(data);
 
             if(data != null || data.length > 0) {
                 for(var i=0; i < data.length; i++) {
                     var noticia = {};
                     noticia.noticia_id = data[i].noticia_id;
-                    noticia.titulo = data[i].titulo;
-                    noticia.detalles = data[i].detalles;
+                    noticia.titulo = data[i].titulo.length > 55 ? data[i].titulo.substring(0,55) + "..." : data[i].titulo;
+                    noticia.detalles = $sce.trustAsHtml((data[i].detalles.length > 180 ? data[i].detalles.substring(0, 180) + "....." : data[i].detalles));
                     noticia.fotos = data[i].fotos;
                     //noticia.fecha = data[i].fecha;
                     noticia.fecha = convertDate(data[i].fecha);

@@ -6,10 +6,6 @@
             <label>Buscar:</label>
             <input type="text" class="buscar-control" style="width: 70%;"
                    ng-model="noticiasCtrl.filtro" ng-keyup="noticiasCtrl.buscarNoticia(noticiasCtrl.filtro);">
-            <!--div class="back" style="margin: 0">
-                <div class="arrow-left"></div>
-                <a href="" ng-click="appCtrl.goTo({nombre: 'Volver', path: '/main'});">Volver</a>
-            </div-->
         </div>
 
         <div class="slider-container-2" ng-if="!noticiasCtrl.buscar">
@@ -20,8 +16,8 @@
                              title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo}}</h5>
+                        <div ng-bind-html="noticia.detalles"></div>
                         <div class="noticia-fecha">Fecha: {{noticia.fecha}}</div>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
                     </div>
@@ -34,8 +30,8 @@
                              title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo}}</h5>
+                        <div ng-bind-html="noticia.detalles"></div>
                         <div class="noticia-fecha">Fecha: {{noticia.fecha}}</div>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
                     </div>
@@ -48,8 +44,8 @@
                              title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo}}</h5>
+                        <div ng-bind-html="noticia.detalles"></div>
                         <div class="noticia-fecha">Fecha: {{noticia.fecha}}</div>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
                     </div>
@@ -62,8 +58,8 @@
                              title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo}}</h5>
+                        <div ng-bind-html="noticia.detalles"></div>
                         <div class="noticia-fecha">Fecha: {{noticia.fecha}}</div>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
                     </div>
@@ -76,8 +72,8 @@
                              title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                     </div>
                     <div class="noticia-info">
-                        <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                        <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                        <h5>{{noticia.titulo}}</h5>
+                        <div ng-bind-html="noticia.detalles"></div>
                         <div class="noticia-fecha">Fecha: {{noticia.fecha}}</div>
                         <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
                     </div>
@@ -92,8 +88,8 @@
                          title="{{noticia.fotos[0].foto}}" alt="{{noticia.fotos[0].foto}}">
                 </div>
                 <div class="noticia-info">
-                    <h5>{{noticia.titulo.length > 60 ? noticia.titulo.substring(0,60) + "....." : noticia.titulo}}</h5>
-                    <p>{{noticia.detalles.length > 180 ? noticia.detalles.substring(0, 180) + "....." : noticia.detalles}}</p>
+                    <h5>{{noticia.titulo}}</h5>
+                    <div ng-bind-html="noticia.detalles"></div>
                     <div class="noticia-fecha">Fecha: {{noticia.fecha}}</div>
                     <button ng-click="noticiasCtrl.goToNoticia(noticia.noticia_id);" class="btn btn-default">Ver</button>
                 </div>
