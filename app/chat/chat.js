@@ -1,15 +1,16 @@
 (function () {
 
     'use strict';
+
     var scripts = document.getElementsByTagName("script");
     var currentScriptPath = scripts[scripts.length - 1].src;
 
-    angular.module('acdesarrollos.chat', ['ngRoute', ['mailer/mailer.js']])
+    angular.module('acdesarrollos.chat', ['ngRoute'])
         .controller('ChatController', ChatController);
 
-    ChatController.$inject = ['$scope', '$location', 'MailerService'];
+    ChatController.$inject = ['$scope', '$location', 'ContactsService'];
 
-    function ChatController($scope, $location, MailerService) {
+    function ChatController($scope, $location, ContactsService) {
         var vm = this;
 
         vm.nombre = '';
@@ -38,16 +39,24 @@
 
             vm.idChat = Math.floor((Math.random() * 1000) + 1);
 
-            MailerService.sendMailForChat( vm.email, vm.nombre, function(data){
-                //console.log(data);
-                vm.enviando = false;
-            });
+            var mensaje = 'http://192.185.67.199/~arielces/ac-desarrollos-chat/';
+            var asunto = 'Nuevo chat de ' + vm.nombre;
+
+            ContactsService.sendMail(vm.email,
+                [{mail: 'arielcessario@gmail.com'}, {mail: 'mmaneff@gmail.com'}, {mail: 'diegoyankelevich@gmail.com'}],
+                vm.nombre,
+                mensaje,
+                asunto,
+                function (data, result) {
+                    vm.enviando = false;
+                });
 
             myDataRef.push({id: vm.idChat, name: vm.nombre, mail: vm.email, message: vm.nombre + ' se ha conectado'});
             vm.chatIsLogged = true;
         }
 
         function sendChat(event) {
+            //console.log(event);
             if (event.keyCode == 13) {
                 if (vm.nombre.trim() == '') {
                     return;

@@ -826,8 +826,7 @@ strong {
   text-align: left;
   @media (min-width: 800px) {
     font-size: 20px;
-    margin-bottom: 60px;
-
+    //margin-bottom: 60px;
   }
 
 }
@@ -2307,6 +2306,12 @@ button:hover{
 }
 
 .noticia-fecha {
+  font-size: 14px;
+  font-weight: bold;
+}
+.chant-info{
+  text-align: center;
+  margin-top: 15px;
   font-size: 14px;
   font-weight: bold;
 }
