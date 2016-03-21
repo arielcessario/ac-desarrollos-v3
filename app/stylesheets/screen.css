@@ -1801,7 +1801,7 @@ button:hover {
 
 /* line 1764, ../sass/screen.scss */
 #message-chat {
-  height: 350px;
+  height: 320px;
   overflow-y: auto;
   border-right: 1px solid;
 }
@@ -2432,4 +2432,17 @@ button:hover .arrow-up {
   margin-top: 15px;
   font-size: 14px;
   font-weight: bold;
+}
+
+/* line 2318, ../sass/screen.scss */
+.chat-header {
+  display: flex;
+}
+@media (min-width: 800px) {
+  /* line 2318, ../sass/screen.scss */
+  .chat-header {
+    width: 60%;
+    margin-left: 25%;
+    margin-top: 15px;
+  }
 }
