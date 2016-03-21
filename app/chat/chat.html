@@ -30,6 +30,15 @@
         </div>
 
         <div class="chat-container" id="" ng-if="chatCtrl.chatIsLogged">
+            <div class="chat-header">
+                <div style="margin-right: 10px">
+                    <img src="images/logo.png" width="50px" height="50px">
+                </div>
+                <div>
+                    <div>Atención al Cliente</div>
+                    <span>Buenos dias en que podemos ayudarte?...</span>
+                </div>
+            </div>
             <div class="chat-container-login">
                 <div class="arrow-contacto">
                     <div class="arrow-right"></div>
@@ -41,9 +50,9 @@
                     </div>
                 </div>
             </div>
-            <input id="texto-mensaje" ng-model="chatCtrl.message"
+            <input id="texto-mensaje" ng-model="chatCtrl.message" placeholder="Escriba su mensaje aquí..."
                    ng-keypress="chatCtrl.sendChat($event);" type="text">
-            <div class="chant-info">Por favor, ingrese su consulta</div>
+            <!--div class="chant-info">Por favor, ingrese su consulta</div-->
         </div>
 
     </div>

@@ -1763,7 +1763,7 @@ button:hover{
 }
 #message-chat{
   //height: 250px;
-  height: 350px;
+  height: 320px;
   overflow-y: auto;
   border-right: 1px solid;
 }
@@ -2314,4 +2314,13 @@ button:hover{
   margin-top: 15px;
   font-size: 14px;
   font-weight: bold;
+}
+.chat-header{
+  display: flex;
+
+  @media (min-width: 800px) {
+    width: 60%;
+    margin-left: 25%;
+    margin-top: 15px;
+  }
 }
