@@ -4,12 +4,12 @@
     var scripts = document.getElementsByTagName("script");
     var currentScriptPath = scripts[scripts.length - 1].src;
 
-    angular.module('acdesarrollos.noticia', ['ngRoute'])
+    angular.module('acdesarrollos.noticia', ['ngRoute', 'ngSanitize'])
         .controller('NoticiaController', NoticiaController);
 
-    NoticiaController.$inject = ['$scope', '$location', '$routeParams', 'NoticiasService'];
+    NoticiaController.$inject = ['$scope', '$location', '$routeParams', 'NoticiasService', '$sce'];
 
-    function NoticiaController($scope, $location, $routeParams, NoticiasService) {
+    function NoticiaController($scope, $location, $routeParams, NoticiasService, $sce) {
         var vm = this;
 
         vm.titulo = '';
@@ -27,6 +27,8 @@
             NoticiasService.getNoticiaByID(vm.id, function (data) {
                 //console.log(data);
                 vm.noticia = data;
+                vm.noticia.detalles = $sce.trustAsHtml(data.detalles);
+
                 var comentario1 = {fecha:'12/02/2016',detalles:'sfsdfsdfsdfsdfsdf'};
                 var comentario2 = {fecha:'01/02/2016',detalles:'xxxxxxxxxxxxxxxx'};
 

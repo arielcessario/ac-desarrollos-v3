@@ -11,7 +11,8 @@
             <div class="show-noticia-info">
                 <h3 class="color-default">{{noticiaCtrl.noticia.titulo}}</h3>
                 <div class="noticia-detalle">
-                    <p>{{noticiaCtrl.noticia.detalles}}</p>
+                    <!--p>{{noticiaCtrl.noticia.detalles}}</p-->
+                    <div ng-bind-html="noticiaCtrl.noticia.detalles"></div>
                 </div>
             </div>
         </div>
