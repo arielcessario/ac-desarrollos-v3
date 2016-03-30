@@ -4,11 +4,13 @@
 
   // Declare app level module which depends on views, and components
   angular.module('acDesarrollos', ['oc.lazyLoad',
-    'ngRoute',
-    'ngAnimate',
-    'acUtils',
-    'acContacts',
-    'ac.noticias'
+      'ngRoute',
+      'ngAnimate',
+      'firebase',
+      'acUtils',
+      'acContacts',
+      'ac.noticias',
+      'acFactory'
   ]).config(['$routeProvider', function($routeProvider) {
 
         $routeProvider.otherwise('/');
@@ -34,7 +36,7 @@
           resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
             loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
               // you can lazy load files for an existing module
-              return $ocLazyLoad.load('contactanos/contacto.js');
+              return $ocLazyLoad.load('contactanos/contacto.min.js');
             }]
           }
         });
@@ -125,7 +127,8 @@
 
       }])
       .controller('AppController', AppController)
-      .service('LinksService', LinksService);
+      .service('LinksService', LinksService)
+      .constant('_FIREREF', 'https://chat-acdesarrollos.firebaseio.com/');
 
 
   function LinksService() {
@@ -142,9 +145,9 @@
   }
 
 
-  AppController.$inject = ['$scope', '$location', 'LinksService', '$window'];
+  AppController.$inject = ['$scope', '$location', 'LinksService', '$window', 'FireService'];
 
-  function AppController($scope, $location, LinksService, $window) {
+  function AppController($scope, $location, LinksService, $window, FireService) {
 
     var vm = this;
     vm.hideLoader = true;
@@ -155,6 +158,9 @@
     vm.display_menu = true;
     vm.display_header = true;
     vm.links = LinksService.links;
+
+    //Inicio el servicio de Firebase
+    FireService.init();
 
     if($window.location.hash != "#/") {
       var path = $window.location.hash.replace("#", "");
