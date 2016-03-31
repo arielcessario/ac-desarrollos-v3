@@ -38,7 +38,7 @@
             if(acChat.chat_type != 1 && acChat.id == vm.idChat) {
                 var messages = angular.element(document.querySelector('#message'));
 
-                messages.append('<div class="chat-ac"><img src="images/logo.png" width="40px" height="40px"><div><p class="chat-texto-admin">' + acChat.name + ' (' + acChat.mail + ') dice: ' + acChat.message + '</p><div class="chat-hora">'+ acChat.date_time +'</div></div></div>');
+                messages.append('<div class="chat-ac"><img src="images/logo.png" width="40px" height="40px"><div><p>' + acChat.name + ' (' + acChat.mail + ') dice: ' + acChat.message + '</p><div class="chat-hora">'+ acChat.date_time +'</div></div></div>');
                 if (!$scope.$$phase) {
                     $scope.$apply();
                 }
@@ -145,7 +145,7 @@
                 var messages = angular.element(document.querySelector('#message'));
                 //console.log(messages);
 
-                messages.append('<div class="chat-cliente"><img src="images/cliente.png" width="40px" height="40px"><div><p class="chat-texto-cliente">' + vm.nombre + ' (' + vm.email + ') dice: ' + vm.message + '</p><div class="chat-hora">'+ date_time +'</div></div></div>');
+                messages.append('<div class="chat-cliente"><img src="images/logo-cliente-chat.png" width="60px"><div><p>' + vm.nombre + ' (' + vm.email + ') dice: ' + vm.message + '</p><div class="chat-hora">'+ date_time +'</div></div></div>');
                 if (!$scope.$$phase) {
                     $scope.$apply();
                 }
