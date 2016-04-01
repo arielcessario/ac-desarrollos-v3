@@ -988,7 +988,7 @@ strong {
 .back > a:hover, .btn-action > a:hover {
   color: white;
   cursor: pointer;
-  text-decoration: underline;
+  //text-decoration: underline;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
@@ -1157,7 +1157,7 @@ border-radius: 20px;
   color: #000;
 }
 .back-2 > a:hover {
-  text-decoration: underline;
+  //text-decoration: underline;
   color: #fff;
 }
 
@@ -1722,9 +1722,9 @@ label {
 }
 
 button {
-  font-family: 'Oswald', sans-serif;
+font-family: 'Oswald', sans-serif;
   border: none;
-  font-size: 14px;
+  font-size: 22px;
   background-color: transparent;
   font-weight: bold;
   cursor: pointer;
@@ -1733,7 +1733,7 @@ button {
 button:hover{
   color: white;
   cursor: pointer;
-  text-decoration: underline;
+  //text-decoration: underline;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
@@ -2250,20 +2250,30 @@ div[title]:hover:after {
   height: 109px;
 }
 .back-2{
+  font-size: 22px;
   width: 200px;
   margin: 5% calc(50% - 100px);
   text-align: center;
+  a{
+    font-size: 22px;
+  }
 }
 .back-3{
+  font-size: 22px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  a{
+    font-size: 22px;
+
+  }
   @media (min-width: 800px) {
     align-items: flex-end;
   }
 }
 .arrow-up {
+  margin-left: 11px;
   width: 0;
   height: 0;
   display: inline-block; /****/
@@ -2287,7 +2297,7 @@ div[title]:hover:after {
 }
 a:hover{
   .arrow-left {
-    margin-right: 5px;
+    margin-right: 0px;
     border-right: 15px solid darkorange;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -2302,10 +2312,10 @@ a:hover{
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     */
-    transform: translate(-1em,0);
-    -moz-transform: translate(-1em,0);
-    -webkit-transform: translate(-1em,0);
-    -o-transform: translate(-1em,0);
+    transform: translate(-0.7em,0);
+    -moz-transform: translate(-0.7em,0);
+    -webkit-transform: translate(-0.7em,0);
+    -o-transform: translate(-0.7em,0);
   }
   .arrow-up {
     border-bottom: 15px solid darkorange;
@@ -2322,10 +2332,10 @@ a:hover{
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     */
-    transform: translate(0,-1em);
-    -moz-transform: translate(0,-1em);
-    -webkit-transform: translate(0,-1em);
-    -o-transform: translate(0,-1em);
+    transform: translate(0,.5em);
+    -moz-transform: translate(0,.5em);
+    -webkit-transform: translate(0,0.5em);
+    -o-transform: translate(0,-.5em);
   }
 }
 button:hover{
@@ -2365,10 +2375,10 @@ button:hover{
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     */
-    transform: translate(0,-1em);
-    -moz-transform: translate(0,-1em);
-    -webkit-transform: translate(0,-1em);
-    -o-transform: translate(0,-1em);
+    transform: translate(0,-.5em);
+    -moz-transform: translate(0,-.5em);
+    -webkit-transform: translate(0,-.5em);
+    -o-transform: translate(0,-.5em);
   }
 }
 #chat-login, #enviar-consulta, #enviar-cotizacion{
