@@ -2186,12 +2186,14 @@ div[title]:hover:after {
   &:hover, &:focus {
     text-decoration: none;
     outline: none;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa84c+0,ff7b0d+100;Orange+3D */
-    background: rgb(255,168,76); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+    background: rgba(210,105,30,1);
+    background: -moz-linear-gradient(top, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210,105,30,1)), color-stop(100%, rgba(210,105,30,1)));
+    background: -webkit-linear-gradient(top, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 100%);
+    background: -o-linear-gradient(top, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 100%);
+    background: -ms-linear-gradient(top, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 100%);
+    background: linear-gradient(to bottom, rgba(210,105,30,1) 0%, rgba(210,105,30,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2691e', endColorstr='#d2691e', GradientType=0 );
     color: white;
     border: 1px solid white;
     box-shadow:inset 0 0 7px 0 rgba(white, 0.8);
