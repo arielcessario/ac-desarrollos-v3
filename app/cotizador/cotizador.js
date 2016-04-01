@@ -198,6 +198,15 @@
             //Informaci�n Adicional
             createReunion();
 
+            window.google_trackConversion({
+                google_conversion_id:956728168,
+                google_conversion_language: "en",
+                google_conversion_format:"3",
+                google_conversion_color:"ffffff",
+                google_conversion_label:"xMWQCOyv2mQQ6IaayAM",
+                google_remarketing_only:false
+            });
+
             MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web,
                 vm.pagina_web, vm.comentario, vm.website_referencia, dominio_info,
                 vm.dominio_a_registrar, vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico,
