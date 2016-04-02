@@ -5,11 +5,19 @@
     var currentScriptPath = scripts[scripts.length - 1].src;
 
     angular.module('acdesarrollos.cotizador', ['ngRoute', ['mailer/mailer.js']])
-        .controller('CotizadorController', CotizadorController);
+        .controller('CotizadorController', CotizadorController)
+        .constant('googleAdsCotizador', {
+            google_conversion_id:956728168,
+            google_conversion_language: "en",
+            google_conversion_format:"3",
+            google_conversion_color:"ffffff",
+            google_conversion_label:"xMWQCOyv2mQQ6IaayAM",
+            google_remarketing_only:false
+        });
 
-    CotizadorController.$inject = ['$scope', '$location', 'MailerService'];
+    CotizadorController.$inject = ['$scope', '$location', 'MailerService', '$window', 'googleAdsCotizador'];
 
-    function CotizadorController($scope, $location, MailerService) {
+    function CotizadorController($scope, $location, MailerService, $window, googleAdsCotizador) {
         var vm = this;
 
         vm.enviando = false;
@@ -198,14 +206,7 @@
             //Informaci�n Adicional
             createReunion();
 
-            window.google_trackConversion({
-                google_conversion_id:956728168,
-                google_conversion_language: "en",
-                google_conversion_format:"3",
-                google_conversion_color:"ffffff",
-                google_conversion_label:"xMWQCOyv2mQQ6IaayAM",
-                google_remarketing_only:false
-            });
+            $window.google_trackConversion(googleAdsCotizador);
 
             MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web,
                 vm.pagina_web, vm.comentario, vm.website_referencia, dominio_info,

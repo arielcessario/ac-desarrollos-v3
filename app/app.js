@@ -15,7 +15,7 @@
 
         $routeProvider.otherwise('/');
 
-        /*
+
         $routeProvider.when('/main', {
           templateUrl: 'main/main.html',
           controller: 'MainController',
@@ -27,7 +27,6 @@
             }]
           }
         });
-        */
 
         $routeProvider.when('/contacto', {
           templateUrl: 'contactanos/contacto.html',
@@ -139,7 +138,8 @@
       {nombre: 'SABIAS?', path: '/sabias'},
       {nombre: 'NOTICIAS', path: '/noticias'},
       {nombre: 'COTIZADOR', path: '/cotizador'},
-      {nombre: 'CHATEA CON NOSOTROS!', path: '/chat'}
+      {nombre: 'CHATEA CON NOSOTROS!', path: '/chat'},
+      {nombre: 'INICIO', path: '/main'}
     ];
 
   }
