@@ -132,14 +132,14 @@
 
   function LinksService() {
     this.links = [
+      {nombre: 'INICIO', path: '/main'},
       {nombre: 'NUESTRA MISION', path: '/mision'},
       {nombre: 'QUE HACEMOS', path: '/hacemos'},
       {nombre: 'CONTACTANOS', path: '/contacto'},
       {nombre: 'SABIAS?', path: '/sabias'},
       {nombre: 'NOTICIAS', path: '/noticias'},
       {nombre: 'COTIZADOR', path: '/cotizador'},
-      {nombre: 'CHATEA CON NOSOTROS!', path: '/chat'},
-      {nombre: 'INICIO', path: '/main'}
+      {nombre: 'CHATEA CON NOSOTROS!', path: '/chat'}
     ];
 
   }

@@ -62,7 +62,6 @@
             function (data) {
                 //vm.usuarios = data;
                 //console.log(data);
-                console.log(data.length);
 
                 var messages = angular.element(document.querySelector('#message'));
                 /*

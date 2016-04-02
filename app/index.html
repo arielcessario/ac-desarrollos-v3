@@ -545,6 +545,10 @@
             <div id="menu-desktop-lower">
                 <div id="menu-desktop-lower-inner">
                     <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('INICIO') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'INICIO', path: '/main'});"> INICIO
+                    </div>
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NUESTRA MISION') > -1 }"
                          ng-click="appCtrl.goTo({nombre: 'NUESTRA MISION', path: '/mision'});"> NUESTRA MISION
                     </div>
