@@ -119,6 +119,36 @@ html {
   }
 }
 
+.texto-main{
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  color: black;
+  margin-top: 50px;
+  padding: 20px;
+  @media (max-width: 500px) {
+    font-size: 27px;
+    margin-top: 20px;
+  }
+
+}
+
+.texto-main2{
+  max-width: 1000px;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  color: black;
+  font-weight: lighter;
+  margin-top: 10px;
+  margin: auto;
+  padding: 20px;
+  @media (max-width: 500px) {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -2287,6 +2317,7 @@ div[title]:hover:after {
   position: absolute;
 }
 .arrow-left {
+  opacity: 0;
   margin-right: 5px;
   height: 0px;
   width: 0px;
@@ -2297,8 +2328,12 @@ div[title]:hover:after {
 }
 a:hover{
   .arrow-left {
+    opacity: 1;
     margin-right: 0px;
-    border-right: 15px solid darkorange;
+    border-right: 15px solid black;
+    text-shadow:
+            0 2px 2px rgba(255,255,255,0.7),
+            0 10px 4px rgba(0,0,0,0.5);
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -ms-transition: all .3s;
@@ -2318,6 +2353,7 @@ a:hover{
     -o-transform: translate(-0.7em,0);
   }
   .arrow-up {
+    opacity: 0;
     border-bottom: 15px solid darkorange;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -2340,6 +2376,7 @@ a:hover{
 }
 button:hover{
   .arrow-left {
+    opacity: 1;
     margin-right: 5px;
     border-right: 15px solid darkorange;
     -webkit-transition: all .3s;
@@ -2361,6 +2398,7 @@ button:hover{
     -o-transform: translate(-1em,0);
   }
   .arrow-up {
+    opacity: 0;
     border-bottom: 15px solid darkorange;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
