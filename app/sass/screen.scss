@@ -119,13 +119,68 @@ html {
   }
 }
 
+//colors
+$red: #E1332D;
+$white: #fff;
+
+//base styles
+
+.btn-comenzar{
+color: black;
+cursor: pointer;
+font-size:16px;
+font-weight: 400;
+line-height: 45px;
+max-width: 160px;
+position: relative;
+text-decoration: none;
+text-transform: uppercase;
+vertical-align: middle;
+width: 100%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+&:hover { text-decoration: none; }
+}
+
+
+.btn-comenzar{
+  background: rgba(red, 0);
+  border-bottom: 1px solid;
+  color: cadetblue;
+  line-height: 1.4;
+  padding: .25em;
+  text-decoration: none;
+
+  &:hover {
+    background: rgba(cadetblue, 1);
+    color: white;
+  }
+}
+
+
+
+
+
 .texto-main{
   text-align: center;
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
-  color: black;
+  color: cadetblue;
   margin-top: 50px;
   padding: 20px;
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:2s;
+  -moz-animation-duration:2s;
+  animation-duration:2s;
+  text-transform: uppercase;
+
   @media (max-width: 500px) {
     font-size: 27px;
     margin-top: 20px;
@@ -144,8 +199,41 @@ html {
   margin-top: 10px;
   margin: auto;
   padding: 20px;
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:3s;
+  -moz-animation-duration:3s;
+  animation-duration:3s;
   @media (max-width: 500px) {
     font-size: 18px;
+    margin-top: 0px;
+  }
+}
+
+.texto-main3{
+  max-width: 1000px;
+  //text-align: left;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-top: 10px;
+  margin: auto;
+  padding: 20px;
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:3s;
+  -moz-animation-duration:3s;
+  animation-duration:3s;
+  @media (max-width: 500px) {
+    font-size: 16px;
     margin-top: 0px;
   }
 }
@@ -783,6 +871,14 @@ strong {
   padding: 10px 0;
   text-align: justify;
   min-height: 600px;
+  background: rgba(255,255,255,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(237,237,237,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
 }
 .container-noticias {
   width: 100%;
