@@ -27,12 +27,14 @@
         })
         .controller('HacemosController', HacemosController);
 
-    HacemosController.$inject = ['$scope', '$interval', '$location'];
+    HacemosController.$inject = ['$scope', '$interval', '$location', '$routeParams'];
 
-    function HacemosController($scope, $interval, $location) {
+    function HacemosController($scope, $interval, $location, $routeParams) {
         var vm = this;
 
+        vm.id = $routeParams.id;
         vm.view = 'hacemos/hacemos/ecommerce.html';
+        //$location.path('/hacemos/ecommerce');
         vm.slider_nro = 1;
 
         vm.slider_01 = {titulo: '', descripcion:''};
@@ -43,27 +45,42 @@
 
         vm.showSlider = showSlider;
 
-        $interval(changeSlider, 30000);
+        console.log(vm.id);
+        console.log($routeParams.id);
+
+        $location.path('/hacemos/' + vm.id);
+
+        //$interval(changeSlider, 30000);
         //$interval(changeSlider, 5000);
+
 
         function changeSlider() {
             vm.slider_nro = (vm.slider_nro == 5) ? 1 : vm.slider_nro + 1;
 
             if(vm.slider_nro == 1) {
                 vm.view = 'hacemos/hacemos/ecommerce.html';
+                //$location.path('/hacemos/ecommerce');
+                vm.id = 'ecommerce';
             } else if(vm.slider_nro == 2) {
                 vm.view = 'hacemos/hacemos/institucionales.html';
+                //$location.path('/hacemos/institucionales');
+                vm.id = 'institucionales';
             } else if(vm.slider_nro == 3) {
                 vm.view = 'hacemos/hacemos/sistemas.html';
+                //$location.path('/hacemos/sistemas');
+                vm.id = 'sistemas';
             } else if(vm.slider_nro == 4) {
                 vm.view = 'hacemos/hacemos/desarrollos.html';
+                $location.path('/hacemos/desarrollos');
             } else if(vm.slider_nro == 5) {
                 vm.view = 'hacemos/hacemos/analiticas.html';
+                $location.path('/hacemos/analiticas');
             }
-            //console.log(vm.view);
-            //console.log($location);
-            //console.log($location.path());
-            //console.log($location.absUrl());
+            console.log(vm.slider_nro);
+            //$location.path('/hacemos/' + vm.id);
+            console.log(vm.view);
+            console.log($location.path());
+            console.log($location.absUrl());
         }
 
         function showSlider(slider) {
@@ -71,18 +88,30 @@
 
             if(slider == 1) {
                 vm.view = 'hacemos/hacemos/ecommerce.html';
-                //$location.path('hacemos/ecommerce.html');
+                //$location.path('/hacemos/ecommerce');
+                vm.id = 'ecommerce';
             } else if(slider == 2) {
                 vm.view = 'hacemos/hacemos/institucionales.html';
+                //$location.path('/hacemos/institucionales');
+                vm.id = 'institucionales';
             } else if(slider == 3) {
                 vm.view = 'hacemos/hacemos/sistemas.html';
+                //$location.path('/hacemos/sistemas');
+                vm.id = 'sistemas';
             } else if(slider == 4) {
                 vm.view = 'hacemos/hacemos/desarrollos.html';
+                //$location.path('/hacemos/desarrollos');
+                vm.id = 'desarrollos';
             } else if(slider == 5) {
                 vm.view = 'hacemos/hacemos/analiticas.html';
+                //$location.path('/hacemos/analiticas');
+                vm.id = 'analiticas';
             }
-            //console.log(vm.view);
-            //console.log($location);
+            console.log(vm.slider_nro);
+            //$location.path('/hacemos/' + vm.id);
+            console.log(vm.view);
+            console.log($location.path());
+            console.log($location.absUrl());
         }
     };
 

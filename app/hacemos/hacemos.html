@@ -4,20 +4,20 @@
 
         <div class="slider-container-2">
 
-            <div ng-class="{'slider-selected':hacemosCtrl.slider_nro == 1}" class="slider-container">
+            <div ng-if="hacemosCtrl.slider_nro == 1" class="slider-container slider-selected">
                 <!--div ng-include="hacemosCtrl.view"></div-->
                 <slider-ecommerce></slider-ecommerce>
             </div>
-            <div ng-class="{'slider-selected':hacemosCtrl.slider_nro == 2}" class="slider-container">
+            <div ng-if="hacemosCtrl.slider_nro == 2" class="slider-container slider-selected">
                 <slider-institucional></slider-institucional>
             </div>
-            <div ng-class="{'slider-selected':hacemosCtrl.slider_nro == 3}" class="slider-container">
+            <div ng-if="hacemosCtrl.slider_nro == 3" class="slider-container slider-selected">
                 <slider-sistema></slider-sistema>
             </div>
-            <div ng-class="{'slider-selected':hacemosCtrl.slider_nro == 4}" class="slider-container">
+            <div ng-if="hacemosCtrl.slider_nro == 4" class="slider-container slider-selected">
                 <slider-desarrollo></slider-desarrollo>
             </div>
-            <div ng-class="{'slider-selected':hacemosCtrl.slider_nro == 5}" class="slider-container">
+            <div ng-if="hacemosCtrl.slider_nro == 5" class="slider-container slider-selected">
                 <slider-analitica></slider-analitica>
             </div>
         </div>

@@ -45,10 +45,22 @@
           controller: 'HacemosController',
           //data: {requiresLogin: false},
           resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
-            loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-              // you can lazy load files for an existing module
-              return $ocLazyLoad.load('hacemos/hacemos.min.js');
-            }]
+              loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                  // you can lazy load files for an existing module
+                  return $ocLazyLoad.load('hacemos/hacemos.js');
+              }]
+          }
+        });
+
+        $routeProvider.when('/hacemos/:id', {
+          templateUrl: 'hacemos/hacemos.html',
+          controller: 'HacemosController',
+          //data: {requiresLogin: false},
+          resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+              loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                  // you can lazy load files for an existing module
+                  return $ocLazyLoad.load('hacemos/hacemos.js');
+              }]
           }
         });
 
