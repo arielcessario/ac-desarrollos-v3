@@ -39,7 +39,7 @@
             }]
           }
         });
-
+        /*
         $routeProvider.when('/hacemos', {
           templateUrl: 'hacemos/hacemos.html',
           controller: 'HacemosController',
@@ -51,7 +51,7 @@
               }]
           }
         });
-
+        */
         $routeProvider.when('/hacemos/:id', {
           templateUrl: 'hacemos/hacemos.html',
           controller: 'HacemosController',
@@ -146,7 +146,7 @@
     this.links = [
       {nombre: 'INICIO', path: '/main'},
       {nombre: 'NUESTRA MISION', path: '/mision'},
-      {nombre: 'QUE HACEMOS', path: '/hacemos'},
+      {nombre: 'QUE HACEMOS', path: '/hacemos/ecommerce'},
       {nombre: 'CONTACTANOS', path: '/contacto'},
       {nombre: 'SABIAS?', path: '/sabias'},
       {nombre: 'NOTICIAS', path: '/noticias'},

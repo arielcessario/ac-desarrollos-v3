@@ -25,94 +25,118 @@
             controllerAs: 'hacemosCtrl',
             templateUrl: "hacemos/hacemos/analiticas.html"
         })
-        .controller('HacemosController', HacemosController);
+        .controller('HacemosController', HacemosController)
+        .service('SliderService', SliderService);
 
-    HacemosController.$inject = ['$scope', '$interval', '$location', '$routeParams'];
 
-    function HacemosController($scope, $interval, $location, $routeParams) {
+    HacemosController.$inject = ['$scope', '$interval', '$location', '$routeParams', 'SliderService'];
+
+    function HacemosController($scope, $interval, $location, $routeParams, SliderService) {
         var vm = this;
 
-        vm.id = $routeParams.id;
-        vm.view = 'hacemos/hacemos/ecommerce.html';
-        //$location.path('/hacemos/ecommerce');
-        vm.slider_nro = 1;
-
+        //VARIABLES
         vm.slider_01 = {titulo: '', descripcion:''};
         vm.slider_02 = {titulo: '', descripcion:''};
         vm.slider_03 = {titulo: '', descripcion:''};
         vm.slider_04 = {titulo: '', descripcion:''};
         vm.slider_05 = {titulo: '', descripcion:''};
 
+        //FUNCIONES
         vm.showSlider = showSlider;
 
+
+        vm.id = $routeParams.id === undefined ? 'ecommerce' : $routeParams.id;
+        vm.slider_nro = getSliderNro(vm.id);
+
         console.log(vm.id);
-        console.log($routeParams.id);
 
-        $location.path('/hacemos/' + vm.id);
+        $interval(changeSlider, 30000);
+        //$interval(changeSlider, 10000);
+        /*
+         SliderService.listen(function () {
+         $location.path('/hacemos/' + SliderService.showSliderSelected);
 
-        //$interval(changeSlider, 30000);
-        //$interval(changeSlider, 5000);
+         $timeout(function () {
 
+         }, 10);
+
+         console.log($location.path());
+         console.log(vm.slider_nro);
+         });
+         */
+        function getSliderNro(slider) {
+            var numero = 0;
+
+            if(slider == 'ecommerce') {
+                numero = 1;
+            } else if(slider == 'institucionales') {
+                numero = 2;
+            } else if(slider == 'sistemas') {
+                numero = 3;
+            } else if(slider == 'desarrollos') {
+                numero = 4;
+            } else if(slider == 'analiticas') {
+                numero = 5;
+            }
+
+            return numero;
+        }
 
         function changeSlider() {
             vm.slider_nro = (vm.slider_nro == 5) ? 1 : vm.slider_nro + 1;
 
             if(vm.slider_nro == 1) {
-                vm.view = 'hacemos/hacemos/ecommerce.html';
-                //$location.path('/hacemos/ecommerce');
                 vm.id = 'ecommerce';
             } else if(vm.slider_nro == 2) {
-                vm.view = 'hacemos/hacemos/institucionales.html';
-                //$location.path('/hacemos/institucionales');
                 vm.id = 'institucionales';
             } else if(vm.slider_nro == 3) {
-                vm.view = 'hacemos/hacemos/sistemas.html';
-                //$location.path('/hacemos/sistemas');
                 vm.id = 'sistemas';
             } else if(vm.slider_nro == 4) {
-                vm.view = 'hacemos/hacemos/desarrollos.html';
-                $location.path('/hacemos/desarrollos');
+                vm.id = 'desarrollos';
             } else if(vm.slider_nro == 5) {
-                vm.view = 'hacemos/hacemos/analiticas.html';
-                $location.path('/hacemos/analiticas');
+                vm.id = 'analiticas';
             }
+
+            //SliderService.showSliderSelected = vm.id;
+            //SliderService.broadcast();
             console.log(vm.slider_nro);
-            //$location.path('/hacemos/' + vm.id);
-            console.log(vm.view);
-            console.log($location.path());
-            console.log($location.absUrl());
+            $location.path('/hacemos/' + vm.id);
         }
 
         function showSlider(slider) {
             vm.slider_nro = slider;
 
             if(slider == 1) {
-                vm.view = 'hacemos/hacemos/ecommerce.html';
-                //$location.path('/hacemos/ecommerce');
                 vm.id = 'ecommerce';
             } else if(slider == 2) {
-                vm.view = 'hacemos/hacemos/institucionales.html';
-                //$location.path('/hacemos/institucionales');
                 vm.id = 'institucionales';
             } else if(slider == 3) {
-                vm.view = 'hacemos/hacemos/sistemas.html';
-                //$location.path('/hacemos/sistemas');
                 vm.id = 'sistemas';
             } else if(slider == 4) {
-                vm.view = 'hacemos/hacemos/desarrollos.html';
-                //$location.path('/hacemos/desarrollos');
                 vm.id = 'desarrollos';
             } else if(slider == 5) {
-                vm.view = 'hacemos/hacemos/analiticas.html';
-                //$location.path('/hacemos/analiticas');
                 vm.id = 'analiticas';
             }
-            console.log(vm.slider_nro);
-            //$location.path('/hacemos/' + vm.id);
-            console.log(vm.view);
-            console.log($location.path());
-            console.log($location.absUrl());
+
+            //SliderService.showSliderSelected = vm.id;
+            //SliderService.broadcast();
+            $location.path('/hacemos/' + vm.id);
         }
     };
+
+    SliderService.$inject = ['$rootScope'];
+    function SliderService($rootScope) {
+
+        this.showSliderSelected = '';
+
+        this.broadcast = function () {
+            $rootScope.$broadcast("refreshSelectedPage")
+        };
+
+        this.listen = function (callback) {
+            $rootScope.$on("refreshSelectedPage", callback)
+        };
+
+    }
 
 })();
