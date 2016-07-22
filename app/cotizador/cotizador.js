@@ -5,19 +5,11 @@
     var currentScriptPath = scripts[scripts.length - 1].src;
 
     angular.module('acdesarrollos.cotizador', ['ngRoute', ['mailer/mailer.js']])
-        .controller('CotizadorController', CotizadorController)
-        .constant('googleAdsCotizador', {
-            google_conversion_id:956728168,
-            google_conversion_language: "en",
-            google_conversion_format:"3",
-            google_conversion_color:"ffffff",
-            google_conversion_label:"xMWQCOyv2mQQ6IaayAM",
-            google_remarketing_only:false
-        });
+        .controller('CotizadorController', CotizadorController);
 
-    CotizadorController.$inject = ['$scope', '$location', 'MailerService', '$window', 'googleAdsCotizador'];
+    CotizadorController.$inject = ['$scope', '$location', 'MailerService', '$window'];
 
-    function CotizadorController($scope, $location, MailerService, $window, googleAdsCotizador) {
+    function CotizadorController($scope, $location, MailerService, $window) {
         var vm = this;
 
         vm.enviando = false;
@@ -172,7 +164,7 @@
                 }
             }
 
-            //Dise�o de P�gina Web
+            //Diseño de Pagina Web
             var nueva_web = '';
             if(vm.nuevapagina == 1) {
                 nueva_web = 'Diseño de una nueva página web';
@@ -203,17 +195,14 @@
 
             addDisenioGrafico();
 
-            //Informaci�n Adicional
+            //Informacion Adicional
             createReunion();
-
-            $window.google_trackConversion(googleAdsCotizador);
 
             MailerService.sendCotizacion(vm.clienteEntity, vm.nuestros_servicios, nueva_web,
                 vm.pagina_web, vm.comentario, vm.website_referencia, dominio_info,
                 vm.dominio_a_registrar, vm.dominio_deseado, vm.graficos, vm.otro_disenio_grafico,
                 vm.reunionEntity, vm.hostingEntity, function(data){
                     //console.log(data);
-
                     cleanVariables();
                 });
         }
@@ -369,7 +358,7 @@
             vm.dominio = false;
             vm.impresion = false;
 
-            //Dise�o de P�gina Web
+            //Diseño de Pagina Web
             vm.nuevapagina = false;
             vm.comentario = '';
             vm.slider_fijo = false;
@@ -392,13 +381,13 @@
             vm.extension_3 = false;
             vm.dominio_deseado = '';
 
-            //Dise�o Gr�fico
+            //Diseño Grafico
             vm.logotipo = false;
             vm.tarjeta = false;
             vm.catalogo = false;
             vm.otro_disenio_grafico = '';
 
-            //Informaci�n adicional
+            //Informacion adicional
             vm.como_nos_conocio = '';
             vm.desea_reunion = [];
             vm.lugar_reunion = '';
@@ -413,7 +402,6 @@
 
             vm.hosting_selected = vm.plan_hosting[0];
         }
-
 
     };
 

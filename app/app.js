@@ -39,7 +39,7 @@
             }]
           }
         });
-        /*
+
         $routeProvider.when('/hacemos', {
           templateUrl: 'hacemos/hacemos.html',
           controller: 'HacemosController',
@@ -51,7 +51,7 @@
               }]
           }
         });
-        */
+        /*
         $routeProvider.when('/hacemos/:id', {
           templateUrl: 'hacemos/hacemos.html',
           controller: 'HacemosController',
@@ -63,7 +63,7 @@
               }]
           }
         });
-
+        */
         $routeProvider.when('/noticias', {
           templateUrl: 'noticias/noticias.html',
           controller: 'NoticiasController',
@@ -146,7 +146,8 @@
     this.links = [
       {nombre: 'INICIO', path: '/main'},
       {nombre: 'NUESTRA MISION', path: '/mision'},
-      {nombre: 'QUE HACEMOS', path: '/hacemos/ecommerce'},
+      //{nombre: 'QUE HACEMOS', path: '/hacemos/ecommerce'},
+      {nombre: 'QUE HACEMOS', path: '/hacemos'},
       {nombre: 'CONTACTANOS', path: '/contacto'},
       {nombre: 'SABIAS?', path: '/sabias'},
       {nombre: 'NOTICIAS', path: '/noticias'},
@@ -186,16 +187,6 @@
       vm.display_menu = true;
       vm.display_header = true;
 
-      /*
-       if(location.nombre != 'INICIO') {
-       //vm.display_menu = true;
-       //vm.display_header = true;
-       } else {
-       //vm.display_menu = true;
-       //vm.display_header = true;
-       vm.selectedPage = 'INICIO';
-       }
-       */
     }
 
   }

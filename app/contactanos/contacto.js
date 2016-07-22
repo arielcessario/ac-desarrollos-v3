@@ -54,6 +54,7 @@
                     vm.asunto = '';
                     vm.mensaje = '';
                 });
+
         }
 
     };

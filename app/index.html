@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -426,7 +425,7 @@
                 'bower_components/angular-sanitize/angular-sanitize.min.js',
                 'https://cdn.firebase.com/js/client/2.4.0/firebase.js',
                 'https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js',
-                'https://www.googleadservices.com/pagead/conversion_async.js',
+                //'https://www.googleadservices.com/pagead/conversion_async.js',
                 'ac-angularfire-factory/ac-factory.js'
             ], 'segundo');
 
@@ -440,7 +439,6 @@
         });
 
     </script>
-
     <!--<link rel="stylesheet" href="stylesheets/screen.css">-->
     <script>
         var cb = function () {
@@ -456,39 +454,8 @@
         else window.addEventListener('load', cb);
     </script>
 
-
-
 </head>
 <body ng-controller="AppController as appCtrl" style="position: relative;">
-<!-- Google Code for Contacto Conversion Page. In your html page, add the snippet and call
-    goog_report_conversion when someone clicks on the chosen link or button. -->
-<script type="text/javascript">
-    /* <![CDATA[ */
-    goog_snippet_vars = function() {
-        var w = window;
-        w.google_conversion_id = 956728168;
-        w.google_conversion_label = "_8PjCNaT810Q6IaayAM";
-        w.google_remarketing_only = false;
-        w.google_conversion_value = 0;
-    }
-    // DO NOT CHANGE THE CODE BELOW.
-    goog_report_conversion = function(url) {
-        goog_snippet_vars();
-        window.google_conversion_format = "3";
-        var opt = new Object();
-        opt.onload_callback = function() {
-            if (typeof(url) != 'undefined') {
-                window.location = url;
-            }
-        }
-        var conv_handler = window['google_trackConversion'];
-        if (typeof(conv_handler) == 'function') {
-            conv_handler(opt);
-        }
-    }
-    /* ]]> */
-</script>
-
 <div ng-if="!appCtrl.hideLoader" id="ac-loader">
     <img src="images/loader-logo.png" alt="" class="loader-img" >
     <span id="loader-loading">Loading...</span>
@@ -580,9 +547,13 @@
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NUESTRA MISION') > -1 }"
                          ng-click="appCtrl.goTo({nombre: 'NUESTRA MISION', path: '/mision'});"> NUESTRA MISION
                     </div>
-                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                    <!--div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('QUE HACEMOS') > -1 }"
                          ng-click="appCtrl.goTo({nombre: 'QUE HACEMOS', path: '/hacemos/ecommerce'});"> QUE HACEMOS
+                    </div-->
+                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                         ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('QUE HACEMOS') > -1 }"
+                         ng-click="appCtrl.goTo({nombre: 'QUE HACEMOS', path: '/hacemos'});"> QUE HACEMOS
                     </div>
                     <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('CONTACTANOS') > -1 }"
@@ -592,10 +563,10 @@
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('SABIAS') > -1 }"
                          ng-click="appCtrl.goTo({nombre: 'SABIAS', path: '/sabias'});"> SABIAS?
                     </div>
-                    <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
+                    <!--div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('NOTICIAS') > -1 }"
                          ng-click="appCtrl.goTo({nombre: 'NOTICIAS', path: '/noticias'});"> NOTICIAS
-                    </div>
+                    </div-->
                     <div class="menu-desktop-btn ac-ripple" style="border-right: 2px solid #a1cca5;"
                          ng-class="{'menu-desktop-btn-selected':appCtrl.selectedPage.indexOf('COTIZADOR') > -1 }"
                          ng-click="appCtrl.goTo({nombre: 'COTIZADOR', path: '/cotizador'});"> COTIZADOR
