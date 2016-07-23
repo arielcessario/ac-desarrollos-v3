@@ -15,8 +15,7 @@ $background_primary: #eee;
 $background_secundary: #000;
 
 $color_primary: #333;
-//$color_secundary:#9DCDA6;;
-//$color_terciary:#C57161;
+
 
 $color_1: #fbe083;
 $color_2: #ce5f2d;
@@ -30,15 +29,10 @@ $color_7: #8CC63F;
 @import "compass";
 @import "compass/css3/font-face";
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
-//@include font-face($font_primary, font-files("MYRIADPRO-COND.woff"));
-//@include font-face($font_secundary, font-files("MYRIADPRO-BOLDCOND.woff"));
 
-//@include font-face($myriad_pro_bold, font-files("MYRIADPRO-BOLD.woff"));
-//@include font-face($myriad_pro_regular, font-files("MYRIADPRO-REGULAR.woff"));
 
 html, body {
   //height: 100%;
-
 }
 
 body {
@@ -83,30 +77,11 @@ html {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#17384a+0,090b0f+100 */
-  //background: rgb(23, 56, 74); /* Old browsers */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-
-  //background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3Mzg0YSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTBiMGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  //background: -moz-linear-gradient(top, rgba(23, 56, 74, 1) 0%, rgba(9, 11, 15, 1) 100%); /* FF3.6+ */
-  //background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(23, 56, 74, 1)), color-stop(100%, rgba(9, 11, 15, 1))); /* Chrome,Safari4+ */
-  //background: -webkit-linear-gradient(top, rgba(23, 56, 74, 1) 0%, rgba(9, 11, 15, 1) 100%); /* Chrome10+,Safari5.1+ */
-  //background: -o-linear-gradient(top, rgba(23, 56, 74, 1) 0%, rgba(9, 11, 15, 1) 100%); /* Opera 11.10+ */
-  //background: -ms-linear-gradient(top, rgba(23, 56, 74, 1) 0%, rgba(9, 11, 15, 1) 100%); /* IE10+ */
-  //background: linear-gradient(to bottom, rgba(23, 56, 74, 1) 0%, rgba(9, 11, 15, 1) 100%); /* W3C */
-  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#17384a', endColorstr='#090b0f', GradientType=0); /* IE6-8 */
-
   background-color: $color_6;
 
   position: fixed;
   top: 0;
   z-index: 1000;
-  //-webkit-transform: translate3d(0, 0, 0);
-  //-moz-transform: translate3d(0, 0, 0);
-  //-ms-transform: translate3d(0, 0, 0);
-  //-o-transform: translate3d(0, 0, 0);
-  //transform: translate3d(0, 0, 0);
   @media (min-width: 800px) {
     display: flex;
     justify-content: center;
